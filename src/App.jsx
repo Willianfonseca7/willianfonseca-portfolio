@@ -1,17 +1,21 @@
 // src/App.jsx
-// Configuração das rotas principais (comentário em português)
+// Configuração das rotas principais
 import { Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home.jsx";
 import Skills from "./pages/Skills.jsx";
 import ProjectsPage from "./pages/Projects.jsx";
 import ContactPage from "./pages/Contact.jsx";
-import ContactSection from "./components/ContactSection.jsx";
+import AboutMePage from "./pages/Aboutme.jsx";
 
 export default function App() {
   return (
     <Routes>
       {/* Startseite / Übersicht */}
       <Route path="/" element={<Home />} />
+
+      {/* Seite über mich */}
+      <Route path="/about" element={<AboutMePage />} />
 
       {/* Seite nur für Skills */}
       <Route path="/skills" element={<Skills />} />
@@ -24,3 +28,4 @@ export default function App() {
     </Routes>
   );
 }
+

@@ -1,57 +1,230 @@
-// src/components/ContactSection.jsx
+import { useState } from "react";
 
 export default function ContactSection() {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    message: "",
+  });
+
+  const [touched, setTouched] = useState({
+    email: false,
+    password: false,
+    message: false,
+  });
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // Validations
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const isEmailValid = emailRegex.test(formData.email);
+
+  const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+  const isPasswordValid = passwordRegex.test(formData.password);
+
+  const isMessageValid = formData.message.trim().length >= 20;
+
+  const isFormValid = isEmailValid && isPasswordValid && isMessageValid;
+
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    setIsSubmitted(false);
+  }
+
+  function handleBlur(e) {
+    const { name } = e.target;
+    setTouched((prev) => ({ ...prev, [name]: true }));
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (!isFormValid) {
+      setTouched({ email: true, password: true, message: true });
+      return;
+    }
+
+    setIsSubmitted(true);
+
+    setFormData({
+      email: "",
+      password: "",
+      message: "",
+    });
+
+    setTouched({ email: false, password: false, message: false });
+  }
+
   return (
-    <section
-      id="contact"
-      className="mx-auto max-w-5xl px-4 py-20 space-y-10"
-    >
-      {/* Header */}
-      <header className="space-y-3">
+    <section id="contact" className="mx-auto max-w-5xl px-4 py-20 space-y-10">
+
+      {/* HEADER CORRETO — ÚNICO QUE FICA */}
+      <header className="space-y-4 mb-12 text-center">
         <h2 className="text-3xl font-bold tracking-tight text-slate-50">
           Kontakt
         </h2>
-        <p className="text-sm text-slate-300 max-w-xl">
-          Wenn du Fragen hast oder mit mir zusammenarbeiten möchtest, kannst du
-          mich jederzeit über E-Mail oder GitHub erreichen.
+
+        <p className="text-sm text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          Wenn du Fragen hast oder mit mir zusammenarbeiten möchtest, kannst du mich 
+          jederzeit über das Formular oder über meine Links erreichen. Ich freue mich 
+          über Feedback, Projektideen oder einfach eine kurze Nachricht.
         </p>
       </header>
 
-      {/* Card de contato */}
-      <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 backdrop-blur-sm shadow-xl space-y-6">
-        <p className="text-slate-300">
-          <span className="font-semibold text-slate-50">E-Mail: </span>
+      {/* GRID COM LINKS + FORM */}
+      <div className="grid gap-8 md:grid-cols-2">
+        
+        {/* CARD COM BOTÕES */}
+        <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 backdrop-blur-sm shadow-xl space-y-6">
+
+          <h3 className="text-xl font-semibold text-slate-50 mb-3">
+            Kontakt Links
+          </h3>
+
+          {/* Email */}
           <a
             href="mailto:willianfonseca7@gmail.com"
-            className="text-sky-400 hover:text-sky-300"
+            className="block w-full text-center rounded-xl bg-sky-500/20 border border-sky-500/40 text-sky-300 py-2 font-medium hover:bg-sky-500/40 hover:text-white transition-all shadow-md hover:shadow-sky-500/40"
           >
-            willianfonseca7@gmail.com
+            📧 E-Mail kontaktieren
           </a>
-        </p>
 
-        <p className="text-slate-300">
-          <span className="font-semibold text-slate-50">GitHub: </span>
+          {/* GitHub */}
           <a
             href="https://github.com/Willianfonseca7"
             target="_blank"
             rel="noreferrer"
-            className="text-sky-400 hover:text-sky-300"
+            className="block w-full text-center rounded-xl bg-purple-500/20 border border-purple-500/40 text-purple-300 py-2 font-medium hover:bg-purple-500/40 hover:text-white transition-all shadow-md hover:shadow-purple-500/40"
           >
-            github.com/Willianfonseca7
+            🐱‍💻 GitHub Profil
           </a>
-        </p>
 
-        <p className="text-slate-300">
-          <span className="font-semibold text-slate-50">LinkedIn: </span>
+          {/* LinkedIn */}
           <a
             href="https://www.linkedin.com/in/willian-fonseca/"
             target="_blank"
             rel="noreferrer"
-            className="text-sky-400 hover:text-sky-300"
+            className="block w-full text-center rounded-xl bg-blue-500/20 border border-blue-500/40 text-blue-300 py-2 font-medium hover:bg-blue-500/40 hover:text-white transition-all shadow-md hover:shadow-blue-500/40"
           >
-            linkedin.com/in/willian-fonseca
+            🔗 LinkedIn Profil
           </a>
-        </p>
+
+        </div>
+
+        {/* FORM */}
+        <form
+          onSubmit={handleSubmit}
+          className={`rounded-2xl border p-6 backdrop-blur-sm shadow-xl space-y-5 bg-slate-900/70 transition-all duration-300 ${
+            isFormValid
+              ? "border-emerald-500 shadow-emerald-500/40"
+              : "border-slate-800"
+          } ${isSubmitted ? "animate-pulse" : ""}`}
+        >
+          <h3 className="text-xl font-semibold text-slate-50">
+            Schreib mir eine Nachricht
+          </h3>
+
+          {/* EMAIL */}
+          <div className="space-y-1">
+            <label className="block text-sm font-medium text-slate-200">
+              E-Mail
+            </label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              placeholder="du@example.com"
+              className={`w-full rounded-xl bg-slate-900/80 border px-3 py-2 text-sm text-slate-50 transition-all 
+                ${
+                  touched.email && !isEmailValid
+                    ? "border-red-500 focus:ring-2 focus:ring-red-500"
+                    : "border-slate-700 focus:border-sky-500 focus:ring-2 focus:ring-sky-500"
+                }`}
+            />
+            {touched.email && !isEmailValid && (
+              <p className="text-xs text-red-400">
+                Bitte gib eine gültige E-Mail-Adresse ein.
+              </p>
+            )}
+          </div>
+
+          {/* PASSWORD */}
+          <div className="space-y-1">
+            <label className="block text-sm font-medium text-slate-200">
+              Passwort
+            </label>
+            <input
+              type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              placeholder="Mindestens 6 Zeichen + Zahlen"
+              className={`w-full rounded-xl bg-slate-900/80 border px-3 py-2 text-sm text-slate-50 transition-all 
+                ${
+                  touched.password && !isPasswordValid
+                    ? "border-red-500 focus:ring-2 focus:ring-red-500"
+                    : "border-slate-700 focus:border-sky-500 focus:ring-2 focus:ring-sky-500"
+                }`}
+            />
+            {touched.password && !isPasswordValid && (
+              <p className="text-xs text-red-400">
+                Mindestens 6 Zeichen, Buchstaben und Zahlen.
+              </p>
+            )}
+          </div>
+
+          {/* MESSAGE */}
+          <div className="space-y-1">
+            <label className="block text-sm font-medium text-slate-200">
+              Nachricht
+            </label>
+            <textarea
+              name="message"
+              rows={4}
+              value={formData.message}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              placeholder="Bitte schreibe mindestens 20 Zeichen..."
+              className={`w-full rounded-xl bg-slate-900/80 border px-3 py-2 text-sm text-slate-50 resize-none transition-all 
+                ${
+                  touched.message && !isMessageValid
+                    ? "border-red-500 focus:ring-2 focus:ring-red-500"
+                    : "border-slate-700 focus:border-sky-500 focus:ring-2 focus:ring-sky-500"
+                }`}
+            />
+
+            {touched.message && !isMessageValid && (
+              <p className="text-xs text-red-400">
+                Die Nachricht sollte mindestens 20 Zeichen lang sein.
+              </p>
+            )}
+          </div>
+
+          {/* BOTÃO */}
+          <button
+            type="submit"
+            disabled={!isFormValid}
+            className={`w-full rounded-xl px-4 py-2 font-semibold text-slate-900 shadow-md transition-all 
+              ${
+                isFormValid
+                  ? "bg-emerald-400 hover:bg-emerald-300 hover:shadow-emerald-500/40"
+                  : "bg-slate-700 text-slate-400"
+              }`}
+          >
+            Nachricht senden
+          </button>
+
+          {/* SUCESSO */}
+          {isSubmitted && (
+            <p className="text-sm text-emerald-400 text-center">
+              Danke für deine Nachricht! 🙌
+            </p>
+          )}
+        </form>
       </div>
     </section>
   );

@@ -1,18 +1,14 @@
-// src/pages/Projects.jsx
-
+// src/pages/Projekte.jsx
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import ProjectsSection from "../components/ProjectsSection.jsx";
 
-
-export default function ProjectsPage() {
+export default function Projekte() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50">
+    <div className="min-h-screen bg-slate-950 text-slate-50 flex flex-col">
       <Navbar />
 
-      <main className="mx-auto max-w-5xl px-4 py-12 space-y-24">
-      
-
+      <main className="flex-1 mx-auto w-full max-w-5xl px-4 py-16">
         <ProjectsSection />
       </main>
 
@@ -20,6 +16,3 @@ export default function ProjectsPage() {
     </div>
   );
 }
-
-
-
