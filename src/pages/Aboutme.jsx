@@ -1,17 +1,14 @@
-// src/pages/Aboutme.jsx
-import Navbar from "../components/Navbar.jsx";
-import About from "../components/About.jsx";
-import Footer from "../components/Footer.jsx";
+import Navbar from "../components/ui/Navbar.jsx";
+import Footer from "../components/sections/Footer.jsx";
+import AboutSection from "../components/sections/AboutSection.jsx";
 
 export default function AboutMePage() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50 flex flex-col">
+    <div className="min-h-screen text-slate-100">
       <Navbar />
-
-      <main className="flex-1">
-        <About />
+      <main>
+        <AboutSection />
       </main>
-
       <Footer />
     </div>
   );

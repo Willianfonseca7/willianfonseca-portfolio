@@ -1,17 +1,14 @@
-// src/pages/Projekte.jsx
-import Navbar from "../components/Navbar.jsx";
-import Footer from "../components/Footer.jsx";
-import ProjectsSection from "../components/ProjectsSection.jsx";
+import Navbar from "../components/ui/Navbar.jsx";
+import Footer from "../components/sections/Footer.jsx";
+import ProjectsSection from "../components/sections/ProjectsSection.jsx";
 
 export default function Projekte() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50 flex flex-col">
+    <div className="min-h-screen text-slate-100">
       <Navbar />
-
-      <main className="flex-1 mx-auto w-full max-w-5xl px-4 py-16">
+      <main>
         <ProjectsSection />
       </main>
-
       <Footer />
     </div>
   );

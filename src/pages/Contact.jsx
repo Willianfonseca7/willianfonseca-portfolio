@@ -1,12 +1,12 @@
-import Navbar from "../components/Navbar.jsx";
-import ContactSection from "../components/ContactSection.jsx";
-import Footer from "../components/Footer.jsx";
+import Navbar from "../components/ui/Navbar.jsx";
+import Footer from "../components/sections/Footer.jsx";
+import ContactSection from "../components/sections/ContactSection.jsx";
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50 flex flex-col">
+    <div className="min-h-screen text-slate-100">
       <Navbar />
-      <main className="flex-1">
+      <main>
         <ContactSection />
       </main>
       <Footer />

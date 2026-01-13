@@ -1,6 +1,7 @@
 // src/App.jsx
 // Configuração das rotas principais
 import { Routes, Route } from "react-router-dom";
+import useScrollToHash from "./hooks/useScrollToHash.js";
 
 import Home from "./pages/Home.jsx";
 import Skills from "./pages/Skills.jsx";
@@ -9,6 +10,8 @@ import ContactPage from "./pages/Contact.jsx";
 import AboutMePage from "./pages/Aboutme.jsx";
 
 export default function App() {
+  useScrollToHash();
+
   return (
     <Routes>
       {/* Startseite / Übersicht */}
@@ -28,4 +31,3 @@ export default function App() {
     </Routes>
   );
 }
-

@@ -1,0 +1,52 @@
+import Button from "../ui/Button.jsx";
+import Container from "../ui/Container.jsx";
+import FeatureCard from "../ui/FeatureCard.jsx";
+import { useLanguage } from "../../hooks/useLanguage.jsx";
+
+export default function HeroSection() {
+  const { content } = useLanguage();
+  const { hero } = content;
+
+  return (
+    <section className="pt-24 pb-16 sm:pt-28 lg:pt-32">
+      <Container>
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-center">
+          <div className="space-y-6 text-center lg:text-left">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-sky-300/80">
+              {content.meta.tagline}
+            </p>
+            <div className="space-y-3">
+              <h1 className="hero-title text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-50">
+                {hero.title}
+              </h1>
+              <p className="text-base sm:text-lg text-sky-200/90">
+                {hero.subtitle}
+              </p>
+              <p className="text-sm sm:text-base text-slate-300/90 max-w-xl">
+                {hero.description}
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4 lg:justify-start">
+              <Button href={hero.ctas.primary.href} variant="primary">
+                {hero.ctas.primary.label}
+              </Button>
+              <Button href={hero.ctas.secondary.href} variant="secondary">
+                {hero.ctas.secondary.label}
+              </Button>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            {hero.highlights.map((item) => (
+              <FeatureCard
+                key={item.title}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}

@@ -1,1 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    background: radial-gradient(1200px 700px at 10% -10%, rgba(56, 189, 248, 0.18), transparent 60%),
+      radial-gradient(900px 500px at 90% 10%, rgba(14, 116, 144, 0.18), transparent 55%),
+      linear-gradient(180deg, #0b1120 0%, #030712 60%);
+    color: #e2e8f0;
+    min-height: 100vh;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  html[data-theme="light"] body {
+    background: radial-gradient(1200px 700px at 10% -10%, rgba(56, 189, 248, 0.2), transparent 60%),
+      linear-gradient(180deg, #f8fafc 0%, #e2e8f0 70%);
+    color: #0f172a;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+    @apply shadow-[0_20px_60px_-30px_rgba(14,116,144,0.75)] backdrop-blur-xl transition hover:shadow-[0_30px_80px_-30px_rgba(56,189,248,0.75)];
+  }
+
+  .tag-chip {
+    @apply bg-white/10 text-slate-200/90;
+  }
+
+  .nav-header {
+    @apply sticky top-0 z-50 backdrop-blur-xl bg-slate-950/70;
+  }
+
+  .nav-inner {
+    @apply mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6;
+  }
+
+  .nav-links {
+    @apply hidden items-center gap-4 text-[11px] sm:text-xs lg:flex lg:gap-6;
+  }
+
+  .nav-link {
+    @apply text-slate-300/90 transition hover:text-white;
+  }
+
+  .mobile-links .nav-link {
+    @apply rounded-2xl bg-white/5 px-4 py-3 text-sm;
+  }
+
+  .mobile-links .nav-link.active {
+    @apply bg-white/10 text-sky-200;
+  }
+
+  .nav-link.active {
+    @apply text-sky-200;
+  }
+
+  .chip-button {
+    @apply rounded-full bg-white/5 px-3 py-1 text-[11px] font-semibold text-slate-200 transition hover:bg-white/10;
+  }
+
+  .hero-title {
+    text-shadow: 0 0 24px rgba(56, 189, 248, 0.2);
+  }
+
+  .mobile-panel {
+    @apply lg:hidden overflow-hidden transition-all duration-300;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  .mobile-panel.open {
+    max-height: 240px;
+    opacity: 1;
+  }
+
+  .mobile-links {
+    @apply mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 pb-4 sm:px-6;
+  }
+
+  .input-field {
+    @apply w-full rounded-2xl bg-white/5 px-4 py-2 text-sm text-slate-100 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400/70;
+  }
+
+  .input-field[aria-invalid="true"] {
+    @apply ring-2 ring-rose-400/70;
+  }
+
+  .link-card {
+    @apply flex items-center gap-3 rounded-2xl bg-white/5 px-4 py-3 text-slate-200 transition hover:bg-white/10;
+  }
+
+  .tooltip {
+    @apply pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 rounded-full bg-slate-900/90 px-3 py-1 text-[11px] text-slate-200 opacity-0 transition;
+  }
+
+  .group:hover .tooltip {
+    @apply opacity-100;
+  }
+}

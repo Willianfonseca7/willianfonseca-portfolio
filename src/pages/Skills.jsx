@@ -1,18 +1,14 @@
-// src/pages/Skills.jsx
-import Navbar from "../components/Navbar.jsx";
-import Footer from "../components/Footer.jsx";
-import SkillsSection from "../components/SkillsSection.jsx"; // <-- IMPORT ATIVO
+import Navbar from "../components/ui/Navbar.jsx";
+import Footer from "../components/sections/Footer.jsx";
+import SkillsSection from "../components/sections/SkillsSection.jsx";
 
 export default function Skills() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50">
+    <div className="min-h-screen text-slate-100">
       <Navbar />
-
-      <main className="mx-auto max-w-5xl px-4 py-16 space-y-24">
-        {/* Agora usamos o componente real */}
+      <main>
         <SkillsSection />
       </main>
-
       <Footer />
     </div>
   );
