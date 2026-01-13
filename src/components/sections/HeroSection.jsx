@@ -10,8 +10,8 @@ export default function HeroSection() {
   return (
     <section className="pt-24 pb-16 sm:pt-28 lg:pt-32">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-center">
-          <div className="space-y-6 text-center lg:text-left">
+        <div className="space-y-10">
+          <div className="mx-auto max-w-3xl space-y-6 text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-sky-300/80">
               {content.meta.tagline}
             </p>
@@ -22,11 +22,11 @@ export default function HeroSection() {
               <p className="text-base sm:text-lg text-sky-200/90">
                 {hero.subtitle}
               </p>
-              <p className="text-sm sm:text-base text-slate-300/90 max-w-xl">
+              <p className="text-sm sm:text-base text-slate-300/90 mx-auto max-w-2xl">
                 {hero.description}
               </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-4 lg:justify-start">
+            <div className="flex flex-wrap justify-center gap-4">
               <Button href={hero.ctas.primary.href} variant="primary">
                 {hero.ctas.primary.label}
               </Button>
@@ -36,7 +36,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="space-y-4">
+          <div className="grid gap-4 md:grid-cols-3">
             {hero.highlights.map((item) => (
               <FeatureCard
                 key={item.title}
