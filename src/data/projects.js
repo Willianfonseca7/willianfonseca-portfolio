@@ -4,11 +4,11 @@
 export const projects = [
   {
     id: 1,
-    title: "Pokémon App",
+    title: "Pokedex-Web",
     description:
       "Webanwendung mit HTML, CSS, JavaScript und der PokeAPI, um Pokémon zu listen und Details anzuzeigen.",
     techs: ["HTML", "CSS", "JavaScript", "PokeAPI"],
-    playUrl: "https://willianfonseca7.github.io/Pokemon-App/",
+    playUrl: "https://willianfonseca7.github.io/Pokedex-web/",
     codeUrl: "https://github.com/Willianfonseca7/Pokemon-App",
   },
   {

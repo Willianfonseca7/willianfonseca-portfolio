@@ -12,10 +12,10 @@ import ProjectButtons from "./ProjectButtons.jsx";
 const projects = [
   {
     id: "pokemon-app",
-    title: "Pokémon App",
+    title: "Pokedex-Web",
     description: "A web app using HTML, CSS, JS and PokéAPI.",
     tech: ["HTML", "CSS", "JavaScript"],
-    demoUrl: "https://willianfonseca7.github.io/Pokemon-App/",
+    demoUrl: "https://willianfonseca7.github.io/Pokedex-web/",
     codeUrl: "https://github.com/Willianfonseca7/Pokemon-App",
     images: ["/pokemonapp.png", "/pokemonapp2.png", "/pokemonapp3.png"],
     playLabel: "Spielen",
@@ -59,10 +59,10 @@ function ProjectCard({ project }) {
     <GlowCard>
       {/* Title + description */}
       <div className="space-y-2">
-        <h2 className="text-lg font-semibold text-slate-50">
+        <h2 className="text-lg font-semibold text-primary">
           {project.title}
         </h2>
-        <p className="text-sm text-slate-400">{project.description}</p>
+        <p className="text-sm text-muted">{project.description}</p>
       </div>
 
       {/* Tech badges */}
@@ -70,7 +70,7 @@ function ProjectCard({ project }) {
         {project.tech.map((tag) => (
           <span
             key={tag}
-            className="rounded-full border border-slate-700/80 bg-slate-900/70 px-3 py-1 text-xs font-medium text-slate-200"
+            className="rounded-full border border-slate-700/80 bg-slate-900/70 px-3 py-1 text-xs font-medium text-primary"
           >
             {tag}
           </span>
@@ -92,7 +92,7 @@ function ProjectCard({ project }) {
               <button
                 type="button"
                 onClick={showPrev}
-                className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-slate-900/80 px-2.5 py-1 text-sm text-slate-100 hover:bg-slate-800"
+                className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-slate-900/80 px-2.5 py-1 text-sm text-primary hover:bg-slate-800"
               >
                 ‹
               </button>
@@ -101,7 +101,7 @@ function ProjectCard({ project }) {
               <button
                 type="button"
                 onClick={showNext}
-                className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-slate-900/80 px-2.5 py-1 text-sm text-slate-100 hover:bg-slate-800"
+                className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-slate-900/80 px-2.5 py-1 text-sm text-primary hover:bg-slate-800"
               >
                 ›
               </button>
@@ -145,7 +145,7 @@ export default function ProjectsSection() {
       {/* Section header */}
       <header>
         <h1 className="text-3xl font-semibold tracking-tight">Projects</h1>
-        <p className="mt-2 text-sm text-slate-400 max-w-xl">
+        <p className="mt-2 text-sm text-muted max-w-xl">
           Selected work that shows my journey as a frontend developer.
         </p>
       </header>

@@ -6,7 +6,7 @@ import AboutPreviewSection from "../components/sections/AboutPreviewSection.jsx"
 
 export default function Home() {
   return (
-    <div className="min-h-screen text-slate-100">
+    <div className="min-h-screen text-primary">
       <Navbar />
       <main>
         <HeroSection />

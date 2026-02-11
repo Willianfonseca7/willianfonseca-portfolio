@@ -18,7 +18,7 @@ export default function AboutPreviewSection() {
 
           <div className="grid gap-6 lg:grid-cols-3">
             {content.home.intro.map((sentence) => (
-              <Card key={sentence} className="text-sm text-slate-300/90">
+              <Card key={sentence} className="text-sm text-muted">
                 {sentence}
               </Card>
             ))}

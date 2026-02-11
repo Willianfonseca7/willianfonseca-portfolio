@@ -1,7 +1,7 @@
-export default function Card({ children, className = "" }) {
+export default function Card({ children, className = "", interactive = true }) {
   return (
     <div
-      className={`glass-card relative overflow-hidden rounded-3xl p-6 sm:p-7 ${className}`}
+      className={`glass-card ${interactive ? "card-interactive" : ""} relative overflow-hidden p-6 sm:p-7 ${className}`}
     >
       {children}
     </div>

@@ -1,9 +1,9 @@
 import { test, expect } from "@playwright/test";
 
-test("Home -> Projects shows Kontainer", async ({ page }) => {
+test("Home -> Projects shows ContainerHub", async ({ page }) => {
   await page.goto("/");
   await page.getByRole("link", { name: /projekte/i }).click();
-  await expect(page.getByText("Kontainer")).toBeVisible();
+  await expect(page.getByText("ContainerHub")).toBeVisible();
 });
 
 test("Contact form shows confirmation", async ({ page }) => {

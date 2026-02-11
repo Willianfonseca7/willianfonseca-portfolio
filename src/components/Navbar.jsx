@@ -35,7 +35,7 @@ export default function Navbar() {
   const linkClass = ({ isActive }) =>
     isActive
       ? "text-indigo-300 font-semibold"
-      : "text-slate-300 hover:text-white";
+      : "text-muted hover-text-primary";
 
   return (
     <header className="border-b border-slate-200/20 bg-slate-950/80 dark:border-slate-800 dark:bg-slate-950/80">
@@ -69,7 +69,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={toggleTheme}
-            className="ml-3 inline-flex items-center gap-1 rounded-full border border-slate-600/60 bg-slate-900/80 px-3 py-1 text-[11px] font-medium text-slate-200 hover:border-sky-400 hover:text-sky-100 transition-all"
+            className="ml-3 inline-flex items-center gap-1 rounded-full border border-slate-600/60 bg-slate-900/80 px-3 py-1 text-[11px] font-medium text-primary hover:border-sky-400 hover:text-sky-100 transition-all"
           >
             {theme === "dark" ? "☀️ Light" : "🌙 Dark"}
           </button>

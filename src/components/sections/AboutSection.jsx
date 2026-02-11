@@ -30,9 +30,7 @@ export default function AboutSection() {
 
           <div className="grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-slate-100">
-                {about.valuesTitle}
-              </h3>
+              <h3 className="heading text-lg">{about.valuesTitle}</h3>
               <div className="flex flex-wrap gap-2">
                 {about.values.map((value) => (
                   <Tag key={value} label={value} />
@@ -40,9 +38,7 @@ export default function AboutSection() {
               </div>
             </div>
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-slate-100">
-                {about.languagesTitle}
-              </h3>
+              <h3 className="heading text-lg">{about.languagesTitle}</h3>
               <div className="flex flex-wrap gap-2">
                 {about.languages.map((language) => (
                   <Tag key={language} label={language} />

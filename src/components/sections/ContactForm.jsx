@@ -72,17 +72,15 @@ export default function ContactForm() {
   return (
     <Card className="space-y-6">
       <div className="space-y-2">
-        <h3 className="text-xl font-semibold text-slate-100">
-          {form.title}
-        </h3>
-        <p className="text-sm text-slate-300/90">
+        <h3 className="heading text-xl">{form.title}</h3>
+        <p className="text-sm text-muted">
           {copied ? form.copiedMessage : form.helper}
         </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="space-y-1">
-          <label className="text-sm text-slate-200" htmlFor="name">
+          <label className="text-sm text-primary" htmlFor="name">
             {form.nameLabel}
           </label>
           <input
@@ -102,7 +100,7 @@ export default function ContactForm() {
         </div>
 
         <div className="space-y-1">
-          <label className="text-sm text-slate-200" htmlFor="email">
+          <label className="text-sm text-primary" htmlFor="email">
             {form.emailLabel}
           </label>
           <input
@@ -122,7 +120,7 @@ export default function ContactForm() {
         </div>
 
         <div className="space-y-1">
-          <label className="text-sm text-slate-200" htmlFor="message">
+          <label className="text-sm text-primary" htmlFor="message">
             {form.messageLabel}
           </label>
           <textarea

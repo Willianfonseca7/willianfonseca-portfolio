@@ -4,7 +4,7 @@ import AboutSection from "../components/sections/AboutSection.jsx";
 
 export default function AboutMePage() {
   return (
-    <div className="min-h-screen text-slate-100">
+    <div className="min-h-screen text-primary">
       <Navbar />
       <main>
         <AboutSection />

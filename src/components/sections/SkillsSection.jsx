@@ -21,9 +21,7 @@ export default function SkillsSection() {
           <div className="grid gap-6 lg:grid-cols-4">
             {skills.groups.map((group) => (
               <Card key={group.title} className="space-y-4">
-                <h3 className="text-lg font-semibold text-slate-100">
-                  {group.title}
-                </h3>
+                <h3 className="heading text-lg">{group.title}</h3>
                 <div className="flex flex-wrap gap-2">
                   {group.items.map((item) => (
                     <Tag key={item} label={item} />
@@ -35,7 +33,7 @@ export default function SkillsSection() {
 
           <div className="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
             <Card className="space-y-4">
-              <h3 className="text-lg font-semibold text-slate-100">Konzepte</h3>
+              <h3 className="heading text-lg">Konzepte</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.concepts.map((item) => (
                   <Tag key={item} label={item} />
@@ -43,9 +41,7 @@ export default function SkillsSection() {
               </div>
             </Card>
             <Card className="space-y-4">
-              <h3 className="text-lg font-semibold text-slate-100">
-                Aktuell am Lernen
-              </h3>
+              <h3 className="heading text-lg">Aktuell am Lernen</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.learning.map((item) => (
                   <Tag key={item} label={item} />

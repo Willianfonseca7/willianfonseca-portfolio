@@ -15,11 +15,11 @@ export default function SectionHeader({
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-tight text-slate-50">
+      <h2 className="heading text-3xl sm:text-4xl leading-tight">
         {title}
       </h2>
       {subtitle ? (
-        <p className={`text-sm sm:text-base text-slate-300/90 max-w-2xl ${subtitleClass}`}>
+        <p className={`text-sm sm:text-base text-muted max-w-2xl ${subtitleClass}`}>
           {subtitle}
         </p>
       ) : null}

@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "title": "Pokémon App",
+    "title": "Pokedex-Web",
     "description": "A web app using HTML/CSS/JS and PokéAPI.",
     "techStack": ["HTML", "CSS", "JavaScript"],
-    "demoUrl": "https://seu-link-do-jogo.com",
+    "demoUrl": "https://willianfonseca7.github.io/Pokedex-web/",
     "codeUrl": "https://github.com/Willianfonseca7/Pokemon-App"
   },
   {

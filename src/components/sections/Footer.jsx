@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="py-10">
       <Container>
-        <div className="flex flex-col items-center justify-between gap-4 pt-6 text-xs text-slate-400 sm:flex-row">
+        <div className="flex flex-col items-center justify-between gap-4 pt-6 text-xs text-muted sm:flex-row">
           <span>{content.meta.name}</span>
           <span>{content.meta.location}</span>
         </div>

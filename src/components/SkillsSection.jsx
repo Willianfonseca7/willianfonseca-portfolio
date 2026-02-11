@@ -73,10 +73,10 @@ export default function SkillsSection() {
     >
       {/* Header */}
       <header className="space-y-3 text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-slate-50">
+        <h2 className="text-3xl font-bold tracking-tight text-primary">
           Skills & Tech-Stack
         </h2>
-        <p className="text-sm text-slate-300 max-w-2xl mx-auto">
+        <p className="text-sm text-muted max-w-2xl mx-auto">
           In meiner Umschulung zum Web & WebApp Developer arbeite ich täglich mit
           modernen Frontend-Technologien. Hier ist ein Überblick über die Tools und
           Skills, mit denen ich aktuell arbeite.
@@ -102,20 +102,20 @@ export default function SkillsSection() {
                   <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-800/70 text-xl">
                     {group.icon}
                   </span>
-                  <h3 className="text-lg font-semibold text-slate-50">
+                  <h3 className="text-lg font-semibold text-primary">
                     {group.title}
                   </h3>
                 </div>
               </div>
 
               {/* Comentário sobre o que você já fez com esse grupo */}
-              <p className="text-xs text-slate-400">{group.highlight}</p>
+              <p className="text-xs text-muted">{group.highlight}</p>
 
               <div className="flex flex-wrap gap-2">
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="inline-flex items-center rounded-full border border-slate-700 bg-slate-800/70 px-3 py-1 text-xs text-slate-100 transition-all duration-200 hover:border-sky-400 hover:text-sky-100 hover:-translate-y-0.5"
+                    className="inline-flex items-center rounded-full border border-slate-700 bg-slate-800/70 px-3 py-1 text-xs text-primary transition-all duration-200 hover:border-sky-400 hover:text-sky-100 hover:-translate-y-0.5"
                   >
                     <span className="mr-1 h-1.5 w-1.5 rounded-full bg-sky-400 group-hover:bg-sky-300" />
                     {skill}

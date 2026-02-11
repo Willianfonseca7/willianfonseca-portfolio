@@ -25,9 +25,7 @@ export default function ContactSection() {
 
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
             <Card className="space-y-5">
-              <h3 className="text-lg font-semibold text-slate-100">
-                {content.contact.linksTitle}
-              </h3>
+              <h3 className="heading text-lg">{content.contact.linksTitle}</h3>
               <div className="space-y-3">
                 {content.contact.links.map((link) => (
                   <a
@@ -41,7 +39,7 @@ export default function ContactSection() {
                     <span className="text-lg">
                       {iconMap[link.icon] || "🔗"}
                     </span>
-                    <span className="text-sm font-medium text-slate-100">
+                    <span className="text-sm font-medium text-primary">
                       {link.label}
                     </span>
                   </a>

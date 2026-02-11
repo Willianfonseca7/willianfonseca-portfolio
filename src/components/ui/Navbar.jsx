@@ -7,6 +7,13 @@ export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
   const { language, setLanguage, content } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
+  const navItems = [
+    { to: "/", label: content.nav.home },
+    { to: "/about", label: content.nav.about },
+    { to: "/skills", label: content.nav.skills },
+    { to: "/projekte", label: content.nav.projects },
+    { to: "/kontakt", label: content.nav.contact },
+  ];
 
   const linkClass = ({ isActive }) =>
     isActive
@@ -23,7 +30,7 @@ export default function Navbar() {
         </div>
 
         <nav className="nav-links">
-          {content.nav.map((item) => (
+          {navItems.map((item) => (
             <NavLink
               key={item.to}
               to={item.to}
@@ -44,15 +51,24 @@ export default function Navbar() {
             aria-controls="mobile-menu"
             onClick={() => setIsOpen((prev) => !prev)}
           >
-            Menü
+            {content.nav.menu}
           </button>
-          <button
-            type="button"
-            onClick={() => setLanguage(language === "de" ? "pt" : "de")}
-            className="chip-button"
-          >
-            {language === "de" ? "DE" : "PT"}
-          </button>
+          <div className="lang-toggle">
+            {[
+              { key: "de", label: "DE" },
+              { key: "pt", label: "PT" },
+              { key: "en", label: "EN" },
+            ].map((item) => (
+              <button
+                key={item.key}
+                type="button"
+                onClick={() => setLanguage(item.key)}
+                className={`lang-button ${language === item.key ? "active" : ""}`}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
           <button type="button" onClick={toggleTheme} className="chip-button">
             {theme === "dark" ? "Dark" : "Light"}
           </button>
@@ -64,7 +80,7 @@ export default function Navbar() {
         className={`mobile-panel ${isOpen ? "open" : ""}`}
       >
         <nav className="mobile-links">
-          {content.nav.map((item) => (
+          {navItems.map((item) => (
             <NavLink
               key={item.to}
               to={item.to}

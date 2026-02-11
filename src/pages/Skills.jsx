@@ -4,7 +4,7 @@ import SkillsSection from "../components/sections/SkillsSection.jsx";
 
 export default function Skills() {
   return (
-    <div className="min-h-screen text-slate-100">
+    <div className="min-h-screen text-primary">
       <Navbar />
       <main>
         <SkillsSection />

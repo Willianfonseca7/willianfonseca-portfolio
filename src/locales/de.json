@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "name": "Willian Santos Fonseca",
+    "role": "Junior Frontend Developer (in Umschulung)",
+    "location": "Düsseldorf (Bilk)",
+    "tagline": "Frontend · React · Tailwind · UX"
+  },
+  "nav": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "skills": "Skills",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "menu": "Menü"
+  },
+  "hero": {
+    "title": "Junior Frontend Developer (in Umschulung)",
+    "subtitle": "React / Tailwind / JavaScript",
+    "description": "Quereinsteiger mit Fokus auf moderne UI, wiederverwendbare Komponenten und saubere API-Integration. Ich entwickle klare, responsive Interfaces und lerne kontinuierlich dazu.",
+    "ctas": {
+      "primary": { "label": "Projekte ansehen", "href": "/projekte" },
+      "secondary": { "label": "Kontakt", "href": "/kontakt" }
+    },
+    "highlights": [
+      {
+        "title": "React Components",
+        "description": "Strukturierte UI-Bausteine mit Props, Hooks und klaren Zuständigkeiten."
+      },
+      {
+        "title": "REST APIs",
+        "description": "Fetch, Async/Await und Error-Handling für stabile Datenflüsse."
+      },
+      {
+        "title": "Testing Basics",
+        "description": "Unit- und E2E-Tests für verlässliche Features."
+      }
+    ]
+  },
+  "home": {
+    "aboutPreviewTitle": "Über mich in 3 Sätzen",
+    "aboutPreviewSubtitle": "Kurz, klar und direkt: Wer ich bin und wie ich arbeite.",
+    "projectsPreviewSubtitle": "Ein kurzer Überblick über meine aktuellsten Arbeiten und Lernprojekte.",
+    "intro": [
+      "Ich bin Willian, Quereinsteiger und aktuell in der Umschulung zum Web & WebApp Developer am Syntax Institut.",
+      "Mein Fokus liegt auf Frontend-Entwicklung mit React, klarer UI-Struktur und sauberer UX.",
+      "Projekte wie ContainerHub, Pokémon WebApp und Toytopia zeigen meinen Weg und meine Lernkurve."
+    ]
+  },
+  "about": {
+    "eyebrow": "Profil",
+    "title": "Über mich",
+    "description": "Ich bin Quereinsteiger und bringe eine starke Motivation für Frontend-Entwicklung und UX mit. In der Umschulung zum Web & WebApp Developer am Syntax Institut arbeite ich an modernen React-Projekten mit klarer Architektur, sauberem Styling und verständlichen UI-Flows. Projekte wie ContainerHub (React/Tailwind + Strapi-API), die Pokémon WebApp und Toytopia helfen mir, API-Integration, State-Management und UI-Systeme praktisch umzusetzen.",
+    "valuesTitle": "Was mir wichtig ist",
+    "languagesTitle": "Sprachen",
+    "workStyle": [
+      {
+        "title": "Strukturiert",
+        "description": "Ich plane Komponenten vorab und halte Zuständigkeiten klar, damit die UI wartbar bleibt."
+      },
+      {
+        "title": "Kooperativ",
+        "description": "Ich arbeite gerne mit Git-Branches und Pull Requests und halte Kommunikation transparent."
+      },
+      {
+        "title": "Nutzerzentriert",
+        "description": "Ich achte auf klare Layouts, responsive Verhalten und verständliche Interaktionen."
+      }
+    ],
+    "values": ["Klarheit", "Zuverlässigkeit", "Lernbereitschaft", "Teamwork", "Sauberer Code"],
+    "languages": ["Portugiesisch", "Deutsch", "Englisch (A2)"]
+  },
+  "skills": {
+    "title": "Skills & Tech-Stack",
+    "subtitle": "Ein realistischer Überblick über meinen aktuellen Stack und die Konzepte, die ich täglich nutze.",
+    "groups": [
+      {
+        "title": "Frontend",
+        "items": ["HTML5", "CSS3", "JavaScript (ES6+)", "React", "React Router", "Vite", "Tailwind CSS"]
+      },
+      {
+        "title": "Tools",
+        "items": ["Git & GitHub (Branches/PR)", "npm/pnpm", "Postman", "VS Code"]
+      },
+      {
+        "title": "Design/UX",
+        "items": ["Figma", "Design System Basics", "Responsive Layouts", "Typografie & Kontrast"]
+      },
+      {
+        "title": "Testing/Quality",
+        "items": ["Vitest", "React Testing Library", "Playwright"]
+      }
+    ],
+    "concepts": [
+      "Komponentisierung",
+      "Props & State",
+      "Hooks",
+      "Bedingtes Rendering",
+      "Listen & Keys",
+      "Formulare",
+      "Fetch/REST",
+      "Async/Await",
+      "Error Handling",
+      "Responsivität",
+      "A11y Basics",
+      "Performance Basics (React.memo)"
+    ],
+    "learning": ["Advanced React Patterns", "Testing vertiefen", "State Management", "Design Tokens"]
+  },
+  "projects": {
+    "title": "Projekte",
+    "featuredTitle": "Ausgewählte Projekte",
+    "subtitle": "Kompakte Beschreibungen mit Fokus auf Technologie, Verantwortung und Lernziele.",
+    "list": [
+      {
+        "id": "containerhub",
+        "title": "ContainerHub",
+        "description": "Plattform für Containervermietung mit React, Tailwind und Strapi-API (draft/active).",
+        "stack": ["React", "Vite", "Tailwind", "Strapi"],
+        "highlights": ["API-Integration über /api/containers", "CRUD-Flow mit Statuslogik (draft/active)"],
+        "demoUrl": "https://kontainer-flame.vercel.app/",
+        "codeUrl": "https://github.com/Willianfonseca7/ContainerHub",
+        "featured": true
+      },
+      {
+        "id": "pokedex-web",
+        "title": "Pokedex-Web",
+        "description": "API-basierte App mit Fokus auf UI-Komponenten, State und responsive Darstellung.",
+        "stack": ["React", "API", "UI Components"],
+        "highlights": ["Datenabfragen per Fetch", "Saubere Component-Struktur"],
+        "demoUrl": "https://willianfonseca7.github.io/Pokedex-web/",
+        "codeUrl": "https://github.com/Willianfonseca7/Pokemon-App",
+        "featured": true
+      },
+      {
+        "id": "toytopia",
+        "title": "Toytopia",
+        "description": "E-Commerce UI für Spielzeug mit Fokus auf Layout, Komponenten und UX.",
+        "stack": ["React", "UI/UX", "State"],
+        "highlights": ["Produktkarten & Filter UI", "Zustandsverwaltung für Warenkorb"],
+        "demoUrl": null,
+        "codeUrl": null,
+        "featured": true
+      }
+    ]
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Du hast Fragen oder möchtest mit mir zusammenarbeiten? Schreib mir gerne eine Nachricht oder nutze die Links.",
+    "linksTitle": "Links & Profile",
+    "links": [
+      { "label": "E-Mail", "href": "mailto:willianfonseca7@gmail.com", "icon": "mail" },
+      { "label": "GitHub", "href": "https://github.com/Willianfonseca7", "icon": "github" },
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/willian-fonseca-b146b7240/", "icon": "linkedin" }
+    ],
+    "form": {
+      "title": "Schreib mir eine Nachricht",
+      "nameLabel": "Name",
+      "emailLabel": "E-Mail",
+      "messageLabel": "Nachricht",
+      "submitLabel": "Nachricht senden",
+      "successMessage": "Danke! Deine Nachricht wurde vorbereitet.",
+      "minMessageLength": 20,
+      "helper": "Ich antworte so schnell wie möglich.",
+      "copiedMessage": "Nachricht wurde in die Zwischenablage kopiert.",
+      "nameError": "Bitte gib mindestens 2 Zeichen ein.",
+      "emailError": "Bitte gib eine gültige E-Mail-Adresse ein.",
+      "messageError": "Bitte schreibe mindestens 20 Zeichen.",
+      "mailClientLabel": "Mail-Client öffnen"
+    }
+  }
+}

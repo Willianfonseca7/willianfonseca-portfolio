@@ -45,11 +45,11 @@ export default function About() {
             </div>
 
             <div className="space-y-2">
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-50">
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-primary">
                 Über mich
                 </h2>
 
-                <p className="text-sm md:text-base text-slate-300 max-w-2xl mx-auto">
+                <p className="text-sm md:text-base text-muted max-w-2xl mx-auto">
                 Ich bin Willian Fonseca – Quereinsteiger in die IT, aktuell in einer
                 Umschulung zum Web &amp; WebApp Developer am Syntax Institut. Ich
                 kombiniere einen starken Sinn für Logik mit einem Auge für Design und ein
@@ -70,10 +70,10 @@ export default function About() {
             </div>
 
             <div className="relative space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
                 Wer ich bin
               </p>
-              <p className="text-sm md:text-base text-slate-200 leading-relaxed">
+              <p className="text-sm md:text-base text-primary leading-relaxed">
                 Ich komme ursprünglich nicht aus der IT – und genau das ist meine
                 Stärke. Ich weiß, wie es ist, bei null anzufangen, und habe mir 
                 in kurzer Zeit einen soliden Tech-Stack aufgebaut:{" "}
@@ -82,7 +82,7 @@ export default function About() {
                 </span>{" "}
                 und moderne Projektstrukturen mit Git &amp; GitHub.
               </p>
-              <p className="text-sm md:text-base text-slate-300 leading-relaxed">
+              <p className="text-sm md:text-base text-muted leading-relaxed">
                 Ich arbeite strukturiert, mag klare Kommunikation und fühle mich
                 am wohlsten, wenn ich gemeinsam mit anderen etwas baue, das
                 Menschen wirklich benutzen. Für mich ist Frontend nicht nur Code,
@@ -106,14 +106,14 @@ export default function About() {
 
           {/* Valores */}
           <div className="rounded-2xl border border-slate-800 bg-slate-950/70 p-5 shadow-xl space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
               Was mir in Projekten wichtig ist
             </p>
             <div className="flex flex-wrap gap-2">
               {values.map((item) => (
                 <span
                   key={item}
-                  className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-3 py-1 text-xs text-slate-200 border border-slate-700 hover:border-sky-400 hover:text-sky-100 transition-all"
+                  className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-3 py-1 text-xs text-primary border border-slate-700 hover:border-sky-400 hover:text-sky-100 transition-all"
                 >
                   <span className="h-1.5 w-1.5 rounded-full bg-sky-400" />
                   {item}
@@ -122,9 +122,9 @@ export default function About() {
             </div>
 
             {/* Sprachen / Standort */}
-            <div className="mt-3 grid gap-4 text-sm text-slate-200 md:grid-cols-2">
+            <div className="mt-3 grid gap-4 text-sm text-primary md:grid-cols-2">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary0">
                   Sprachen
                 </p>
                 <p className="mt-1">
@@ -132,7 +132,7 @@ export default function About() {
                 </p>
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary0">
                   Standort
                 </p>
                 <p className="mt-1">Düsseldorf, Deutschland</p>
@@ -143,7 +143,7 @@ export default function About() {
 
         {/* Coluna direita – cards de “Wie ich arbeite” */}
         <div className="space-y-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
             Wie ich arbeite
           </p>
 
@@ -166,10 +166,10 @@ export default function About() {
                     {q.emoji}
                   </div>
                   <div className="space-y-1">
-                    <h4 className="text-sm font-semibold text-slate-50">
+                    <h4 className="text-sm font-semibold text-primary">
                       {q.title}
                     </h4>
-                    <p className="text-xs text-slate-300 leading-relaxed">
+                    <p className="text-xs text-muted leading-relaxed">
                       {q.text}
                     </p>
                   </div>

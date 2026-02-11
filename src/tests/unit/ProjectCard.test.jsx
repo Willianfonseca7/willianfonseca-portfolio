@@ -3,7 +3,7 @@ import ProjectCard from "../../components/ui/ProjectCard.jsx";
 
 const project = {
   id: "kontainer",
-  title: "Kontainer",
+  title: "ContainerHub",
   description: "Test",
   stack: ["React", "Tailwind"],
   highlights: ["API"],
@@ -15,7 +15,7 @@ describe("ProjectCard", () => {
   it("renders title and tags", () => {
     render(<ProjectCard project={project} />);
 
-    expect(screen.getByText("Kontainer")).toBeInTheDocument();
+    expect(screen.getByText("ContainerHub")).toBeInTheDocument();
     expect(screen.getByText("React")).toBeInTheDocument();
     expect(screen.getByText("Tailwind")).toBeInTheDocument();
   });

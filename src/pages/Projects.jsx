@@ -4,7 +4,7 @@ import ProjectsSection from "../components/sections/ProjectsSection.jsx";
 
 export default function Projekte() {
   return (
-    <div className="min-h-screen text-slate-100">
+    <div className="min-h-screen text-primary">
       <Navbar />
       <main>
         <ProjectsSection />

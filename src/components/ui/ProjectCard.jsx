@@ -10,8 +10,8 @@ function ProjectCard({ project }) {
   return (
     <Card className="flex h-full flex-col gap-5">
       <div className="space-y-3">
-        <h3 className="text-xl font-semibold text-slate-50">{project.title}</h3>
-        <p className="text-sm text-slate-300/90">{project.description}</p>
+        <h3 className="heading text-xl">{project.title}</h3>
+        <p className="text-sm text-muted">{project.description}</p>
       </div>
 
       <div className="flex flex-wrap gap-2">
@@ -20,7 +20,7 @@ function ProjectCard({ project }) {
         ))}
       </div>
 
-      <ul className="space-y-2 text-sm text-slate-300/90">
+      <ul className="space-y-2 text-sm text-muted">
         {project.highlights.map((item) => (
           <li key={item} className="flex items-start gap-2">
             <span className="mt-1 h-1.5 w-1.5 rounded-full bg-sky-300/80" />
