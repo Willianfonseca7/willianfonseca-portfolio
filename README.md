@@ -1,16 +1,126 @@
-# React + Vite
+# Willian Fonseca – Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Willkommen! Dieses Repository enthält mein persönliches Portfolio als Frontend‑Entwickler. Die Seite zeigt ausgewählte Projekte, Skills und Kontaktmöglichkeiten und ist für Recruiter und Unternehmen optimiert.
 
-Currently, two official plugins are available:
+**Live‑Website (GitHub Pages):**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+https://willianfonseca7.github.io/willianfonseca-portfolio/
+```
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Inhalte
 
-## Expanding the ESLint configuration
+- [Über das Projekt](#über-das-projekt)
+- [Features](#features)
+- [Tech‑Stack](#tech-stack)
+- [Projektstruktur](#projektstruktur)
+- [Lokal ausführen](#lokal-ausführen)
+- [Build & Deployment](#build--deployment)
+- [Tests](#tests)
+- [Kontakt](#kontakt)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Über das Projekt
+
+Das Portfolio präsentiert meine Arbeit als Frontend‑Entwickler. Es ist responsiv, mehrsprachig und fokussiert auf klare Informationsarchitektur, saubere UI‑Komponenten und gute Performance. Inhalte sind modular aufgebaut, damit neue Projekte und Texte schnell ergänzt werden können.
+
+---
+
+## Features
+
+- Moderne, responsive UI
+- Mehrsprachigkeit (DE/EN/PT)
+- Projekte‑Sektion mit strukturierten Daten
+- Saubere Komponenten‑Architektur
+- Client‑seitiges Routing
+
+---
+
+## Tech‑Stack
+
+- **Framework:** React (Vite)
+- **Routing:** React Router
+- **Styling:** CSS + Tailwind (PostCSS)
+- **Tests:** Vitest + Playwright
+- **Deployment:** GitHub Pages (via GitHub Actions)
+
+---
+
+## Projektstruktur
+
+```
+willianfonseca-portfolio/
+├─ src/
+│  ├─ components/
+│  ├─ pages/
+│  ├─ data/
+│  ├─ hooks/
+│  ├─ locales/
+│  └─ main.jsx
+├─ public/
+├─ index.html
+├─ vite.config.js
+└─ package.json
+```
+
+---
+
+## Lokal ausführen
+
+```bash
+npm install
+npm run dev
+```
+
+Öffne dann:
+
+```
+http://localhost:5173
+```
+
+---
+
+## Build & Deployment
+
+**Build lokal:**
+
+```bash
+npm run build
+```
+
+**Deployment (GitHub Pages):**
+
+```bash
+npm run deploy
+```
+
+Der Deploy wird zusätzlich automatisch per GitHub Actions ausgeführt, sobald auf `main` gepusht wird.
+
+---
+
+## Tests
+
+**Unit Tests:**
+
+```bash
+npm run test
+```
+
+**E2E Tests:**
+
+```bash
+npm run test:e2e
+```
+
+---
+
+## Kontakt
+
+Wenn Sie Fragen haben oder ein Interview vereinbaren möchten, melden Sie sich gern.
+
+---
+
+© 2026 Willian Fonseca
