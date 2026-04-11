@@ -26,7 +26,7 @@ export default function HeroSection() {
               {content.meta.tagline}
             </p>
             <div className="space-y-3">
-              <h1 className="hero-title heading text-4xl sm:text-5xl lg:text-6xl">
+              <h1 className="hero-title heading text-3xl sm:text-4xl lg:text-5xl">
                 {hero.title}
               </h1>
               <p className="text-base sm:text-lg text-sky-200/90">

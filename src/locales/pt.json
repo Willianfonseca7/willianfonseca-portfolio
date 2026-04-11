@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "Willian Santos Fonseca",
-    "role": "Junior Frontend Developer (em formação)",
+    "role": "Junior Web Developer com prova IHK aprovada",
     "location": "Düsseldorf (Bilk)",
     "tagline": "Frontend · React · Tailwind · UX"
   },
@@ -14,25 +14,25 @@
     "menu": "Menu"
   },
   "hero": {
-    "title": "Junior Frontend Developer (em formação)",
-    "subtitle": "React / Tailwind / JavaScript",
-    "description": "Quereinsteiger com foco em UI moderna, componentes reutilizáveis e integração limpa de APIs. Desenvolvimento interfaces claras, responsivas e sigo aprendendo continuamente.",
+    "title": "Desenvolvedor com prova IHK aprovada",
+    "subtitle": "React / Next.js / Tailwind / JavaScript / Backend Basics",
+    "description": "Profissional com formação prática em Web & WebApp Development, módulos concluídos, Kurszertifikat e prova Junior Web Developer IHK já aprovada. Meu foco é construir interfaces modernas, responsivas e bem estruturadas, com integração limpa de APIs e base aplicada de backend.",
     "ctas": {
       "primary": { "label": "Ver projetos", "href": "/projekte" },
       "secondary": { "label": "Contato", "href": "/kontakt" }
     },
     "highlights": [
       {
-        "title": "React Components",
-        "description": "UI estruturada com props, hooks e responsabilidades claras."
+        "title": "IHK Aprovado",
+        "description": "Prova Junior Web Developer já concluída com sucesso."
       },
       {
-        "title": "REST APIs",
-        "description": "Fetch, Async/Await e tratamento de erros para fluxos estáveis."
+        "title": "Formação Concluída",
+        "description": "Kurszertifikat e Modulbescheinigung já integrados ao meu portfólio."
       },
       {
-        "title": "Testing Basics",
-        "description": "Tests unitários e E2E para manter confiança no código."
+        "title": "Frontend com Backend Basis",
+        "description": "React, Tailwind, APIs, autenticação e fluxos com banco de dados."
       }
     ]
   },
@@ -41,15 +41,15 @@
     "aboutPreviewSubtitle": "Curto e direto: quem sou e como trabalho.",
     "projectsPreviewSubtitle": "Um resumo dos projetos mais recentes e estudos atuais.",
     "intro": [
-      "Sou Willian, Quereinsteiger e estou na Umschulung para Web & WebApp Developer no Syntax Institut.",
-      "Meu foco é Frontend com React, UI clara e uma UX consistente.",
-      "Projetos como ContainerHub, Heilpratika e Pokémon WebApp mostram minha evolução."
+      "Sou Willian, desenvolvedor com formação prática em Web & WebApp Development no Syntax Institut.",
+      "Concluí módulos importantes, Kurszertifikat e já fui aprovado na prova Junior Web Developer IHK.",
+      "Meu foco está em Frontend com React e Next.js, com base aplicada de backend em projetos reais."
     ]
   },
   "about": {
     "eyebrow": "Perfil",
     "title": "Sobre mim",
-    "description": "Sou Quereinsteiger e trago uma forte motivação para Frontend e UX. Na Umschulung para Web & WebApp Developer no Syntax Institut, trabalho com projetos React modernos, arquitetura clara, styling limpo e fluxos de UI consistentes. Projetos como ContainerHub (React/Tailwind + Strapi API), Heilpratika e Pokémon WebApp me ajudam a praticar integração de APIs, state e sistemas de UI.",
+    "description": "Sou desenvolvedor com forte foco em Frontend e UX. Na formação em Web & WebApp Developer no Syntax Institut concluí módulos importantes, Kurszertifikat e já fui aprovado na prova Junior Web Developer IHK. Trabalho com projetos React modernos, arquitetura clara, styling limpo e também com integrações de backend. Projetos como ContainerHub, Heilpraktiker-Bleialf e Pokémon WebApp mostram minha evolução prática em UI, APIs, autenticação e fluxos de dados.",
     "valuesTitle": "O que valorizo",
     "languagesTitle": "Idiomas",
     "workStyle": [
@@ -77,7 +77,10 @@
     "statusTitle": "Status atual",
     "statusSummary": "Certificado de Frontend concluído. Já passei também na prova IHK da área Fullstack e agora estou aguardando a emissão oficial do certificado.",
     "statusTags": ["Certificado Frontend Developer", "Prova IHK Fullstack aprovada", "Certificado pendente"],
-    "certificationsTitle": "Formação & certificados",
+    "certificationsTitle": "Formação, CV & certificados",
+    "certificationsHint": "Clique em um documento para abrir a imagem em tamanho original.",
+    "openCertificateLabel": "Abrir documento",
+    "closeCertificateLabel": "Fechar",
     "groups": [
       {
         "title": "Frontend",
@@ -113,24 +116,34 @@
     "learning": ["Aprofundando Next.js", "Fluxos de backend", "Testing aprofundado", "State Management", "Design Tokens"],
     "certifications": [
       {
-        "title": "Certificado Frontend Developer 2026",
-        "status": "Concluído",
-        "description": "Comprovação da formação em Frontend com foco em UI moderna, React, componentização e styling limpo."
+        "title": "Certificado Junior Web Developer IHK",
+        "status": "Aprovado",
+        "description": "A prova já foi concluída com sucesso. O certificado oficial da IHK ainda está em processo de emissão.",
+        "imageUrl": "/cert-ihk-fullstack.png"
+      },
+      {
+        "title": "CV / Lebenslauf 2026",
+        "status": "Atualizado",
+        "description": "Currículo profissional com resumo do meu perfil, stack atual, projetos, formação e experiência direcionada para vagas de Frontend Developer.",
+        "imageUrl": "/cert-frontend-2026.png"
       },
       {
         "title": "Certificado do curso Web & WebApp Developer",
         "status": "Concluído",
-        "description": "Formação com prática em frontend, desenvolvimento web, projetos reais e preparação para o mercado de trabalho."
+        "description": "Formação com prática em frontend, desenvolvimento web, projetos reais e preparação para o mercado de trabalho.",
+        "imageUrl": "/cert-web-webapp-course.png"
       },
       {
-        "title": "Certificados dos módulos",
+        "title": "Modulbescheinigung Modul 1",
         "status": "Concluído",
-        "description": "Conteúdos cobertos incluem fundamentos, introdução a software e web development, especialização e preparação para o mercado."
+        "description": "Documento do módulo inicial da formação, registrando a base da qualificação e a evolução dentro do curso.",
+        "imageUrl": "/cert-module-1.png"
       },
       {
-        "title": "Prova IHK Fullstack",
-        "status": "Aprovado",
-        "description": "A prova já foi concluída com sucesso. O certificado oficial da IHK ainda está em processo de emissão."
+        "title": "Modulbescheinigung M4",
+        "status": "Concluído",
+        "description": "Comprovante do módulo de especialização e preparação para o mercado de trabalho dentro da formação.",
+        "imageUrl": "/cert-module-4.png"
       }
     ]
   },

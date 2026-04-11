@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "Willian Santos Fonseca",
-    "role": "Junior Frontend Developer (in Umschulung)",
+    "role": "Junior Web Developer mit bestandener IHK-Prüfung",
     "location": "Düsseldorf (Bilk)",
     "tagline": "Frontend · React · Tailwind · UX"
   },
@@ -14,25 +14,25 @@
     "menu": "Menü"
   },
   "hero": {
-    "title": "Junior Frontend Developer (in Umschulung)",
-    "subtitle": "React / Tailwind / JavaScript",
-    "description": "Quereinsteiger mit Fokus auf moderne UI, wiederverwendbare Komponenten und saubere API-Integration. Ich entwickle klare, responsive Interfaces und lerne kontinuierlich dazu.",
+    "title": "Junior Web Developer mit IHK-Zertifizierung",
+    "subtitle": "React / Next.js / Tailwind / JavaScript / Backend Basics",
+    "description": "Web Developer mit Ausbildung im Bereich Web & WebApp Development, abgeschlossenen Modulen, Kurszertifikat und bereits bestandener Junior Web Developer IHK Prüfung. Mein Fokus liegt auf modernen, responsiven Interfaces mit sauberer API-Integration und angewandter Backend-Basis.",
     "ctas": {
       "primary": { "label": "Projekte ansehen", "href": "/projekte" },
       "secondary": { "label": "Kontakt", "href": "/kontakt" }
     },
     "highlights": [
       {
-        "title": "React Components",
-        "description": "Strukturierte UI-Bausteine mit Props, Hooks und klaren Zuständigkeiten."
+        "title": "IHK Bestanden",
+        "description": "Junior Web Developer Prüfung bereits erfolgreich abgeschlossen."
       },
       {
-        "title": "REST APIs",
-        "description": "Fetch, Async/Await und Error-Handling für stabile Datenflüsse."
+        "title": "Ausbildung Abgeschlossen",
+        "description": "Kurszertifikat und Modulbescheinigungen bereits im Portfolio dokumentiert."
       },
       {
-        "title": "Testing Basics",
-        "description": "Unit- und E2E-Tests für verlässliche Features."
+        "title": "Frontend mit Backend-Basis",
+        "description": "React, Tailwind, APIs, Authentifizierung und datenbasierte Flows."
       }
     ]
   },
@@ -41,15 +41,15 @@
     "aboutPreviewSubtitle": "Kurz, klar und direkt: Wer ich bin und wie ich arbeite.",
     "projectsPreviewSubtitle": "Ein kurzer Überblick über meine aktuellsten Arbeiten und Lernprojekte.",
     "intro": [
-      "Ich bin Willian, Quereinsteiger und aktuell in der Umschulung zum Web & WebApp Developer am Syntax Institut.",
-      "Mein Fokus liegt auf Frontend-Entwicklung mit React, klarer UI-Struktur und sauberer UX.",
-      "Projekte wie ContainerHub, Heilpratika und die Pokémon WebApp zeigen meinen Weg und meine Lernkurve."
+      "Ich bin Willian, Web Developer mit praxisnaher Ausbildung im Bereich Web & WebApp Development am Syntax Institut.",
+      "Ich habe wichtige Module, das Kurszertifikat und die Junior Web Developer IHK Prüfung bereits abgeschlossen.",
+      "Mein Fokus liegt auf Frontend mit React und Next.js, ergänzt durch angewandte Backend-Erfahrung aus realen Projekten."
     ]
   },
   "about": {
     "eyebrow": "Profil",
     "title": "Über mich",
-    "description": "Ich bin Quereinsteiger und bringe eine starke Motivation für Frontend-Entwicklung und UX mit. In der Umschulung zum Web & WebApp Developer am Syntax Institut arbeite ich an modernen React-Projekten mit klarer Architektur, sauberem Styling und verständlichen UI-Flows. Projekte wie ContainerHub (React/Tailwind + Strapi-API), Heilpratika und die Pokémon WebApp helfen mir, API-Integration, State-Management und UI-Systeme praktisch umzusetzen.",
+    "description": "Ich bin Web Developer mit starkem Fokus auf Frontend-Entwicklung und UX. In der Ausbildung zum Web & WebApp Developer am Syntax Institut habe ich wichtige Module, das Kurszertifikat und bereits die Junior Web Developer IHK Prüfung abgeschlossen. Ich arbeite an modernen React-Projekten mit klarer Architektur, sauberem Styling und verständlichen UI-Flows und verbinde das mit Backend-Integration. Projekte wie ContainerHub, Heilpraktiker-Bleialf und die Pokémon WebApp helfen mir, UI, APIs, Authentifizierung und Datenflüsse praktisch umzusetzen.",
     "valuesTitle": "Was mir wichtig ist",
     "languagesTitle": "Sprachen",
     "workStyle": [
@@ -77,7 +77,10 @@
     "statusTitle": "Aktueller Stand",
     "statusSummary": "Frontend-Zertifikat abgeschlossen. Die IHK-Prüfung im Fullstack-Bereich habe ich bereits bestanden, das offizielle Zertifikat befindet sich noch in Ausstellung.",
     "statusTags": ["Frontend Developer Zertifikat", "IHK Fullstack Prüfung bestanden", "Zertifikat ausstehend"],
-    "certificationsTitle": "Weiterbildung & Zertifikate",
+    "certificationsTitle": "Weiterbildung, Lebenslauf & Zertifikate",
+    "certificationsHint": "Klicke auf ein Dokument, um die Vorschau in Originalgröße zu öffnen.",
+    "openCertificateLabel": "Dokument öffnen",
+    "closeCertificateLabel": "Schließen",
     "groups": [
       {
         "title": "Frontend",
@@ -113,24 +116,34 @@
     "learning": ["Next.js vertiefen", "Backend-Flows", "Testing vertiefen", "State Management", "Design Tokens"],
     "certifications": [
       {
-        "title": "Frontend Developer Zertifikat 2026",
-        "status": "Abgeschlossen",
-        "description": "Nachweis über die abgeschlossene Frontend-Weiterbildung mit Fokus auf moderne UI-Entwicklung, React, Komponentenstruktur und sauberes Styling."
+        "title": "Junior Web Developer IHK Zertifikat",
+        "status": "Bestanden",
+        "description": "Die Prüfung wurde bereits erfolgreich bestanden. Das offizielle IHK-Zertifikat ist aktuell noch nicht eingetroffen.",
+        "imageUrl": "/cert-ihk-fullstack.png"
+      },
+      {
+        "title": "Lebenslauf / CV 2026",
+        "status": "Aktualisiert",
+        "description": "Beruflicher Lebenslauf mit kompaktem Überblick über mein Profil, meinen aktuellen Stack, Projekte, Weiterbildung und meine Ausrichtung auf Frontend-Developer-Positionen.",
+        "imageUrl": "/cert-frontend-2026.png"
       },
       {
         "title": "Kurszertifikat Web & WebApp Developer",
         "status": "Abgeschlossen",
-        "description": "Zusammenfassung der Ausbildung am Syntax Institut mit Praxis in Frontend, Projektarbeit, Webentwicklung und arbeitsmarktorientierter Vorbereitung."
+        "description": "Zusammenfassung der Ausbildung am Syntax Institut mit Praxis in Frontend, Projektarbeit, Webentwicklung und arbeitsmarktorientierter Vorbereitung.",
+        "imageUrl": "/cert-web-webapp-course.png"
       },
       {
-        "title": "Modulbescheinigungen",
+        "title": "Modulbescheinigung Modul 1",
         "status": "Abgeschlossen",
-        "description": "Abgedeckte Lerninhalte umfassen Grundlagen, Einführung in Software- und Webentwicklung sowie Spezialisierung und Arbeitsmarktvorbereitung."
+        "description": "Dokument zum ersten Ausbildungsmodul, das die Grundlage der Qualifizierung und den Einstieg in die Weiterbildung festhält.",
+        "imageUrl": "/cert-module-1.png"
       },
       {
-        "title": "IHK Fullstack Prüfung",
-        "status": "Bestanden",
-        "description": "Die Prüfung wurde bereits erfolgreich bestanden. Das offizielle IHK-Zertifikat ist aktuell noch nicht eingetroffen."
+        "title": "Modulbescheinigung M4",
+        "status": "Abgeschlossen",
+        "description": "Nachweis über das Modul Spezialisierung und Arbeitsmarktvorbereitung innerhalb der Weiterbildung.",
+        "imageUrl": "/cert-module-4.png"
       }
     ]
   },
