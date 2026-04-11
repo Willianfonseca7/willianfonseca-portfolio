@@ -43,13 +43,13 @@
     "intro": [
       "I'm Willian, a career changer currently retraining as a Web & WebApp Developer at Syntax Institut.",
       "My focus is modern frontend development with React, clear UI structure, and solid UX.",
-      "Projects like ContainerHub, Pokémon WebApp, and Toytopia show my progress and learning curve."
+      "Projects like ContainerHub, Heilpratika, and the Pokémon WebApp show my progress and learning curve."
     ]
   },
   "about": {
     "eyebrow": "Profile",
     "title": "About me",
-    "description": "I'm a career changer with strong motivation for frontend development and UX. During my retraining as a Web & WebApp Developer at Syntax Institut, I work on modern React projects with clear architecture, clean styling, and understandable UI flows. Projects like ContainerHub (React/Tailwind + Strapi API), the Pokémon WebApp, and Toytopia help me practice API integration, state management, and UI systems.",
+    "description": "I'm a career changer with strong motivation for frontend development and UX. During my retraining as a Web & WebApp Developer at Syntax Institut, I work on modern React projects with clear architecture, clean styling, and understandable UI flows. Projects like ContainerHub (React/Tailwind + Strapi API), Heilpratika, and the Pokémon WebApp help me practice API integration, state management, and UI systems.",
     "valuesTitle": "What matters to me",
     "languagesTitle": "Languages",
     "workStyle": [
@@ -115,8 +115,9 @@
         "id": "containerhub",
         "title": "ContainerHub",
         "description": "Container rental platform with React, Tailwind, and Strapi API (draft/active).",
-        "stack": ["React", "Vite", "Tailwind", "Strapi"],
+        "stack": ["React", "Vite", "Tailwind", "Strapi", "PostgreSQL"],
         "highlights": ["API integration via /api/containers", "CRUD flow with status logic (draft/active)"],
+        "imageUrl": "/containerhub-home.png",
         "demoUrl": "https://kontainer-flame.vercel.app/",
         "codeUrl": "https://github.com/Willianfonseca7/ContainerHub",
         "featured": true
@@ -127,8 +128,20 @@
         "description": "API-based app focused on UI components, state, and responsive layout.",
         "stack": ["React", "API", "UI Components"],
         "highlights": ["Data fetching via Fetch", "Clean component structure"],
+        "imageUrl": "/pokedex-home.png",
         "demoUrl": "https://willianfonseca7.github.io/Pokedex-web/",
         "codeUrl": "https://github.com/Willianfonseca7/Pokemon-App",
+        "featured": true
+      },
+      {
+        "id": "heilpratika",
+        "title": "Heilpraktiker-Bleialf",
+        "description": "Practice platform focused on trust, visual clarity, authentication, and responsive user experience.",
+        "stack": ["Next.js", "React", "Tailwind", "Prisma", "PostgreSQL"],
+        "highlights": ["Authentication and API routes for protected areas", "Health check flow with data persistence and result logic"],
+        "imageUrl": "/heilpraktiker-bleialf-home.png",
+        "demoUrl": "https://heilpraktiker-bleialf.vercel.app/",
+        "codeUrl": null,
         "featured": true
       },
       {
@@ -137,6 +150,7 @@
         "description": "Toy e-commerce UI focused on layout, components, and UX.",
         "stack": ["React", "UI/UX", "State"],
         "highlights": ["Product cards & filters", "Cart state management"],
+        "imageUrl": null,
         "demoUrl": null,
         "codeUrl": null,
         "featured": true

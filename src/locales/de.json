@@ -43,13 +43,13 @@
     "intro": [
       "Ich bin Willian, Quereinsteiger und aktuell in der Umschulung zum Web & WebApp Developer am Syntax Institut.",
       "Mein Fokus liegt auf Frontend-Entwicklung mit React, klarer UI-Struktur und sauberer UX.",
-      "Projekte wie ContainerHub, Pokémon WebApp und Toytopia zeigen meinen Weg und meine Lernkurve."
+      "Projekte wie ContainerHub, Heilpratika und die Pokémon WebApp zeigen meinen Weg und meine Lernkurve."
     ]
   },
   "about": {
     "eyebrow": "Profil",
     "title": "Über mich",
-    "description": "Ich bin Quereinsteiger und bringe eine starke Motivation für Frontend-Entwicklung und UX mit. In der Umschulung zum Web & WebApp Developer am Syntax Institut arbeite ich an modernen React-Projekten mit klarer Architektur, sauberem Styling und verständlichen UI-Flows. Projekte wie ContainerHub (React/Tailwind + Strapi-API), die Pokémon WebApp und Toytopia helfen mir, API-Integration, State-Management und UI-Systeme praktisch umzusetzen.",
+    "description": "Ich bin Quereinsteiger und bringe eine starke Motivation für Frontend-Entwicklung und UX mit. In der Umschulung zum Web & WebApp Developer am Syntax Institut arbeite ich an modernen React-Projekten mit klarer Architektur, sauberem Styling und verständlichen UI-Flows. Projekte wie ContainerHub (React/Tailwind + Strapi-API), Heilpratika und die Pokémon WebApp helfen mir, API-Integration, State-Management und UI-Systeme praktisch umzusetzen.",
     "valuesTitle": "Was mir wichtig ist",
     "languagesTitle": "Sprachen",
     "workStyle": [
@@ -115,8 +115,9 @@
         "id": "containerhub",
         "title": "ContainerHub",
         "description": "Plattform für Containervermietung mit React, Tailwind und Strapi-API (draft/active).",
-        "stack": ["React", "Vite", "Tailwind", "Strapi"],
+        "stack": ["React", "Vite", "Tailwind", "Strapi", "PostgreSQL"],
         "highlights": ["API-Integration über /api/containers", "CRUD-Flow mit Statuslogik (draft/active)"],
+        "imageUrl": "/containerhub-home.png",
         "demoUrl": "https://kontainer-flame.vercel.app/",
         "codeUrl": "https://github.com/Willianfonseca7/ContainerHub",
         "featured": true
@@ -127,8 +128,20 @@
         "description": "API-basierte App mit Fokus auf UI-Komponenten, State und responsive Darstellung.",
         "stack": ["React", "API", "UI Components"],
         "highlights": ["Datenabfragen per Fetch", "Saubere Component-Struktur"],
+        "imageUrl": "/pokedex-home.png",
         "demoUrl": "https://willianfonseca7.github.io/Pokedex-web/",
         "codeUrl": "https://github.com/Willianfonseca7/Pokemon-App",
+        "featured": true
+      },
+      {
+        "id": "heilpratika",
+        "title": "Heilpraktiker-Bleialf",
+        "description": "Plattform für eine Heilpraktiker-Praxis mit Fokus auf Vertrauen, klare Struktur, Authentifizierung und responsive Nutzerführung.",
+        "stack": ["Next.js", "React", "Tailwind", "Prisma", "PostgreSQL"],
+        "highlights": ["Authentifizierung und API-Routen für geschützte Bereiche", "Health-Check mit Datenspeicherung und Ergebnislogik"],
+        "imageUrl": "/heilpraktiker-bleialf-home.png",
+        "demoUrl": "https://heilpraktiker-bleialf.vercel.app/",
+        "codeUrl": null,
         "featured": true
       },
       {
@@ -137,6 +150,7 @@
         "description": "E-Commerce UI für Spielzeug mit Fokus auf Layout, Komponenten und UX.",
         "stack": ["React", "UI/UX", "State"],
         "highlights": ["Produktkarten & Filter UI", "Zustandsverwaltung für Warenkorb"],
+        "imageUrl": null,
         "demoUrl": null,
         "codeUrl": null,
         "featured": true
