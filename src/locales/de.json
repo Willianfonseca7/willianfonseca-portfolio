@@ -72,6 +72,12 @@
   "skills": {
     "title": "Skills & Tech-Stack",
     "subtitle": "Ein realistischer Überblick über meinen aktuellen Stack und die Konzepte, die ich täglich nutze.",
+    "conceptsTitle": "Konzepte",
+    "learningTitle": "Aktuell am Lernen",
+    "statusTitle": "Aktueller Stand",
+    "statusSummary": "Frontend-Zertifikat abgeschlossen. Die IHK-Prüfung im Fullstack-Bereich habe ich bereits bestanden, das offizielle Zertifikat befindet sich noch in Ausstellung.",
+    "statusTags": ["Frontend Developer Zertifikat", "IHK Fullstack Prüfung bestanden", "Zertifikat ausstehend"],
+    "certificationsTitle": "Weiterbildung & Zertifikate",
     "groups": [
       {
         "title": "Frontend",
@@ -104,7 +110,29 @@
       "A11y Basics",
       "Performance Basics (React.memo)"
     ],
-    "learning": ["Advanced React Patterns", "Testing vertiefen", "State Management", "Design Tokens"]
+    "learning": ["Next.js vertiefen", "Backend-Flows", "Testing vertiefen", "State Management", "Design Tokens"],
+    "certifications": [
+      {
+        "title": "Frontend Developer Zertifikat 2026",
+        "status": "Abgeschlossen",
+        "description": "Nachweis über die abgeschlossene Frontend-Weiterbildung mit Fokus auf moderne UI-Entwicklung, React, Komponentenstruktur und sauberes Styling."
+      },
+      {
+        "title": "Kurszertifikat Web & WebApp Developer",
+        "status": "Abgeschlossen",
+        "description": "Zusammenfassung der Ausbildung am Syntax Institut mit Praxis in Frontend, Projektarbeit, Webentwicklung und arbeitsmarktorientierter Vorbereitung."
+      },
+      {
+        "title": "Modulbescheinigungen",
+        "status": "Abgeschlossen",
+        "description": "Abgedeckte Lerninhalte umfassen Grundlagen, Einführung in Software- und Webentwicklung sowie Spezialisierung und Arbeitsmarktvorbereitung."
+      },
+      {
+        "title": "IHK Fullstack Prüfung",
+        "status": "Bestanden",
+        "description": "Die Prüfung wurde bereits erfolgreich bestanden. Das offizielle IHK-Zertifikat ist aktuell noch nicht eingetroffen."
+      }
+    ]
   },
   "projects": {
     "title": "Projekte",

@@ -72,6 +72,12 @@
   "skills": {
     "title": "Skills & Tech Stack",
     "subtitle": "A realistic overview of my current stack and the concepts I use daily.",
+    "conceptsTitle": "Concepts",
+    "learningTitle": "Currently learning",
+    "statusTitle": "Current status",
+    "statusSummary": "Frontend certification completed. I have already passed the IHK full stack exam, and the official certificate is still being issued.",
+    "statusTags": ["Frontend Developer certificate", "Passed IHK full stack exam", "Certificate pending"],
+    "certificationsTitle": "Training & certifications",
     "groups": [
       {
         "title": "Frontend",
@@ -104,7 +110,29 @@
       "A11y basics",
       "Performance basics (React.memo)"
     ],
-    "learning": ["Advanced React Patterns", "Testing deep dive", "State Management", "Design Tokens"]
+    "learning": ["Deepening Next.js", "Backend flows", "Testing deep dive", "State Management", "Design Tokens"],
+    "certifications": [
+      {
+        "title": "Frontend Developer Certificate 2026",
+        "status": "Completed",
+        "description": "Proof of completed frontend training focused on modern UI development, React, component structure, and clean styling."
+      },
+      {
+        "title": "Web & WebApp Developer Course Certificate",
+        "status": "Completed",
+        "description": "Course completion covering practical frontend work, project-based learning, web development, and job market preparation."
+      },
+      {
+        "title": "Module Certificates",
+        "status": "Completed",
+        "description": "Covered topics include fundamentals, introduction to software and web development, plus specialization and job market preparation."
+      },
+      {
+        "title": "IHK Full Stack Exam",
+        "status": "Passed",
+        "description": "The exam has already been passed successfully. The official IHK certificate is currently still pending issuance."
+      }
+    ]
   },
   "projects": {
     "title": "Projects",

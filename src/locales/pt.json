@@ -72,6 +72,12 @@
   "skills": {
     "title": "Skills & Tech-Stack",
     "subtitle": "Visão realista do meu stack atual e dos conceitos que uso diariamente.",
+    "conceptsTitle": "Conceitos",
+    "learningTitle": "Aprendendo agora",
+    "statusTitle": "Status atual",
+    "statusSummary": "Certificado de Frontend concluído. Já passei também na prova IHK da área Fullstack e agora estou aguardando a emissão oficial do certificado.",
+    "statusTags": ["Certificado Frontend Developer", "Prova IHK Fullstack aprovada", "Certificado pendente"],
+    "certificationsTitle": "Formação & certificados",
     "groups": [
       {
         "title": "Frontend",
@@ -104,7 +110,29 @@
       "A11y Basics",
       "Performance Basics (React.memo)"
     ],
-    "learning": ["Advanced React Patterns", "Testing aprofundado", "State Management", "Design Tokens"]
+    "learning": ["Aprofundando Next.js", "Fluxos de backend", "Testing aprofundado", "State Management", "Design Tokens"],
+    "certifications": [
+      {
+        "title": "Certificado Frontend Developer 2026",
+        "status": "Concluído",
+        "description": "Comprovação da formação em Frontend com foco em UI moderna, React, componentização e styling limpo."
+      },
+      {
+        "title": "Certificado do curso Web & WebApp Developer",
+        "status": "Concluído",
+        "description": "Formação com prática em frontend, desenvolvimento web, projetos reais e preparação para o mercado de trabalho."
+      },
+      {
+        "title": "Certificados dos módulos",
+        "status": "Concluído",
+        "description": "Conteúdos cobertos incluem fundamentos, introdução a software e web development, especialização e preparação para o mercado."
+      },
+      {
+        "title": "Prova IHK Fullstack",
+        "status": "Aprovado",
+        "description": "A prova já foi concluída com sucesso. O certificado oficial da IHK ainda está em processo de emissão."
+      }
+    ]
   },
   "projects": {
     "title": "Projetos",
