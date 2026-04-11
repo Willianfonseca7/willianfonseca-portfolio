@@ -15,41 +15,42 @@
   },
   "hero": {
     "title": "Desenvolvedor com prova IHK aprovada",
-    "subtitle": "React / Next.js / Tailwind / JavaScript / Backend Basics",
-    "description": "Profissional com formação prática em Web & WebApp Development, módulos concluídos, Kurszertifikat e prova Junior Web Developer IHK já aprovada. Meu foco é construir interfaces modernas, responsivas e bem estruturadas, com integração limpa de APIs e base aplicada de backend.",
+    "subtitle": "React / Next.js / Tailwind / JavaScript / Integração de APIs",
+    "description": "Desenvolvo interfaces modernas, responsivas e bem estruturadas com React e Next.js. Minha formação em Web & WebApp Development, os módulos concluídos e a prova Junior Web Developer IHK aprovada reforçam uma base prática em frontend, APIs, autenticação e fluxos de backend.",
     "ctas": {
       "primary": { "label": "Ver projetos", "href": "/projekte" },
       "secondary": { "label": "Contato", "href": "/kontakt" }
     },
     "highlights": [
       {
-        "title": "IHK Aprovado",
-        "description": "Prova Junior Web Developer já concluída com sucesso."
+        "title": "React & Next.js",
+        "description": "Componentes reutilizáveis, UI clara e arquitetura organizada."
       },
       {
-        "title": "Formação Concluída",
-        "description": "Kurszertifikat e Modulbescheinigung já integrados ao meu portfólio."
+        "title": "APIs & Auth",
+        "description": "Integração de dados, autenticação e fluxos protegidos aplicados em projetos reais."
       },
       {
-        "title": "Frontend com Backend Basis",
-        "description": "React, Tailwind, APIs, autenticação e fluxos com banco de dados."
+        "title": "Responsive UI",
+        "description": "Interfaces focadas em clareza visual, UX consistente e boa adaptação mobile."
       }
     ]
   },
   "home": {
     "aboutPreviewTitle": "Sobre mim em 3 frases",
     "aboutPreviewSubtitle": "Curto e direto: quem sou e como trabalho.",
-    "projectsPreviewSubtitle": "Um resumo dos projetos mais recentes e estudos atuais.",
+    "projectsPreviewSubtitle": "Projeto em destaque com foco em interface, autenticação e integração de backend.",
+    "projectsPreviewCta": "Ver mais projetos",
     "intro": [
       "Sou Willian, desenvolvedor com formação prática em Web & WebApp Development no Syntax Institut.",
-      "Concluí módulos importantes, Kurszertifikat e já fui aprovado na prova Junior Web Developer IHK.",
-      "Meu foco está em Frontend com React e Next.js, com base aplicada de backend em projetos reais."
+      "Concluí módulos importantes, curso certificado e já fui aprovado na prova Junior Web Developer IHK.",
+      "Meu foco está em frontend com React e Next.js, apoiado por experiência prática com APIs, autenticação e backend."
     ]
   },
   "about": {
     "eyebrow": "Perfil",
     "title": "Sobre mim",
-    "description": "Sou desenvolvedor com forte foco em Frontend e UX. Na formação em Web & WebApp Developer no Syntax Institut concluí módulos importantes, Kurszertifikat e já fui aprovado na prova Junior Web Developer IHK. Trabalho com projetos React modernos, arquitetura clara, styling limpo e também com integrações de backend. Projetos como ContainerHub, Heilpraktiker-Bleialf e Pokémon WebApp mostram minha evolução prática em UI, APIs, autenticação e fluxos de dados.",
+    "description": "Sou desenvolvedor com forte foco em frontend e UX. Na formação em Web & WebApp Developer no Syntax Institut concluí módulos importantes, certificação de curso e já fui aprovado na prova Junior Web Developer IHK. Trabalho com projetos React e Next.js, arquitetura clara, styling limpo e integrações de backend. Projetos como ContainerHub, Heilpraktiker-Bleialf e Pokémon WebApp mostram minha evolução prática em UI, APIs, autenticação e fluxos de dados.",
     "valuesTitle": "O que valorizo",
     "languagesTitle": "Idiomas",
     "workStyle": [

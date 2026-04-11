@@ -15,41 +15,42 @@
   },
   "hero": {
     "title": "Junior Web Developer mit IHK-Zertifizierung",
-    "subtitle": "React / Next.js / Tailwind / JavaScript / Backend Basics",
-    "description": "Web Developer mit Ausbildung im Bereich Web & WebApp Development, abgeschlossenen Modulen, Kurszertifikat und bereits bestandener Junior Web Developer IHK Prüfung. Mein Fokus liegt auf modernen, responsiven Interfaces mit sauberer API-Integration und angewandter Backend-Basis.",
+    "subtitle": "React / Next.js / Tailwind / JavaScript / API-Integration",
+    "description": "Ich entwickle moderne, responsive und klar strukturierte Interfaces mit React und Next.js. Meine Ausbildung im Bereich Web & WebApp Development, abgeschlossene Module und die bestandene Junior Web Developer IHK Prüfung bilden dafür eine praxisnahe Grundlage in Frontend, APIs, Authentifizierung und Backend-Flows.",
     "ctas": {
       "primary": { "label": "Projekte ansehen", "href": "/projekte" },
       "secondary": { "label": "Kontakt", "href": "/kontakt" }
     },
     "highlights": [
       {
-        "title": "IHK Bestanden",
-        "description": "Junior Web Developer Prüfung bereits erfolgreich abgeschlossen."
+        "title": "React & Next.js",
+        "description": "Wiederverwendbare Komponenten, klare UI und saubere Struktur."
       },
       {
-        "title": "Ausbildung Abgeschlossen",
-        "description": "Kurszertifikat und Modulbescheinigungen bereits im Portfolio dokumentiert."
+        "title": "APIs & Auth",
+        "description": "Datenintegration, Authentifizierung und geschützte Flows aus realen Projekten."
       },
       {
-        "title": "Frontend mit Backend-Basis",
-        "description": "React, Tailwind, APIs, Authentifizierung und datenbasierte Flows."
+        "title": "Responsive UI",
+        "description": "Interfaces mit klarem UX-Fokus und sauberer Darstellung auf allen Geräten."
       }
     ]
   },
   "home": {
     "aboutPreviewTitle": "Über mich in 3 Sätzen",
     "aboutPreviewSubtitle": "Kurz, klar und direkt: Wer ich bin und wie ich arbeite.",
-    "projectsPreviewSubtitle": "Ein kurzer Überblick über meine aktuellsten Arbeiten und Lernprojekte.",
+    "projectsPreviewSubtitle": "Ausgewähltes Projekt mit Fokus auf Interface, Authentifizierung und Backend-Integration.",
+    "projectsPreviewCta": "Mehr Projekte ansehen",
     "intro": [
       "Ich bin Willian, Web Developer mit praxisnaher Ausbildung im Bereich Web & WebApp Development am Syntax Institut.",
       "Ich habe wichtige Module, das Kurszertifikat und die Junior Web Developer IHK Prüfung bereits abgeschlossen.",
-      "Mein Fokus liegt auf Frontend mit React und Next.js, ergänzt durch angewandte Backend-Erfahrung aus realen Projekten."
+      "Mein Fokus liegt auf Frontend mit React und Next.js, ergänzt durch praktische Erfahrung mit APIs, Authentifizierung und Backend."
     ]
   },
   "about": {
     "eyebrow": "Profil",
     "title": "Über mich",
-    "description": "Ich bin Web Developer mit starkem Fokus auf Frontend-Entwicklung und UX. In der Ausbildung zum Web & WebApp Developer am Syntax Institut habe ich wichtige Module, das Kurszertifikat und bereits die Junior Web Developer IHK Prüfung abgeschlossen. Ich arbeite an modernen React-Projekten mit klarer Architektur, sauberem Styling und verständlichen UI-Flows und verbinde das mit Backend-Integration. Projekte wie ContainerHub, Heilpraktiker-Bleialf und die Pokémon WebApp helfen mir, UI, APIs, Authentifizierung und Datenflüsse praktisch umzusetzen.",
+    "description": "Ich bin Web Developer mit starkem Fokus auf Frontend-Entwicklung und UX. In der Ausbildung zum Web & WebApp Developer am Syntax Institut habe ich wichtige Module, das Kurszertifikat und bereits die Junior Web Developer IHK Prüfung abgeschlossen. Ich arbeite an React- und Next.js-Projekten mit klarer Architektur, sauberem Styling und verständlichen UI-Flows und verbinde das mit Backend-Integration. Projekte wie ContainerHub, Heilpraktiker-Bleialf und die Pokémon WebApp helfen mir, UI, APIs, Authentifizierung und Datenflüsse praktisch umzusetzen.",
     "valuesTitle": "Was mir wichtig ist",
     "languagesTitle": "Sprachen",
     "workStyle": [

@@ -15,41 +15,42 @@
   },
   "hero": {
     "title": "Junior Web Developer with IHK exam passed",
-    "subtitle": "React / Next.js / Tailwind / JavaScript / Backend Basics",
-    "description": "Web developer with Web & WebApp Development training, completed modules, a course certificate, and a passed Junior Web Developer IHK exam. My focus is building modern, responsive interfaces with clean API integration and applied backend fundamentals.",
+    "subtitle": "React / Next.js / Tailwind / JavaScript / API Integration",
+    "description": "I build modern, responsive, and well-structured interfaces with React and Next.js. My Web & WebApp Development training, completed modules, and passed Junior Web Developer IHK exam give me a practical foundation in frontend, APIs, authentication, and backend flows.",
     "ctas": {
       "primary": { "label": "View projects", "href": "/projekte" },
       "secondary": { "label": "Contact", "href": "/kontakt" }
     },
     "highlights": [
       {
-        "title": "IHK Passed",
-        "description": "Junior Web Developer exam already completed successfully."
+        "title": "React & Next.js",
+        "description": "Reusable components, clear UI, and organized frontend architecture."
       },
       {
-        "title": "Training Completed",
-        "description": "Course certificate and module records already documented in the portfolio."
+        "title": "APIs & Auth",
+        "description": "Data integration, authentication, and protected flows from real projects."
       },
       {
-        "title": "Frontend with Backend Basics",
-        "description": "React, Tailwind, APIs, authentication, and data-driven flows."
+        "title": "Responsive UI",
+        "description": "Interfaces focused on visual clarity, consistent UX, and mobile readiness."
       }
     ]
   },
   "home": {
     "aboutPreviewTitle": "About me in 3 sentences",
     "aboutPreviewSubtitle": "Short, clear, and direct: who I am and how I work.",
-    "projectsPreviewSubtitle": "A quick look at my most recent work and learning projects.",
+    "projectsPreviewSubtitle": "Featured project focused on interface work, authentication, and backend integration.",
+    "projectsPreviewCta": "View more projects",
     "intro": [
       "I'm Willian, a web developer with practical training in Web & WebApp Development at Syntax Institut.",
       "I completed key modules, the course certificate, and already passed the Junior Web Developer IHK exam.",
-      "My main focus is frontend with React and Next.js, supported by applied backend experience from real projects."
+      "My main focus is frontend with React and Next.js, supported by practical experience with APIs, authentication, and backend."
     ]
   },
   "about": {
     "eyebrow": "Profile",
     "title": "About me",
-    "description": "I'm a web developer with a strong focus on frontend development and UX. During my Web & WebApp Developer training at Syntax Institut, I completed important modules, the course certificate, and already passed the Junior Web Developer IHK exam. I work on modern React projects with clear architecture, clean styling, understandable UI flows, and backend integration. Projects like ContainerHub, Heilpraktiker-Bleialf, and the Pokémon WebApp help me practice UI work, APIs, authentication, and data flows in real scenarios.",
+    "description": "I'm a web developer with a strong focus on frontend development and UX. During my Web & WebApp Developer training at Syntax Institut, I completed important modules, the course certificate, and already passed the Junior Web Developer IHK exam. I work on React and Next.js projects with clear architecture, clean styling, understandable UI flows, and backend integration. Projects like ContainerHub, Heilpraktiker-Bleialf, and the Pokémon WebApp help me practice UI work, APIs, authentication, and data flows in real scenarios.",
     "valuesTitle": "What matters to me",
     "languagesTitle": "Languages",
     "workStyle": [

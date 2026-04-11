@@ -2,10 +2,13 @@ import { useLanguage } from "../../hooks/useLanguage.jsx";
 import Container from "../ui/Container.jsx";
 import SectionHeader from "../ui/SectionHeader.jsx";
 import ProjectCard from "../ui/ProjectCard.jsx";
+import Button from "../ui/Button.jsx";
 
 export default function ProjectsPreviewSection() {
   const { content } = useLanguage();
-  const projects = content.projects.list.filter((project) => project.featured);
+  const featuredProject = content.projects.list.find(
+    (project) => project.id === "heilpratika"
+  );
 
   return (
     <section className="py-20">
@@ -17,11 +20,19 @@ export default function ProjectsPreviewSection() {
             subtitle={content.home.projectsPreviewSubtitle}
           />
 
-          <div className="grid gap-8 lg:grid-cols-3">
-            {projects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
+          {featuredProject ? (
+            <div className="space-y-6">
+              <div className="grid gap-8 lg:grid-cols-1">
+                <ProjectCard project={featuredProject} />
+              </div>
+
+              <div className="flex justify-center">
+                <Button href="/projekte" variant="secondary">
+                  {content.home.projectsPreviewCta}
+                </Button>
+              </div>
+            </div>
+          ) : null}
         </div>
       </Container>
     </section>
