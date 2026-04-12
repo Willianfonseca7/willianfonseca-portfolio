@@ -2,6 +2,7 @@ import { memo } from "react";
 import Card from "./Card.jsx";
 import Tag from "./Tag.jsx";
 import Button from "./Button.jsx";
+import { useLanguage } from "../../hooks/useLanguage.jsx";
 
 function resolveImageUrl(imageUrl) {
   if (!imageUrl) return null;
@@ -17,6 +18,8 @@ function resolveImageUrl(imageUrl) {
 }
 
 function ProjectCard({ project }) {
+  const { content } = useLanguage();
+  const labels = content.projects.ui;
   const hasDemo = Boolean(project.demoUrl);
   const hasCode = Boolean(project.codeUrl);
   const resolvedImageUrl = resolveImageUrl(project.imageUrl);
@@ -39,7 +42,7 @@ function ProjectCard({ project }) {
           <div className="flex aspect-[16/9] items-end bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.3),_transparent_45%),linear-gradient(135deg,_rgba(15,23,42,0.95),_rgba(30,41,59,0.92))] p-5">
             <div className="space-y-2">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-sky-200/80">
-                Preview coming soon
+                {labels.previewComingSoon}
               </p>
               <h3 className="heading text-lg">{project.title}</h3>
             </div>
@@ -77,10 +80,10 @@ function ProjectCard({ project }) {
             target={hasDemo ? "_blank" : undefined}
             rel={hasDemo ? "noreferrer" : undefined}
           >
-            Demo
+            {labels.demo}
           </Button>
           {!hasDemo && (
-            <span className="tooltip">coming soon</span>
+            <span className="tooltip">{labels.comingSoon}</span>
           )}
         </div>
         <div className="relative group">
@@ -92,10 +95,10 @@ function ProjectCard({ project }) {
             target={hasCode ? "_blank" : undefined}
             rel={hasCode ? "noreferrer" : undefined}
           >
-            Code
+            {labels.code}
           </Button>
           {!hasCode && (
-            <span className="tooltip">coming soon</span>
+            <span className="tooltip">{labels.comingSoon}</span>
           )}
         </div>
       </div>

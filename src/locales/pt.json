@@ -8,15 +8,17 @@
   "nav": {
     "home": "Início",
     "about": "Sobre",
-    "skills": "Skills",
+    "skills": "Competências",
     "projects": "Projetos",
     "contact": "Contato",
-    "menu": "Menu"
+    "menu": "Menu",
+    "themeDark": "Escuro",
+    "themeLight": "Claro"
   },
   "hero": {
     "title": "Desenvolvedor com prova IHK aprovada",
     "subtitle": "React / Next.js / Tailwind / JavaScript / Integração de APIs",
-    "description": "Desenvolvo interfaces modernas, responsivas e bem estruturadas com React e Next.js. Minha formação em Web & WebApp Development, os módulos concluídos e a prova Junior Web Developer IHK aprovada reforçam uma base prática em frontend, APIs, autenticação e fluxos de backend.",
+    "description": "Desenvolvo interfaces modernas, responsivas e bem estruturadas com React e Next.js. Minha formação em desenvolvimento web e WebApp, os módulos concluídos e a prova Junior Web Developer IHK aprovada reforçam uma base prática em frontend, APIs, autenticação e fluxos de backend.",
     "ctas": {
       "primary": { "label": "Ver projetos", "href": "/projekte" },
       "secondary": { "label": "Contato", "href": "/kontakt" }
@@ -27,11 +29,11 @@
         "description": "Componentes reutilizáveis, UI clara e arquitetura organizada."
       },
       {
-        "title": "APIs & Auth",
+        "title": "APIs e Autenticação",
         "description": "Integração de dados, autenticação e fluxos protegidos aplicados em projetos reais."
       },
       {
-        "title": "Responsive UI",
+        "title": "Interface Responsiva",
         "description": "Interfaces focadas em clareza visual, UX consistente e boa adaptação mobile."
       }
     ]
@@ -42,15 +44,15 @@
     "projectsPreviewSubtitle": "Projeto em destaque com foco em interface, autenticação e integração de backend.",
     "projectsPreviewCta": "Ver mais projetos",
     "intro": [
-      "Sou Willian, desenvolvedor com formação prática em Web & WebApp Development no Syntax Institut.",
-      "Concluí módulos importantes, curso certificado e já fui aprovado na prova Junior Web Developer IHK.",
+      "Sou Willian, desenvolvedor com formação prática em desenvolvimento web e WebApp no Syntax Institut.",
+      "Concluí módulos importantes, certificado de curso e já fui aprovado na prova Junior Web Developer IHK.",
       "Meu foco está em frontend com React e Next.js, apoiado por experiência prática com APIs, autenticação e backend."
     ]
   },
   "about": {
     "eyebrow": "Perfil",
     "title": "Sobre mim",
-    "description": "Sou desenvolvedor com forte foco em frontend e UX. Na formação em Web & WebApp Developer no Syntax Institut concluí módulos importantes, certificação de curso e já fui aprovado na prova Junior Web Developer IHK. Trabalho com projetos React e Next.js, arquitetura clara, styling limpo e integrações de backend. Projetos como ContainerHub, Heilpraktiker-Bleialf e Pokémon WebApp mostram minha evolução prática em UI, APIs, autenticação e fluxos de dados.",
+    "description": "Sou desenvolvedor com forte foco em frontend e UX. Na formação em desenvolvimento web e WebApp no Syntax Institut concluí módulos importantes, certificado de curso e já fui aprovado na prova Junior Web Developer IHK. Trabalho com projetos React e Next.js, arquitetura clara, styling limpo e integrações de backend. Projetos como ContainerHub, Heilpraktiker-Bleialf e Pokémon WebApp mostram minha evolução prática em interface, APIs, autenticação e fluxos de dados.",
     "valuesTitle": "O que valorizo",
     "languagesTitle": "Idiomas",
     "workStyle": [
@@ -71,14 +73,14 @@
     "languages": ["Português", "Alemão", "Inglês (A2)"]
   },
   "skills": {
-    "title": "Skills & Tech-Stack",
-    "subtitle": "Visão realista do meu stack atual e dos conceitos que uso diariamente.",
+    "title": "Competências & Tecnologias",
+    "subtitle": "Visão realista das tecnologias que uso hoje e dos conceitos que aplico no dia a dia.",
     "conceptsTitle": "Conceitos",
     "learningTitle": "Aprendendo agora",
     "statusTitle": "Status atual",
-    "statusSummary": "Certificado de Frontend concluído. Já passei também na prova IHK da área Fullstack e agora estou aguardando a emissão oficial do certificado.",
+    "statusSummary": "Formação de frontend concluída. Já passei também na prova IHK da área full stack e agora estou aguardando a emissão oficial do certificado.",
     "statusTags": ["Perfil Junior Web Developer", "Prova IHK Fullstack aprovada", "Certificado pendente"],
-    "certificationsTitle": "Formação, CV & certificados",
+    "certificationsTitle": "Formação, currículo e certificados",
     "certificationsHint": "Clique em um documento para abrir a imagem em tamanho original.",
     "openCertificateLabel": "Abrir documento",
     "closeCertificateLabel": "Fechar",
@@ -88,15 +90,15 @@
         "items": ["HTML5", "CSS3", "JavaScript (ES6+)", "React", "React Router", "Vite", "Tailwind CSS"]
       },
       {
-        "title": "Tools",
+        "title": "Ferramentas",
         "items": ["Git & GitHub (Branches/PR)", "npm/pnpm", "Postman", "VS Code"]
       },
       {
-        "title": "Design/UX",
+        "title": "Design e UX",
         "items": ["Figma", "Design System básico", "Layouts responsivos", "Tipografia & contraste"]
       },
       {
-        "title": "Testing/Quality",
+        "title": "Testes & Qualidade",
         "items": ["Vitest", "React Testing Library", "Playwright"]
       }
     ],
@@ -111,10 +113,10 @@
       "Async/Await",
       "Tratamento de erros",
       "Responsividade",
-      "A11y Basics",
-      "Performance Basics (React.memo)"
+      "Acessibilidade básica",
+      "Performance básica (React.memo)"
     ],
-    "learning": ["Aprofundando Next.js", "Fluxos de backend", "Testing aprofundado", "State Management", "Design Tokens"],
+    "learning": ["Aprofundando Next.js", "Fluxos de backend", "Testes avançados", "Gerenciamento de estado", "Design tokens"],
     "certifications": [
       {
         "title": "Certificado Junior Web Developer IHK",
@@ -123,7 +125,7 @@
         "imageUrl": "/cert-ihk-fullstack.png"
       },
       {
-        "title": "CV / Lebenslauf 2026",
+        "title": "Currículo 2026",
         "status": "Atualizado",
         "description": "Currículo profissional com resumo do meu perfil, stack atual, projetos, formação e experiência direcionada para vagas de Junior Web Developer.",
         "imageUrl": "/cert-frontend-2026.png"
@@ -135,13 +137,13 @@
         "imageUrl": "/cert-web-webapp-course.png"
       },
       {
-        "title": "Modulbescheinigung Modul 1",
+        "title": "Design de Produto & Desenvolvimento em TI",
         "status": "Concluído",
-        "description": "Documento do módulo inicial da formação, registrando a base da qualificação e a evolução dentro do curso.",
+        "description": "Comprovante do módulo voltado a product design e desenvolvimento em TI dentro da formação.",
         "imageUrl": "/cert-module-1.png"
       },
       {
-        "title": "Modulbescheinigung M4",
+        "title": "Especialização & Preparação para o Mercado de Trabalho",
         "status": "Concluído",
         "description": "Comprovante do módulo de especialização e preparação para o mercado de trabalho dentro da formação.",
         "imageUrl": "/cert-module-4.png"
@@ -152,6 +154,12 @@
     "title": "Projetos",
     "featuredTitle": "Projetos em destaque",
     "subtitle": "Descrições curtas com foco em tecnologia, responsabilidade e aprendizado.",
+    "ui": {
+      "demo": "Demo",
+      "code": "Código",
+      "comingSoon": "em breve",
+      "previewComingSoon": "prévia em breve"
+    },
     "list": [
       {
         "id": "containerhub",
@@ -167,8 +175,8 @@
       {
         "id": "pokedex-web",
         "title": "Pokedex-Web",
-        "description": "App baseada em API com foco em UI, componentes e estado.",
-        "stack": ["React", "API", "UI Components"],
+        "description": "Aplicação baseada em API com foco em interface, componentes e gerenciamento de estado.",
+        "stack": ["React", "API", "Componentes de UI"],
         "highlights": ["Fetch de dados", "Estrutura clara de componentes"],
         "imageUrl": "/pokedex-home.png",
         "demoUrl": "https://willianfonseca7.github.io/Pokedex-web/",
@@ -189,9 +197,9 @@
       {
         "id": "toytopia",
         "title": "Toytopia",
-        "description": "UI de e-commerce com foco em layout, componentes e UX.",
-        "stack": ["React", "UI/UX", "State"],
-        "highlights": ["Cards de produto", "State para carrinho"],
+        "description": "Interface de e-commerce com foco em layout, componentes e experiência do usuário.",
+        "stack": ["React", "UI/UX", "Estado"],
+        "highlights": ["Cards de produto", "Estado para carrinho"],
         "imageUrl": null,
         "demoUrl": null,
         "codeUrl": null,
@@ -202,16 +210,16 @@
   "contact": {
     "title": "Contato",
     "description": "Tem alguma pergunta ou quer colaborar? Envie uma mensagem ou use os links abaixo.",
-    "linksTitle": "Links & perfis",
+    "linksTitle": "Links e perfis",
     "links": [
-      { "label": "E-Mail", "href": "mailto:willianfonseca7@gmail.com", "icon": "mail" },
+      { "label": "Email", "href": "mailto:willianfonseca7@gmail.com", "icon": "mail" },
       { "label": "GitHub", "href": "https://github.com/Willianfonseca7", "icon": "github" },
       { "label": "LinkedIn", "href": "https://www.linkedin.com/in/willian-fonseca-b146b7240/", "icon": "linkedin" }
     ],
     "form": {
       "title": "Envie uma mensagem",
       "nameLabel": "Nome",
-      "emailLabel": "E-Mail",
+      "emailLabel": "Email",
       "messageLabel": "Mensagem",
       "submitLabel": "Enviar mensagem",
       "successMessage": "Obrigado! Sua mensagem foi preparada.",
@@ -219,7 +227,7 @@
       "helper": "Responderei o mais rápido possível.",
       "copiedMessage": "Mensagem copiada para a área de transferência.",
       "nameError": "Digite pelo menos 2 caracteres.",
-      "emailError": "Digite um e-mail válido.",
+      "emailError": "Digite um email válido.",
       "messageError": "Escreva pelo menos 20 caracteres.",
       "mailClientLabel": "Abrir cliente de e-mail"
     }

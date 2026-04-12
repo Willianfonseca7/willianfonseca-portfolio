@@ -11,7 +11,9 @@
     "skills": "Skills",
     "projects": "Projects",
     "contact": "Contact",
-    "menu": "Menu"
+    "menu": "Menu",
+    "themeDark": "Dark",
+    "themeLight": "Light"
   },
   "hero": {
     "title": "Junior Web Developer with IHK exam passed",
@@ -123,7 +125,7 @@
         "imageUrl": "/cert-ihk-fullstack.png"
       },
       {
-        "title": "CV / Resume 2026",
+        "title": "Resume 2026",
         "status": "Updated",
         "description": "Professional resume summarizing my profile, current stack, projects, training, and target direction for frontend developer roles.",
         "imageUrl": "/cert-frontend-2026.png"
@@ -135,13 +137,13 @@
         "imageUrl": "/cert-web-webapp-course.png"
       },
       {
-        "title": "Module Certificate 1",
+        "title": "Product Design & Development in IT",
         "status": "Completed",
-        "description": "Document for the first training module, recording the qualification baseline and the start of the program.",
+        "description": "Proof of the training module focused on product design and development in IT.",
         "imageUrl": "/cert-module-1.png"
       },
       {
-        "title": "Module Certificate M4",
+        "title": "Specialization & Job Market Preparation",
         "status": "Completed",
         "description": "Proof of the specialization and job market preparation module completed within the training program.",
         "imageUrl": "/cert-module-4.png"
@@ -152,6 +154,12 @@
     "title": "Projects",
     "featuredTitle": "Featured projects",
     "subtitle": "Compact descriptions focused on technology, responsibilities, and learning goals.",
+    "ui": {
+      "demo": "Demo",
+      "code": "Code",
+      "comingSoon": "coming soon",
+      "previewComingSoon": "preview coming soon"
+    },
     "list": [
       {
         "id": "containerhub",

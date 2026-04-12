@@ -11,7 +11,9 @@
     "skills": "Skills",
     "projects": "Projekte",
     "contact": "Kontakt",
-    "menu": "Menü"
+    "menu": "Menü",
+    "themeDark": "Dunkel",
+    "themeLight": "Hell"
   },
   "hero": {
     "title": "Junior Web Developer mit IHK-Zertifizierung",
@@ -123,7 +125,7 @@
         "imageUrl": "/cert-ihk-fullstack.png"
       },
       {
-        "title": "Lebenslauf / CV 2026",
+        "title": "Lebenslauf 2026",
         "status": "Aktualisiert",
         "description": "Beruflicher Lebenslauf mit kompaktem Überblick über mein Profil, meinen aktuellen Stack, Projekte, Weiterbildung und meine Ausrichtung auf Frontend-Developer-Positionen.",
         "imageUrl": "/cert-frontend-2026.png"
@@ -135,13 +137,13 @@
         "imageUrl": "/cert-web-webapp-course.png"
       },
       {
-        "title": "Modulbescheinigung Modul 1",
+        "title": "Produktdesign & Entwicklung in der IT",
         "status": "Abgeschlossen",
-        "description": "Dokument zum ersten Ausbildungsmodul, das die Grundlage der Qualifizierung und den Einstieg in die Weiterbildung festhält.",
+        "description": "Nachweis über das Modul Produktdesign und Entwicklung in der IT innerhalb der Weiterbildung.",
         "imageUrl": "/cert-module-1.png"
       },
       {
-        "title": "Modulbescheinigung M4",
+        "title": "Spezialisierung & Arbeitsmarktvorbereitung",
         "status": "Abgeschlossen",
         "description": "Nachweis über das Modul Spezialisierung und Arbeitsmarktvorbereitung innerhalb der Weiterbildung.",
         "imageUrl": "/cert-module-4.png"
@@ -152,6 +154,12 @@
     "title": "Projekte",
     "featuredTitle": "Ausgewählte Projekte",
     "subtitle": "Kompakte Beschreibungen mit Fokus auf Technologie, Verantwortung und Lernziele.",
+    "ui": {
+      "demo": "Demo",
+      "code": "Code",
+      "comingSoon": "bald verfügbar",
+      "previewComingSoon": "Vorschau bald verfügbar"
+    },
     "list": [
       {
         "id": "containerhub",

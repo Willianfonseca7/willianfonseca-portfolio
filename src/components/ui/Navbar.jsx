@@ -70,7 +70,7 @@ export default function Navbar() {
             ))}
           </div>
           <button type="button" onClick={toggleTheme} className="chip-button">
-            {theme === "dark" ? "Dark" : "Light"}
+            {theme === "dark" ? content.nav.themeDark : content.nav.themeLight}
           </button>
         </div>
       </div>
