@@ -78,32 +78,64 @@ export default function SkillsSection() {
             </Card>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1.8fr)]">
-            <Card className="space-y-4">
-              <h3 className="heading text-lg">{skills.statusTitle}</h3>
-              <div className="space-y-3">
-                <p className="text-sm text-muted">{skills.statusSummary}</p>
-                <div className="flex flex-wrap gap-2">
-                  {skills.statusTags.map((item) => (
-                    <Tag key={item} label={item} />
-                  ))}
-                </div>
+          <Card className="space-y-4">
+            <h3 className="heading text-lg">{skills.statusTitle}</h3>
+            <div className="space-y-3">
+              <p className="max-w-3xl text-sm text-muted">{skills.statusSummary}</p>
+              <div className="flex flex-wrap gap-2">
+                {skills.statusTags.map((item) => (
+                  <Tag key={item} label={item} />
+                ))}
               </div>
-            </Card>
+            </div>
+          </Card>
 
-            <Card className="space-y-5">
-              <h3 className="heading text-lg">{skills.certificationsTitle}</h3>
-              <p className="text-sm text-muted">{skills.certificationsHint}</p>
-              <div className="grid gap-6 lg:grid-cols-2">
-                {skills.certifications.map((item) => (
-                  <Card
-                    key={item.title}
-                    className="flex h-full flex-col gap-4 p-0"
-                    interactive={false}
+          <div className="space-y-6">
+            <SectionHeader
+              eyebrow={skills.certificationsTitle}
+              title={skills.certificationsTitle}
+              subtitle={skills.certificationsHint}
+            />
+
+            <div className="grid gap-6 lg:grid-cols-2">
+              {skills.certifications.map((item) => (
+                <Card
+                  key={item.title}
+                  className="flex h-full flex-col gap-4 p-0"
+                  interactive={false}
+                >
+                  <button
+                    type="button"
+                    className="group/cert block overflow-hidden rounded-t-[var(--radius-card)] border-b border-white/10 text-left"
+                    onClick={() =>
+                      setSelectedCertificate({
+                        title: item.title,
+                        imageUrl: resolveAssetUrl(item.imageUrl),
+                      })
+                    }
                   >
+                    <div className="relative aspect-[4/3] overflow-hidden bg-slate-950/60">
+                      <img
+                        src={resolveAssetUrl(item.imageUrl)}
+                        alt={item.title}
+                        className="h-full w-full object-cover object-top transition duration-500 group-hover/cert:scale-[1.02]"
+                        loading="lazy"
+                      />
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-transparent" />
+                    </div>
+                  </button>
+
+                  <div className="space-y-3 px-6 pb-6">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <h4 className="heading text-base">{item.title}</h4>
+                      <span className="rounded-full bg-sky-400/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-sky-200">
+                        {item.status}
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted">{item.description}</p>
                     <button
                       type="button"
-                      className="group/cert block overflow-hidden rounded-t-[var(--radius-card)] border-b border-white/10 text-left"
+                      className="text-xs font-semibold uppercase tracking-[0.24em] text-sky-200/85 transition hover:text-sky-100"
                       onClick={() =>
                         setSelectedCertificate({
                           title: item.title,
@@ -111,42 +143,12 @@ export default function SkillsSection() {
                         })
                       }
                     >
-                      <div className="relative aspect-[4/3] overflow-hidden bg-slate-950/60">
-                        <img
-                          src={resolveAssetUrl(item.imageUrl)}
-                          alt={item.title}
-                          className="h-full w-full object-cover object-top transition duration-500 group-hover/cert:scale-[1.02]"
-                          loading="lazy"
-                        />
-                        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-transparent" />
-                      </div>
+                      {skills.openCertificateLabel}
                     </button>
-
-                    <div className="space-y-3 px-6 pb-6">
-                      <div className="flex flex-wrap items-center gap-2">
-                        <h4 className="heading text-base">{item.title}</h4>
-                        <span className="rounded-full bg-sky-400/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-sky-200">
-                          {item.status}
-                        </span>
-                      </div>
-                      <p className="text-sm text-muted">{item.description}</p>
-                      <button
-                        type="button"
-                        className="text-xs font-semibold uppercase tracking-[0.24em] text-sky-200/85 transition hover:text-sky-100"
-                        onClick={() =>
-                          setSelectedCertificate({
-                            title: item.title,
-                            imageUrl: resolveAssetUrl(item.imageUrl),
-                          })
-                        }
-                      >
-                        {skills.openCertificateLabel}
-                      </button>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-            </Card>
+                  </div>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </Container>
