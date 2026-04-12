@@ -191,7 +191,7 @@
         "highlights": ["Backend-Integration über API-Routen und Benutzerauthentifizierung", "Health-Check mit Datenspeicherung und Ergebnislogik"],
         "imageUrl": "/heilpraktiker-bleialf-home.png",
         "demoUrl": "https://heilpraktiker-bleialf.vercel.app/",
-        "codeUrl": null,
+        "codeUrl": "https://github.com/Willianfonseca7/heilpraktiker-bleialf",
         "featured": true
       },
       {

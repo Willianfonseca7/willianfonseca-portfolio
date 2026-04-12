@@ -191,7 +191,7 @@
         "highlights": ["Integração com backend por rotas de API e autenticação de usuários", "Health check com persistência de dados e lógica de resultados"],
         "imageUrl": "/heilpraktiker-bleialf-home.png",
         "demoUrl": "https://heilpraktiker-bleialf.vercel.app/",
-        "codeUrl": null,
+        "codeUrl": "https://github.com/Willianfonseca7/heilpraktiker-bleialf",
         "featured": true
       },
       {
