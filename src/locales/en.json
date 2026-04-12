@@ -186,9 +186,9 @@
       {
         "id": "heilpratika",
         "title": "Heilpraktiker-Bleialf",
-        "description": "Practice platform focused on trust, visual clarity, authentication, and responsive user experience.",
+        "description": "Practice platform focused on trust, authentication, and frontend-backend integration.",
         "stack": ["Next.js", "React", "Tailwind", "Prisma", "PostgreSQL"],
-        "highlights": ["Authentication and API routes for protected areas", "Health check flow with data persistence and result logic"],
+        "highlights": ["Backend integration through API routes and user authentication", "Health check flow with data persistence and result logic"],
         "imageUrl": "/heilpraktiker-bleialf-home.png",
         "demoUrl": "https://heilpraktiker-bleialf.vercel.app/",
         "codeUrl": null,

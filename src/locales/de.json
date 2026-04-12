@@ -186,9 +186,9 @@
       {
         "id": "heilpratika",
         "title": "Heilpraktiker-Bleialf",
-        "description": "Plattform für eine Heilpraktiker-Praxis mit Fokus auf Vertrauen, klare Struktur, Authentifizierung und responsive Nutzerführung.",
+        "description": "Plattform für eine Heilpraktiker-Praxis mit Fokus auf Vertrauen, Authentifizierung und Integration zwischen Frontend und Backend.",
         "stack": ["Next.js", "React", "Tailwind", "Prisma", "PostgreSQL"],
-        "highlights": ["Authentifizierung und API-Routen für geschützte Bereiche", "Health-Check mit Datenspeicherung und Ergebnislogik"],
+        "highlights": ["Backend-Integration über API-Routen und Benutzerauthentifizierung", "Health-Check mit Datenspeicherung und Ergebnislogik"],
         "imageUrl": "/heilpraktiker-bleialf-home.png",
         "demoUrl": "https://heilpraktiker-bleialf.vercel.app/",
         "codeUrl": null,
