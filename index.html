@@ -4,6 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Willian Fonseca Portfolio</title>
+    <script>
+      (function () {
+        const redirect = window.location.search.match(/[?&]p=([^&]+)/);
+        if (!redirect) return;
+
+        const decodedPath = redirect[1]
+          .replace(/~and~/g, "&")
+          .replace(/%2F/g, "/");
+
+        const newUrl =
+          window.location.pathname.replace(/\/$/, "") +
+          decodedPath +
+          window.location.hash;
+
+        window.history.replaceState(null, "", newUrl);
+      })();
+    </script>
   </head>
   <body class="scroll-smooth">
     <div id="root"></div>
