@@ -77,7 +77,7 @@
     "learningTitle": "Aprendendo agora",
     "statusTitle": "Status atual",
     "statusSummary": "Certificado de Frontend concluído. Já passei também na prova IHK da área Fullstack e agora estou aguardando a emissão oficial do certificado.",
-    "statusTags": ["Certificado Frontend Developer", "Prova IHK Fullstack aprovada", "Certificado pendente"],
+    "statusTags": ["Perfil Junior Web Developer", "Prova IHK Fullstack aprovada", "Certificado pendente"],
     "certificationsTitle": "Formação, CV & certificados",
     "certificationsHint": "Clique em um documento para abrir a imagem em tamanho original.",
     "openCertificateLabel": "Abrir documento",
@@ -125,7 +125,7 @@
       {
         "title": "CV / Lebenslauf 2026",
         "status": "Atualizado",
-        "description": "Currículo profissional com resumo do meu perfil, stack atual, projetos, formação e experiência direcionada para vagas de Frontend Developer.",
+        "description": "Currículo profissional com resumo do meu perfil, stack atual, projetos, formação e experiência direcionada para vagas de Junior Web Developer.",
         "imageUrl": "/cert-frontend-2026.png"
       },
       {
