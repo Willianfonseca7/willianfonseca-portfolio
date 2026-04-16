@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import useTheme from "../../hooks/useTheme.js";
 import { useLanguage } from "../../hooks/useLanguage.jsx";
 
@@ -24,9 +24,9 @@ export default function Navbar() {
     <header className="nav-header">
       <div className="nav-inner">
         <div className="flex items-center gap-4">
-          <span className="text-xs font-semibold uppercase tracking-[0.35em] text-sky-300/80">
+          <Link to="/" className="text-xs font-semibold uppercase tracking-[0.35em] text-sky-300/80 hover:text-sky-200 transition-colors">
             {content.meta.name}
-          </span>
+          </Link>
         </div>
 
         <nav className="nav-links">
