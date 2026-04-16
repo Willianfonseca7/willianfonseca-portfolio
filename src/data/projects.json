@@ -1,18 +1,34 @@
 [
   {
     "id": 1,
+    "title": "ContainerHub",
+    "description": "Container rental platform with React, Tailwind, and Strapi API (draft/active).",
+    "techStack": ["React", "Vite", "Tailwind", "Strapi", "PostgreSQL"],
+    "demoUrl": "https://kontainer-flame.vercel.app/",
+    "codeUrl": "https://github.com/Willianfonseca7/ContainerHub"
+  },
+  {
+    "id": 2,
+    "title": "Heilpraktiker-Bleialf",
+    "description": "Practice platform with Next.js, Prisma, PostgreSQL, user authentication and API routes.",
+    "techStack": ["Next.js", "React", "Tailwind", "Prisma", "PostgreSQL"],
+    "demoUrl": "https://heilpraktiker-bleialf.vercel.app/",
+    "codeUrl": "https://github.com/Willianfonseca7/heilpraktiker-bleialf"
+  },
+  {
+    "id": 3,
     "title": "Pokedex-Web",
-    "description": "A web app using HTML/CSS/JS and PokéAPI.",
-    "techStack": ["HTML", "CSS", "JavaScript"],
+    "description": "API-based app focused on UI components, state management, and responsive layout.",
+    "techStack": ["React", "JavaScript", "PokéAPI"],
     "demoUrl": "https://willianfonseca7.github.io/Pokedex-web/",
     "codeUrl": "https://github.com/Willianfonseca7/Pokemon-App"
   },
   {
-    "id": 2,
-    "title": "Willian Portfolio",
-    "description": "My personal portfolio built with React and Tailwind.",
-    "techStack": ["React", "Vite", "Tailwind CSS"],
-    "demoUrl": "https://seu-portfolio.com",
-    "codeUrl": "https://github.com/Willianfonseca7/Willian-Fonseca-Portfolio"
+    "id": 4,
+    "title": "Portfolio",
+    "description": "This portfolio — React, Vite, Tailwind, multilingual (DE/EN/PT), GitHub Actions CI/CD.",
+    "techStack": ["React", "Vite", "Tailwind CSS", "i18n", "GitHub Actions"],
+    "demoUrl": "https://willianfonseca7.github.io/willianfonseca-portfolio/",
+    "codeUrl": "https://github.com/Willianfonseca7/willianfonseca-portfolio"
   }
 ]
