@@ -70,7 +70,7 @@
       }
     ],
     "values": ["Clarity", "Reliability", "Willingness to learn", "Teamwork", "Clean code"],
-    "languages": ["Portuguese", "German", "English (A2)"]
+    "languages": ["Portuguese", "German", "English"]
   },
   "skills": {
     "title": "Skills & Tech Stack",
@@ -87,7 +87,7 @@
     "groups": [
       {
         "title": "Frontend",
-        "items": ["HTML5", "CSS3", "JavaScript (ES6+)", "React", "React Router", "Vite", "Tailwind CSS"]
+        "items": ["HTML5", "CSS3", "JavaScript (ES6+)", "React", "Next.js", "React Router", "Vite", "Tailwind CSS"]
       },
       {
         "title": "Tools",
@@ -116,7 +116,7 @@
       "A11y basics",
       "Performance basics (React.memo)"
     ],
-    "learning": ["Deepening Next.js", "Backend flows", "Testing deep dive", "State Management", "Design Tokens"],
+    "learning": ["TypeScript", "Backend flows", "Testing deep dive", "State Management", "Design Tokens"],
     "certifications": [
       {
         "title": "Junior Web Developer IHK Certificate",
@@ -191,18 +191,18 @@
         "highlights": ["Backend integration through API routes and user authentication", "Health check flow with data persistence and result logic"],
         "imageUrl": "/heilpraktiker-bleialf-home.png",
         "demoUrl": "https://heilpraktiker-bleialf.vercel.app/",
-        "codeUrl": null,
+        "codeUrl": "https://github.com/Willianfonseca7/heilpraktiker-bleialf",
         "featured": true
       },
       {
-        "id": "toytopia",
-        "title": "Toytopia",
-        "description": "Toy e-commerce UI focused on layout, components, and UX.",
-        "stack": ["React", "UI/UX", "State"],
-        "highlights": ["Product cards & filters", "Cart state management"],
+        "id": "portfolio",
+        "title": "Portfolio",
+        "description": "This portfolio — built with React, Vite, Tailwind, multilingual support, and automated GitHub Pages deploy.",
+        "stack": ["React", "Vite", "Tailwind", "i18n", "GitHub Actions"],
+        "highlights": ["3-language support (DE/EN/PT)", "CI/CD via GitHub Actions"],
         "imageUrl": null,
-        "demoUrl": null,
-        "codeUrl": null,
+        "demoUrl": "https://willianfonseca7.github.io/willianfonseca-portfolio/",
+        "codeUrl": "https://github.com/Willianfonseca7/willianfonseca-portfolio",
         "featured": true
       }
     ]
@@ -222,7 +222,7 @@
       "emailLabel": "Email",
       "messageLabel": "Message",
       "submitLabel": "Send message",
-      "successMessage": "Thanks! Your message has been prepared.",
+      "successMessage": "Copied! Now click the button below to open your mail client and send the message.",
       "minMessageLength": 20,
       "helper": "I'll reply as soon as possible.",
       "copiedMessage": "Message copied to clipboard.",

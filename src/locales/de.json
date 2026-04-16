@@ -70,7 +70,7 @@
       }
     ],
     "values": ["Klarheit", "Zuverlässigkeit", "Lernbereitschaft", "Teamwork", "Sauberer Code"],
-    "languages": ["Portugiesisch", "Deutsch", "Englisch (A2)"]
+    "languages": ["Portugiesisch", "Deutsch", "Englisch"]
   },
   "skills": {
     "title": "Skills & Tech-Stack",
@@ -87,7 +87,7 @@
     "groups": [
       {
         "title": "Frontend",
-        "items": ["HTML5", "CSS3", "JavaScript (ES6+)", "React", "React Router", "Vite", "Tailwind CSS"]
+        "items": ["HTML5", "CSS3", "JavaScript (ES6+)", "React", "Next.js", "React Router", "Vite", "Tailwind CSS"]
       },
       {
         "title": "Tools",
@@ -116,7 +116,7 @@
       "A11y Basics",
       "Performance Basics (React.memo)"
     ],
-    "learning": ["Next.js vertiefen", "Backend-Flows", "Testing vertiefen", "State Management", "Design Tokens"],
+    "learning": ["TypeScript", "Backend-Flows", "Testing vertiefen", "State Management", "Design Tokens"],
     "certifications": [
       {
         "title": "Junior Web Developer IHK Zertifikat",
@@ -191,18 +191,18 @@
         "highlights": ["Backend-Integration über API-Routen und Benutzerauthentifizierung", "Health-Check mit Datenspeicherung und Ergebnislogik"],
         "imageUrl": "/heilpraktiker-bleialf-home.png",
         "demoUrl": "https://heilpraktiker-bleialf.vercel.app/",
-        "codeUrl": null,
+        "codeUrl": "https://github.com/Willianfonseca7/heilpraktiker-bleialf",
         "featured": true
       },
       {
-        "id": "toytopia",
-        "title": "Toytopia",
-        "description": "E-Commerce UI für Spielzeug mit Fokus auf Layout, Komponenten und UX.",
-        "stack": ["React", "UI/UX", "State"],
-        "highlights": ["Produktkarten & Filter UI", "Zustandsverwaltung für Warenkorb"],
+        "id": "portfolio",
+        "title": "Portfolio",
+        "description": "Dieses Portfolio — entwickelt mit React, Vite, Tailwind, Mehrsprachigkeit und automatisiertem GitHub Pages-Deployment.",
+        "stack": ["React", "Vite", "Tailwind", "i18n", "GitHub Actions"],
+        "highlights": ["3 Sprachversionen (DE/EN/PT)", "CI/CD über GitHub Actions"],
         "imageUrl": null,
-        "demoUrl": null,
-        "codeUrl": null,
+        "demoUrl": "https://willianfonseca7.github.io/willianfonseca-portfolio/",
+        "codeUrl": "https://github.com/Willianfonseca7/willianfonseca-portfolio",
         "featured": true
       }
     ]
@@ -222,7 +222,7 @@
       "emailLabel": "E-Mail",
       "messageLabel": "Nachricht",
       "submitLabel": "Nachricht senden",
-      "successMessage": "Danke! Deine Nachricht wurde vorbereitet.",
+      "successMessage": "Kopiert! Klicke jetzt auf den Button unten, um deinen Mail-Client zu öffnen und die Nachricht zu senden.",
       "minMessageLength": 20,
       "helper": "Ich antworte so schnell wie möglich.",
       "copiedMessage": "Nachricht wurde in die Zwischenablage kopiert.",
