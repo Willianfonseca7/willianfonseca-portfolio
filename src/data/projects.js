@@ -22,6 +22,15 @@ export const projects = [
   },
   {
     id: 3,
+    title: "Lego Set Explorer",
+    description:
+      "Full-stack LEGO set explorer with search, filters, authentication, personal collections, and stats dashboard.",
+    techs: ["React", "Node.js", "Express", "TypeScript", "PostgreSQL", "Docker"],
+    playUrl: "https://lego-set-explore.vercel.app",
+    codeUrl: "https://github.com/Willianfonseca7/Lego-Set-Explore",
+  },
+  {
+    id: 4,
     title: "Pokedex-Web",
     description:
       "API-based app focused on UI components, state management, and responsive layout.",
@@ -30,7 +39,7 @@ export const projects = [
     codeUrl: "https://github.com/Willianfonseca7/Pokemon-App",
   },
   {
-    id: 4,
+    id: 5,
     title: "Portfolio",
     description:
       "Personal portfolio built with React, Vite, Tailwind, multilingual support (DE/EN/PT), and GitHub Actions CI/CD.",
