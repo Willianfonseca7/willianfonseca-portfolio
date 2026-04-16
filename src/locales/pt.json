@@ -178,7 +178,7 @@
         "description": "Aplicação full-stack para explorar sets de LEGO com busca, filtros, autenticação, coleções pessoais e painel de estatísticas.",
         "stack": ["React", "Node.js", "Express", "TypeScript", "PostgreSQL", "Docker"],
         "highlights": ["Filtros por tema, ano e quantidade de peças", "Autenticação com sessão, coleções pessoais e dashboard de estatísticas"],
-        "imageUrl": null,
+        "imageUrl": "/lego-set-explore-home.png",
         "demoUrl": "https://lego-set-explore.vercel.app",
         "codeUrl": "https://github.com/Willianfonseca7/Lego-Set-Explore",
         "featured": true
