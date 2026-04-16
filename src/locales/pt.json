@@ -162,14 +162,14 @@
     },
     "list": [
       {
-        "id": "containerhub",
-        "title": "ContainerHub",
-        "description": "Plataforma de aluguel de containers com React, Tailwind e Strapi API (draft/active).",
-        "stack": ["React", "Vite", "Tailwind", "Strapi", "PostgreSQL"],
-        "highlights": ["Integração de API via /api/containers", "CRUD com lógica de status (draft/active)"],
-        "imageUrl": "/containerhub-home.png",
-        "demoUrl": "https://kontainer-flame.vercel.app/",
-        "codeUrl": "https://github.com/Willianfonseca7/ContainerHub",
+        "id": "heilpratika",
+        "title": "Heilpraktiker-Bleialf",
+        "description": "Transformei um site institucional de clínica em uma aplicação fullstack com autenticação, engine de recomendação baseada em input do usuário e sistema de agendamento — criando um funil completo de captação e gestão de pacientes.",
+        "stack": ["Next.js", "React", "Tailwind", "Prisma", "PostgreSQL", "JWT"],
+        "highlights": ["Autenticação por roles (USER/ADMIN/SUPERADMIN) com JWT + cookie e gate de valor no resultado", "Engine de recomendação: quiz → tratamento → médico + agendamento com estados PENDING/CONFIRMED/CANCELED"],
+        "imageUrl": "/heilpraktiker-bleialf-home.png",
+        "demoUrl": "https://heilpraktiker-bleialf.vercel.app/",
+        "codeUrl": "https://github.com/Willianfonseca7/heilpraktiker-bleialf",
         "featured": true
       },
       {
@@ -184,6 +184,17 @@
         "featured": true
       },
       {
+        "id": "containerhub",
+        "title": "ContainerHub",
+        "description": "Plataforma de aluguel de containers com React, Tailwind e Strapi API (draft/active).",
+        "stack": ["React", "Vite", "Tailwind", "Strapi", "PostgreSQL"],
+        "highlights": ["Integração de API via /api/containers", "CRUD com lógica de status (draft/active)"],
+        "imageUrl": "/containerhub-home.png",
+        "demoUrl": "https://kontainer-flame.vercel.app/",
+        "codeUrl": "https://github.com/Willianfonseca7/ContainerHub",
+        "featured": true
+      },
+      {
         "id": "pokedex-web",
         "title": "Pokedex-Web",
         "description": "Aplicação baseada em API com foco em interface, componentes e gerenciamento de estado.",
@@ -192,17 +203,6 @@
         "imageUrl": "/pokedex-home.png",
         "demoUrl": "https://willianfonseca7.github.io/Pokedex-web/",
         "codeUrl": "https://github.com/Willianfonseca7/Pokemon-App",
-        "featured": true
-      },
-      {
-        "id": "heilpratika",
-        "title": "Heilpraktiker-Bleialf",
-        "description": "Plataforma para prática terapêutica com foco em confiança visual, autenticação e integração entre frontend e backend.",
-        "stack": ["Next.js", "React", "Tailwind", "Prisma", "PostgreSQL"],
-        "highlights": ["Integração com backend por rotas de API e autenticação de usuários", "Health check com persistência de dados e lógica de resultados"],
-        "imageUrl": "/heilpraktiker-bleialf-home.png",
-        "demoUrl": "https://heilpraktiker-bleialf.vercel.app/",
-        "codeUrl": "https://github.com/Willianfonseca7/heilpraktiker-bleialf",
         "featured": true
       },
       {
