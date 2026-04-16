@@ -173,6 +173,17 @@
         "featured": true
       },
       {
+        "id": "lego-set-explore",
+        "title": "Lego Set Explorer",
+        "description": "Full-Stack-App zum Erkunden von LEGO-Sets mit Suche, Filtern, Authentifizierung, persönlichen Sammlungen und Statistiken.",
+        "stack": ["React", "Node.js", "Express", "TypeScript", "PostgreSQL", "Docker"],
+        "highlights": ["Filterung nach Thema, Jahr und Teileanzahl", "Session-basierte Authentifizierung mit Sammlungen und Statistik-Dashboard"],
+        "imageUrl": null,
+        "demoUrl": "https://lego-set-explore.vercel.app",
+        "codeUrl": "https://github.com/Willianfonseca7/Lego-Set-Explore",
+        "featured": true
+      },
+      {
         "id": "pokedex-web",
         "title": "Pokedex-Web",
         "description": "API-basierte App mit Fokus auf UI-Komponenten, State und responsive Darstellung.",
