@@ -2,6 +2,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { LanguageProvider } from "../../hooks/useLanguage.jsx";
 import ContactForm from "../../components/sections/ContactForm.jsx";
+import de from "../../locales/de.json";
 
 describe("ContactForm", () => {
   it("blocks submit when message is too short", async () => {
@@ -12,14 +13,16 @@ describe("ContactForm", () => {
       </LanguageProvider>
     );
 
-    await user.type(screen.getByLabelText(/name/i), "Willian");
-    await user.type(screen.getByLabelText(/e-mail/i), "willian@example.com");
-    await user.type(screen.getByLabelText(/nachricht/i), "Kurz");
+    const { nameLabel, emailLabel, messageLabel, submitLabel } = de.contact.form;
 
-    const submitButton = screen.getByRole("button", { name: /nachricht senden/i });
+    await user.type(screen.getByLabelText(new RegExp(nameLabel, "i")), "Willian");
+    await user.type(screen.getByLabelText(new RegExp(emailLabel, "i")), "willian@example.com");
+    await user.type(screen.getByLabelText(new RegExp(messageLabel, "i")), "Kurz");
+
+    const submitButton = screen.getByRole("button", { name: new RegExp(submitLabel, "i") });
     expect(submitButton).toBeDisabled();
 
-    const messageField = screen.getByLabelText(/nachricht/i);
+    const messageField = screen.getByLabelText(new RegExp(messageLabel, "i"));
     fireEvent.blur(messageField);
     expect(messageField).toHaveAttribute("aria-invalid", "true");
   });

@@ -225,7 +225,7 @@
     "links": [
       { "label": "Email", "href": "mailto:willianfonseca7@gmail.com", "icon": "mail" },
       { "label": "GitHub", "href": "https://github.com/Willianfonseca7", "icon": "github" },
-      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/willian-fonseca/", "icon": "linkedin" }
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/willian-fonseca-b146b7240/", "icon": "linkedin" }
     ],
     "form": {
       "title": "Send me a message",
