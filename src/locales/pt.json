@@ -374,7 +374,7 @@
       "emailLabel": "E-mail",
       "messageLabel": "Mensagem",
       "submitLabel": "Enviar mensagem",
-      "successMessage": "Obrigado! Sua mensagem foi preparada.",
+      "successMessage": "Copiado! Clique no botão abaixo para abrir seu cliente de email e enviar a mensagem.",
       "minMessageLength": 20,
       "helper": "Responderei o mais rápido possível.",
       "copiedMessage": "Mensagem copiada para a área de transferência.",

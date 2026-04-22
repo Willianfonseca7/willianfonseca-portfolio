@@ -374,7 +374,7 @@
       "emailLabel": "E-Mail",
       "messageLabel": "Nachricht",
       "submitLabel": "Nachricht senden",
-      "successMessage": "Danke! Deine Nachricht wurde vorbereitet.",
+      "successMessage": "Kopiert! Klicke jetzt auf den Button unten, um deinen Mail-Client zu öffnen und die Nachricht zu senden.",
       "minMessageLength": 20,
       "helper": "Ich antworte so schnell wie möglich.",
       "copiedMessage": "Nachricht wurde in die Zwischenablage kopiert.",

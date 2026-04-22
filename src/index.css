@@ -215,7 +215,7 @@
   }
 
   .mobile-panel.open {
-    max-height: 240px;
+    max-height: 400px;
     opacity: 1;
   }
 
