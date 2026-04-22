@@ -374,7 +374,7 @@
       "emailLabel": "Email",
       "messageLabel": "Message",
       "submitLabel": "Send message",
-      "successMessage": "Thanks! Your message has been prepared.",
+      "successMessage": "Copied! Now click the button below to open your mail client and send the message.",
       "minMessageLength": 20,
       "helper": "I'll reply as soon as possible.",
       "copiedMessage": "Message copied to clipboard.",
