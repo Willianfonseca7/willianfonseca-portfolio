@@ -50,8 +50,20 @@ function ProjectCard({ project }) {
         )}
       </div>
 
-      <div className="space-y-3">
-        <h3 className="heading text-xl">{project.title}</h3>
+      <div className="space-y-2">
+        <div className="flex flex-wrap items-center gap-2">
+          <h3 className="heading text-xl">{project.title}</h3>
+          {project.type && (
+            <span className="rounded-full bg-sky-400/15 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-sky-300/90">
+              {project.type}
+            </span>
+          )}
+        </div>
+        {project.role && (
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-300/55">
+            {project.role}
+          </p>
+        )}
         <p className="text-sm text-muted">{project.description}</p>
       </div>
 

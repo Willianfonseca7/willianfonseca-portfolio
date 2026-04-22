@@ -1,9 +1,9 @@
 {
   "meta": {
     "name": "Willian Santos Fonseca",
-    "role": "Junior Web Developer com prova IHK aprovada",
-    "location": "Düsseldorf (Bilk)",
-    "tagline": "Frontend · React · Tailwind · UX"
+    "role": "Desenvolvedor Fullstack (React / Node.js / PostgreSQL)",
+    "location": "Düsseldorf",
+    "tagline": "Düsseldorf / Remote · Disponível"
   },
   "nav": {
     "home": "Início",
@@ -16,70 +16,96 @@
     "themeLight": "Claro"
   },
   "hero": {
-    "title": "Desenvolvedor com prova IHK aprovada",
-    "subtitle": "React / Next.js / Tailwind / JavaScript / Integração de APIs",
-    "description": "Desenvolvo interfaces modernas, responsivas e bem estruturadas com React e Next.js. Minha formação em desenvolvimento web e WebApp, os módulos concluídos e a prova Junior Web Developer IHK aprovada reforçam uma base prática em frontend, APIs, autenticação e fluxos de backend.",
+    "title": "Desenvolvedor Fullstack",
+    "subtitle": "React · Node.js · PostgreSQL · REST APIs",
+    "description": "Aplicações web completas — do React UI ao PostgreSQL. Autenticação real, APIs estruturadas e deploy em produção.",
     "ctas": {
-      "primary": { "label": "Ver projetos", "href": "/projekte" },
-      "secondary": { "label": "Contato", "href": "/kontakt" }
+      "primary": {
+        "label": "Ver projetos",
+        "href": "/projekte"
+      },
+      "secondary": {
+        "label": "GitHub",
+        "href": "https://github.com/Willianfonseca7",
+        "target": "_blank"
+      },
+      "tertiary": {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/willian-fonseca-b146b7240/",
+        "target": "_blank"
+      }
     },
     "highlights": [
       {
-        "title": "React & Next.js",
-        "description": "Componentes reutilizáveis, UI clara e arquitetura organizada."
+        "title": "Arquitetura Fullstack",
+        "description": "Frontend com React, backend com Node.js/Next.js, banco com PostgreSQL — aplicações completas com lógica de negócio real, não demos de tutorial."
       },
       {
-        "title": "APIs e Autenticação",
-        "description": "Integração de dados, autenticação e fluxos protegidos aplicados em projetos reais."
+        "title": "Design de API & Auth",
+        "description": "Endpoints REST protegidos, autenticação JWT e controle de acesso baseado em roles a partir de projetos prontos para produção."
       },
       {
-        "title": "Interface Responsiva",
-        "description": "Interfaces focadas em clareza visual, UX consistente e boa adaptação mobile."
+        "title": "Certificado IHK",
+        "description": "Desenvolvedor Web Fullstack — prova concluída com sucesso. Certificado oficial em emissão."
       }
     ]
   },
   "home": {
     "aboutPreviewTitle": "Sobre mim em 3 frases",
-    "aboutPreviewSubtitle": "Curto e direto: quem sou e como trabalho.",
-    "projectsPreviewSubtitle": "Projeto em destaque com foco em interface, autenticação e integração de backend.",
-    "projectsPreviewCta": "Ver mais projetos",
+    "aboutPreviewSubtitle": "Quem sou e como trabalho.",
+    "projectsPreviewSubtitle": "Plataforma de saúde com agendamento, autenticação, painel admin e e-mails transacionais.",
+    "projectsPreviewCta": "Ver todos os projetos",
     "intro": [
-      "Sou Willian, desenvolvedor com formação prática em desenvolvimento web e WebApp no Syntax Institut.",
-      "Concluí módulos importantes, certificado de curso e já fui aprovado na prova Junior Web Developer IHK.",
-      "Meu foco está em frontend com React e Next.js, apoiado por experiência prática com APIs, autenticação e backend."
+      "Sou Willian, desenvolvedor Fullstack com foco em React, Node.js e PostgreSQL.",
+      "Construo aplicações web completas: da arquitetura de API e modelagem de banco até o frontend amigável ao usuário.",
+      "Meus projetos são prontos para produção — com autenticação, schemas estruturados e deploy limpo no Vercel e Railway."
     ]
   },
   "about": {
     "eyebrow": "Perfil",
     "title": "Sobre mim",
-    "description": "Sou desenvolvedor com forte foco em frontend e UX. Na formação em desenvolvimento web e WebApp no Syntax Institut concluí módulos importantes, certificado de curso e já fui aprovado na prova Junior Web Developer IHK. Trabalho com projetos React e Next.js, arquitetura clara, styling limpo e integrações de backend. Projetos como ContainerHub, Heilpraktiker-Bleialf e Pokémon WebApp mostram minha evolução prática em interface, APIs, autenticação e fluxos de dados.",
+    "description": "Sou desenvolvedor Fullstack com foco em React, Node.js e PostgreSQL. Após concluir minha formação no Syntax Institut e passar na prova IHK, desenvolvo aplicações que vão além de demos de UI: schemas de banco estruturados, endpoints de API protegidos e lógica de negócio clara. Projetos como o LEGO Set Explorer e o ContainerHub mostram como conecto frontend, backend e banco em um produto coeso.",
     "valuesTitle": "O que valorizo",
     "languagesTitle": "Idiomas",
     "workStyle": [
       {
-        "title": "Estruturado",
-        "description": "Planejo componentes antes e mantenho responsabilidades claras para facilitar manutenção."
+        "title": "Arquitetura primeiro",
+        "description": "Planejo componentes, endpoints de API e schemas de banco antes de implementar — para código estruturado e fácil de manter."
       },
       {
-        "title": "Colaborativo",
-        "description": "Uso branches e pull requests e mantenho comunicação transparente."
+        "title": "Controle de versão & colaboração",
+        "description": "Branches, pull requests e commits descritivos são prática padrão para mim, não exceção."
       },
       {
-        "title": "Centrado no usuário",
-        "description": "Cuido de layouts claros, comportamento responsivo e interações diretas."
+        "title": "Pensamento de produto",
+        "description": "Penso em fluxos de usuário e requisitos. UX e lógica de backend precisam se complementar — não ser projetados isoladamente."
       }
     ],
-    "values": ["Clareza", "Confiabilidade", "Aprendizado", "Equipe", "Código limpo"],
-    "languages": ["Português", "Alemão", "Inglês (A2)"]
+    "values": [
+      "Arquitetura limpa",
+      "Soluções completas",
+      "Confiabilidade",
+      "Aprendizado contínuo",
+      "Comunicação direta"
+    ],
+    "languages": [
+      "Português (nativo)",
+      "Alemão (B2)",
+      "Inglês (básico)"
+    ]
   },
   "skills": {
     "title": "Competências & Tecnologias",
-    "subtitle": "Visão realista das tecnologias que uso hoje e dos conceitos que aplico no dia a dia.",
-    "conceptsTitle": "Conceitos",
+    "subtitle": "Uma visão realista do meu stack atual — da camada de banco de dados até a interface.",
+    "conceptsTitle": "Conceitos & Padrões",
     "learningTitle": "Aprendendo agora",
     "statusTitle": "Status atual",
-    "statusSummary": "Formação de frontend concluída. Já passei também na prova IHK da área full stack e agora estou aguardando a emissão oficial do certificado.",
-    "statusTags": ["Perfil Junior Web Developer", "Prova IHK Fullstack aprovada", "Certificado pendente"],
+    "statusSummary": "Prova IHK na área fullstack aprovada com sucesso — certificado oficial em emissão. Formação no Syntax Institut concluída. Buscando ativamente uma vaga de Desenvolvedor Fullstack Júnior em Düsseldorf ou remoto.",
+    "statusTags": [
+      "Desenvolvedor Fullstack",
+      "Prova IHK aprovada",
+      "Aberto a oportunidades"
+    ],
     "certificationsTitle": "Formação, currículo e certificados",
     "certificationsHint": "Clique em um documento para abrir a imagem em tamanho original.",
     "openCertificateLabel": "Abrir documento",
@@ -87,36 +113,68 @@
     "groups": [
       {
         "title": "Frontend",
-        "items": ["HTML5", "CSS3", "JavaScript (ES6+)", "React", "React Router", "Vite", "Tailwind CSS"]
+        "items": [
+          "HTML5",
+          "CSS3",
+          "JavaScript (ES6+)",
+          "React",
+          "React Router",
+          "Vite",
+          "Tailwind CSS"
+        ]
       },
       {
-        "title": "Ferramentas",
-        "items": ["Git & GitHub (Branches/PR)", "npm/pnpm", "Postman", "VS Code"]
+        "title": "Backend",
+        "items": [
+          "Node.js",
+          "Express.js",
+          "TypeScript",
+          "Next.js API Routes",
+          "REST API",
+          "JWT / Session Auth",
+          "Prisma ORM",
+          "Strapi CMS"
+        ]
       },
       {
-        "title": "Design e UX",
-        "items": ["Figma", "Design System básico", "Layouts responsivos", "Tipografia & contraste"]
+        "title": "Banco & Ferramentas",
+        "items": [
+          "PostgreSQL",
+          "SQL Básico",
+          "Docker & Docker Compose",
+          "Git & GitHub",
+          "Postman",
+          "npm / pnpm",
+          "VS Code"
+        ]
       },
       {
-        "title": "Testes & Qualidade",
-        "items": ["Vitest", "React Testing Library", "Playwright"]
+        "title": "Testes",
+        "items": [
+          "Vitest",
+          "React Testing Library",
+          "Playwright"
+        ]
       }
     ],
     "concepts": [
       "Componentização",
       "Props & State",
-      "Hooks",
+      "Custom Hooks",
       "Renderização condicional",
-      "Listas & Keys",
-      "Formulários",
-      "Fetch/REST",
+      "Fetch / REST",
       "Async/Await",
       "Tratamento de erros",
+      "Fluxo JWT",
+      "Modelagem de banco",
+      "Rotas de API (Next.js)",
       "Responsividade",
-      "Acessibilidade básica",
-      "Performance básica (React.memo)"
+      "Performance básica"
     ],
-    "learning": ["Aprofundando Next.js", "Fluxos de backend", "Testes avançados", "Gerenciamento de estado", "Design tokens"],
+    "learning": [
+      "AI Agents",
+      "Angular"
+    ],
     "certifications": [
       {
         "title": "Certificado Junior Web Developer IHK",
@@ -127,7 +185,7 @@
       {
         "title": "Currículo 2026",
         "status": "Atualizado",
-        "description": "Currículo profissional com resumo do meu perfil, stack atual, projetos, formação e experiência direcionada para vagas de Junior Web Developer.",
+        "description": "Currículo profissional com resumo do perfil, stack atual, projetos, formação e direcionamento para vagas de Desenvolvedor Fullstack.",
         "imageUrl": "/cert-frontend-2026.png"
       },
       {
@@ -139,11 +197,11 @@
       {
         "title": "Design de Produto & Desenvolvimento em TI",
         "status": "Concluído",
-        "description": "Comprovante do módulo voltado a product design e desenvolvimento em TI dentro da formação.",
+        "description": "Comprovante do módulo voltado a design de produto e desenvolvimento em TI dentro da formação.",
         "imageUrl": "/cert-module-1.png"
       },
       {
-        "title": "Especialização & Preparação para o Mercado de Trabalho",
+        "title": "Especialização & Preparação para o Mercado",
         "status": "Concluído",
         "description": "Comprovante do módulo de especialização e preparação para o mercado de trabalho dentro da formação.",
         "imageUrl": "/cert-module-4.png"
@@ -153,7 +211,7 @@
   "projects": {
     "title": "Projetos",
     "featuredTitle": "Projetos em destaque",
-    "subtitle": "Descrições curtas com foco em tecnologia, responsabilidade e aprendizado.",
+    "subtitle": "Projetos prontos para produção com requisitos reais — arquitetura fullstack, autenticação e modelagem de banco de dados.",
     "ui": {
       "demo": "Demo",
       "code": "Código",
@@ -162,64 +220,158 @@
     },
     "list": [
       {
-        "id": "containerhub",
-        "title": "ContainerHub",
-        "description": "Plataforma de aluguel de containers com React, Tailwind e Strapi API (draft/active).",
-        "stack": ["React", "Vite", "Tailwind", "Strapi", "PostgreSQL"],
-        "highlights": ["Integração de API via /api/containers", "CRUD com lógica de status (draft/active)"],
-        "imageUrl": "/containerhub-home.png",
-        "demoUrl": "https://kontainer-flame.vercel.app/",
-        "codeUrl": "https://github.com/Willianfonseca7/ContainerHub",
-        "featured": true
-      },
-      {
-        "id": "pokedex-web",
-        "title": "Pokedex-Web",
-        "description": "Aplicação baseada em API com foco em interface, componentes e gerenciamento de estado.",
-        "stack": ["React", "API", "Componentes de UI"],
-        "highlights": ["Fetch de dados", "Estrutura clara de componentes"],
-        "imageUrl": "/pokedex-home.png",
-        "demoUrl": "https://willianfonseca7.github.io/Pokedex-web/",
-        "codeUrl": "https://github.com/Willianfonseca7/Pokemon-App",
-        "featured": true
+        "id": "lego-set-explore",
+        "title": "LEGO Set Explorer",
+        "type": "Fullstack",
+        "description": "Banco de dados de sets LEGO pesquisável e filtrável, com gestão de coleção pessoal e dashboard de estatísticas. Aplicação fullstack com React, Node.js/Express em TypeScript, PostgreSQL e Docker Compose — frontend no Vercel, backend no Railway.",
+        "stack": [
+          "React",
+          "Node.js",
+          "Express",
+          "TypeScript",
+          "PostgreSQL",
+          "Docker",
+          "Railway"
+        ],
+        "highlights": [
+          "Desenvolvimento de REST API em TypeScript (Node.js/Express) com 9 endpoints: Sets, Auth, Collections e Estatísticas",
+          "Implementação de autenticação por sessão com registro, login e controle de acesso",
+          "Queries SQL complexas com múltiplos filtros (tema, ano, peças) e paginação server-side",
+          "PostgreSQL connection pooling com inicialização automática do schema na primeira execução",
+          "Dashboard de estatísticas com queries SQL agregadas",
+          "Docker Compose local · Vercel (frontend) + Railway (backend + PostgreSQL) em produção"
+        ],
+        "imageUrl": "/lego-set-explore-home.png",
+        "demoUrl": "https://lego-set-explore.vercel.app",
+        "codeUrl": "https://github.com/Willianfonseca7/Lego-Set-Explore",
+        "featured": true,
+        "role": "Desenvolvedor Fullstack · Projeto próprio"
       },
       {
         "id": "heilpratika",
         "title": "Heilpraktiker-Bleialf",
-        "description": "Plataforma para prática terapêutica com foco em confiança visual, autenticação e integração entre frontend e backend.",
-        "stack": ["Next.js", "React", "Tailwind", "Prisma", "PostgreSQL"],
-        "highlights": ["Integração com backend por rotas de API e autenticação de usuários", "Health check com persistência de dados e lógica de resultados"],
+        "type": "Fullstack",
+        "description": "O site existente da clínica estava tecnicamente desatualizado e sem funcionalidades digitais. Reconstrução completa em Next.js com TypeScript: design moderno, agendamento online, portal do paciente com autenticação baseada em roles e painel admin.",
+        "stack": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Prisma ORM",
+          "PostgreSQL",
+          "Tailwind CSS"
+        ],
+        "highlights": [
+          "Implementação de autenticação JWT com bcrypt e separação de roles (Admin / Paciente)",
+          "API de agendamento com validação de médico/tratamento e fluxo de status (PENDING → CONFIRMED → CANCELED)",
+          "E-mails automáticos no login, criação e atualização de consultas",
+          "Prisma ORM + PostgreSQL: schemas estruturados para Users, Appointments e Patients",
+          "Painel admin com gestão de consultas, verificação de disponibilidade e sistema de notificações",
+          "Next.js App Router · TypeScript completo · deploy no Vercel"
+        ],
         "imageUrl": "/heilpraktiker-bleialf-home.png",
         "demoUrl": "https://heilpraktiker-bleialf.vercel.app/",
         "codeUrl": "https://github.com/Willianfonseca7/heilpraktiker-bleialf",
-        "featured": true
+        "featured": true,
+        "role": "Desenvolvedor Fullstack · Projeto para cliente"
+      },
+      {
+        "id": "containerhub",
+        "title": "ContainerHub",
+        "type": "Fullstack",
+        "description": "Uma empresa de aluguel de containers precisava de plataforma digital de gestão de estoque com fluxo de status rastreável. Desenvolvido com frontend React, Strapi como CMS headless e PostgreSQL — fluxo CRUD completo com persistência baseada em status, deploy no Vercel.",
+        "stack": [
+          "React",
+          "Vite",
+          "Tailwind CSS",
+          "Strapi CMS",
+          "PostgreSQL",
+          "REST API"
+        ],
+        "highlights": [
+          "Integração da REST API do Strapi via /api/containers (GET, POST, PUT, DELETE)",
+          "Implementação de lógica de status: draft → active com persistência no PostgreSQL",
+          "Strapi headless CMS com gestão de conteúdo e permissões configurável",
+          "Gerenciamento de estado React controlado para transições dinâmicas de status",
+          "Deploy no Vercel com variáveis de ambiente e pipeline de build automatizado"
+        ],
+        "imageUrl": "/containerhub-home.png",
+        "demoUrl": "https://kontainer-flame.vercel.app/",
+        "codeUrl": "https://github.com/Willianfonseca7/ContainerHub",
+        "featured": true,
+        "role": "Desenvolvedor Fullstack · Projeto próprio"
+      },
+      {
+        "id": "pokedex-web",
+        "title": "Pokédex WebApp",
+        "type": "Frontend",
+        "description": "Projeto inicial para aprender comunicação assíncrona de dados, arquitetura de componentes e gerenciamento de estado em React. SPA interativa com busca em tempo real na PokéAPI, filtro de pesquisa e visualização detalhada em modal.",
+        "stack": [
+          "React",
+          "JavaScript (ES6+)",
+          "PokéAPI",
+          "CSS3",
+          "GitHub Pages"
+        ],
+        "highlights": [
+          "Implementação de comunicação assíncrona com a API via fetch() e async/await",
+          "State controlado para filtros de busca, paginação e visualização de detalhes",
+          "Arquitetura de componentes: App → PokémonList → PokémonCard",
+          "Grid responsivo com overlay modal dinâmico",
+          "Deploy via GitHub Pages — acessível publicamente"
+        ],
+        "imageUrl": "/pokedex-home.png",
+        "demoUrl": "https://willianfonseca7.github.io/Pokedex-web/",
+        "codeUrl": "https://github.com/Willianfonseca7/Pokemon-App",
+        "featured": true,
+        "role": "Desenvolvedor Frontend · Primeiro projeto completo"
       },
       {
         "id": "toytopia",
         "title": "Toytopia",
+        "type": "Frontend",
         "description": "Interface de e-commerce com foco em layout, componentes e experiência do usuário.",
-        "stack": ["React", "UI/UX", "Estado"],
-        "highlights": ["Cards de produto", "Estado para carrinho"],
+        "stack": [
+          "React",
+          "UI/UX",
+          "Estado"
+        ],
+        "highlights": [
+          "Cards de produto & filtros",
+          "Gerenciamento de estado do carrinho"
+        ],
         "imageUrl": null,
         "demoUrl": null,
         "codeUrl": null,
+        "hidden": true,
         "featured": true
       }
     ]
   },
   "contact": {
     "title": "Contato",
-    "description": "Tem alguma pergunta ou quer colaborar? Envie uma mensagem ou use os links abaixo.",
+    "description": "Estou animado com projetos interessantes e novas oportunidades. Pode me escrever — costumo responder em até 24 horas.",
     "linksTitle": "Links e perfis",
     "links": [
-      { "label": "Email", "href": "mailto:willianfonseca7@gmail.com", "icon": "mail" },
-      { "label": "GitHub", "href": "https://github.com/Willianfonseca7", "icon": "github" },
-      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/willian-fonseca-b146b7240/", "icon": "linkedin" }
+      {
+        "label": "E-mail",
+        "href": "mailto:willianfonseca7@gmail.com",
+        "icon": "mail"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/Willianfonseca7",
+        "icon": "github"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/willian-fonseca-b146b7240/",
+        "icon": "linkedin"
+      }
     ],
     "form": {
       "title": "Envie uma mensagem",
       "nameLabel": "Nome",
-      "emailLabel": "Email",
+      "emailLabel": "E-mail",
       "messageLabel": "Mensagem",
       "submitLabel": "Enviar mensagem",
       "successMessage": "Obrigado! Sua mensagem foi preparada.",
@@ -227,7 +379,7 @@
       "helper": "Responderei o mais rápido possível.",
       "copiedMessage": "Mensagem copiada para a área de transferência.",
       "nameError": "Digite pelo menos 2 caracteres.",
-      "emailError": "Digite um email válido.",
+      "emailError": "Digite um e-mail válido.",
       "messageError": "Escreva pelo menos 20 caracteres.",
       "mailClientLabel": "Abrir cliente de e-mail"
     }

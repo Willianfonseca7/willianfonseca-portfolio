@@ -6,6 +6,7 @@ import ProjectCard from "../ui/ProjectCard.jsx";
 export default function ProjectsSection() {
   const { content } = useLanguage();
   const { projects } = content;
+  const visibleProjects = projects.list.filter((project) => !project.hidden);
 
   return (
     <section className="py-20">
@@ -18,7 +19,7 @@ export default function ProjectsSection() {
           />
 
           <div className="grid gap-8 lg:grid-cols-2">
-            {projects.list.map((project) => (
+            {visibleProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>

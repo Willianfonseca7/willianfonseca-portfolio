@@ -37,12 +37,32 @@ export default function HeroSection() {
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button href={hero.ctas.primary.href} variant="primary">
+              <Button
+                href={hero.ctas.primary.href}
+                variant="primary"
+                target={hero.ctas.primary.target}
+                rel={hero.ctas.primary.target === "_blank" ? "noreferrer" : undefined}
+              >
                 {hero.ctas.primary.label}
               </Button>
-              <Button href={hero.ctas.secondary.href} variant="secondary">
+              <Button
+                href={hero.ctas.secondary.href}
+                variant="secondary"
+                target={hero.ctas.secondary.target}
+                rel={hero.ctas.secondary.target === "_blank" ? "noreferrer" : undefined}
+              >
                 {hero.ctas.secondary.label}
               </Button>
+              {hero.ctas.tertiary && (
+                <Button
+                  href={hero.ctas.tertiary.href}
+                  variant="ghost"
+                  target={hero.ctas.tertiary.target}
+                  rel={hero.ctas.tertiary.target === "_blank" ? "noreferrer" : undefined}
+                >
+                  {hero.ctas.tertiary.label}
+                </Button>
+              )}
             </div>
           </div>
 
