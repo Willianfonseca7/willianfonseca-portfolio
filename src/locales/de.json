@@ -18,7 +18,7 @@
   "hero": {
     "title": "Fullstack Developer",
     "subtitle": "React · Node.js · PostgreSQL · REST-APIs",
-    "description": "Vollständige Webanwendungen – von der React-UI bis zur PostgreSQL-Datenbank. Echte Authentifizierung, strukturierte APIs und produktionsbereites Deployment.",
+    "description": "Vollständige Webanwendungen: vom React-Frontend bis zur PostgreSQL-Datenbank. Echte Authentifizierung, strukturierte APIs und produktionsbereites Deployment.",
     "ctas": {
       "primary": {
         "label": "Projekte ansehen",
@@ -46,7 +46,7 @@
       },
       {
         "title": "IHK-Zertifiziert",
-        "description": "Fullstack Web Developer – Prüfung erfolgreich abgeschlossen. Offizielles Zertifikat in Ausstellung."
+        "description": "Drei offizielle IHK-Abschlüsse: IT-Fachkraft für Web Development, Web Development Specialist und Digital Product Designer."
       }
     ]
   },
@@ -64,7 +64,21 @@
   "about": {
     "eyebrow": "Profil",
     "title": "Über mich",
-    "description": "Ich bin Fullstack Developer mit Schwerpunkt auf React, Node.js und PostgreSQL. Nach meiner Weiterbildung am Syntax Institut und der bestandenen IHK-Prüfung entwickle ich Webanwendungen, die über reine UI-Demos hinausgehen: mit strukturierten Datenbankschemas, geschützten API-Endpunkten und klarer Business-Logik. Projekte wie LEGO Set Explorer, ContainerHub und Heilpraktiker-Bleialf zeigen, wie ich Frontend, Backend und Datenbank zu einem kohärenten Produkt verbinde.",
+    "description": "Fullstack Developer mit Fokus auf React, Node.js und PostgreSQL. Drei IHK-Zertifikate und produktionsnahe Projekte mit echten Anforderungen.",
+    "werdegang": {
+      "title": "Werdegang",
+      "paragraphs": [
+        "Ich bin Willian, 31 Jahre alt, geboren in Rio de Janeiro, Brasilien, und seit einigen Jahren in Düsseldorf zu Hause.",
+        "Mein beruflicher Hintergrund liegt in der Logistik: nach einer dreijährigen Ausbildung zum Berufskraftfahrer und einer Weiterbildung als Gefahrgutfahrer war ich bei der Firma Hoyer tätig, täglich im Einsatz für die Produktionsversorgung der Bayer AG in Dormagen.",
+        "Nach einem Arbeitsunfall erhielt ich den Anspruch auf eine Umschulung. Die Wahl war eindeutig: Softwareentwicklung, ein Beruf, den ich mir schon lange vorgestellt hatte. In zwei Jahren habe ich Fullstack-Entwicklung strukturiert aufgebaut, drei IHK-Zertifikate erworben und produktionsnahe Projekte entwickelt."
+      ]
+    },
+    "ihkTitle": "IHK-Zertifizierungen",
+    "ihkCertifications": [
+      "IT-Fachkraft für Web Development IHK",
+      "Web Development Specialist IHK",
+      "Digital Product Designer IHK"
+    ],
     "valuesTitle": "Was mir wichtig ist",
     "languagesTitle": "Sprachen",
     "workStyle": [
@@ -100,10 +114,10 @@
     "conceptsTitle": "Konzepte & Patterns",
     "learningTitle": "Aktuell am Lernen",
     "statusTitle": "Aktueller Stand",
-    "statusSummary": "IHK-Prüfung im Fullstack-Bereich erfolgreich bestanden – offizielles Zertifikat in Ausstellung. Weiterbildung am Syntax Institut abgeschlossen. Ich suche aktiv eine Junior-Fullstack-Stelle in Düsseldorf oder Remote.",
+    "statusSummary": "Drei IHK-Zertifikate erworben: IT-Fachkraft für Web Development, Web Development Specialist und Digital Product Designer. Weiterbildung am Syntax Institut abgeschlossen. Ich suche aktiv eine Junior-Fullstack-Stelle in Düsseldorf oder Remote.",
     "statusTags": [
       "Fullstack Developer",
-      "IHK-Prüfung bestanden",
+      "IHK-Zertifiziert",
       "Offen für Angebote"
     ],
     "certificationsTitle": "Weiterbildung, Lebenslauf & Zertifikate",
@@ -177,10 +191,31 @@
     ],
     "certifications": [
       {
-        "title": "Junior Web Developer IHK Zertifikat",
-        "status": "Bestanden",
-        "description": "Die Prüfung wurde bereits erfolgreich bestanden. Das offizielle IHK-Zertifikat ist aktuell noch nicht eingetroffen.",
-        "imageUrl": "/cert-ihk-fullstack.png"
+        "title": "IT-Fachkraft für Web Development IHK",
+        "status": "Abgeschlossen",
+        "description": "Offizieller IHK-Gesamtabschluss, abgeschlossen am 01.04.2026. Umfasst Digital Product Designer, Junior Web Developer und Web Development Specialist.",
+        "images": [
+          { "label": "Zertifikat", "url": "/zertifikatbilder/certificado-todos-cursos-IHK-conteudo.png" },
+          { "label": "Inhalte", "url": "/zertifikatbilder/certificado-IT-fachkraft-web-development-IHK.png" }
+        ]
+      },
+      {
+        "title": "Web Development Specialist IHK",
+        "status": "Abgeschlossen",
+        "description": "React.js, State Management, Routing, moderne CSS-Frameworks und Performance-Optimierung. Abgeschlossen am 01.04.2026.",
+        "images": [
+          { "label": "Zertifikat", "url": "/zertifikatbilder/certificado-web-development-specialist-IHK.png" },
+          { "label": "Inhalte", "url": "/zertifikatbilder/certificado-web-development-specialist-IHK-conteudo.png" }
+        ]
+      },
+      {
+        "title": "Digital Product Designer IHK",
+        "status": "Abgeschlossen",
+        "description": "UI/UX-Prinzipien, Wireframing, Prototyping, User Research und Produkt- und Projektmanagement (Scrum). Abgeschlossen am 02.04.2026.",
+        "images": [
+          { "label": "Zertifikat", "url": "/zertifikatbilder/certificado-digital-product-designer-IHK.png" },
+          { "label": "Inhalte", "url": "/zertifikatbilder/certificado-digital-product-designer-IHK-conteudo.png" }
+        ]
       },
       {
         "title": "Lebenslauf 2026",

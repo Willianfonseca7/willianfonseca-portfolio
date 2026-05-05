@@ -1,40 +1,86 @@
-import { useEffect, useState } from "react";
 import { useLanguage } from "../../hooks/useLanguage.jsx";
+import { useCertificateModal } from "../../hooks/useCertificateModal.js";
 import Container from "../ui/Container.jsx";
 import SectionHeader from "../ui/SectionHeader.jsx";
 import Card from "../ui/Card.jsx";
 import Tag from "../ui/Tag.jsx";
 
-function resolveAssetUrl(assetUrl) {
-  if (!assetUrl) return null;
-  if (assetUrl.startsWith("http://") || assetUrl.startsWith("https://")) {
-    return assetUrl;
-  }
+function resolveAssetUrl(url) {
+  if (!url) return null;
+  if (url.startsWith("http://") || url.startsWith("https://")) return url;
+  if (url.startsWith("/")) return `${import.meta.env.BASE_URL}${url.slice(1)}`;
+  return url;
+}
 
-  if (assetUrl.startsWith("/")) {
-    return `${import.meta.env.BASE_URL}${assetUrl.slice(1)}`;
-  }
+function certThumbnail(cert) {
+  if (cert.images?.length) return resolveAssetUrl(cert.images[0].url);
+  return resolveAssetUrl(cert.imageUrl);
+}
 
-  return assetUrl;
+function CertificateModal({ cert, activeTab, setActiveTab, onClose, labels }) {
+  const hasMultiple = cert.images?.length > 1;
+  const currentUrl = hasMultiple
+    ? resolveAssetUrl(cert.images[activeTab].url)
+    : resolveAssetUrl(cert.imageUrl);
+
+  return (
+    <div
+      className="fixed inset-0 z-100 flex items-center justify-center bg-slate-950/88 p-4 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <div
+        className="relative flex max-h-[92vh] max-w-[92vw] flex-col overflow-hidden rounded-(--radius-card) border border-white/10 bg-slate-950/80 shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-center justify-between gap-4 px-4 pt-3 pb-2">
+          {hasMultiple ? (
+            <div className="flex gap-1">
+              {cert.images.map((img, i) => (
+                <button
+                  key={img.label}
+                  type="button"
+                  onClick={() => setActiveTab(i)}
+                  className={`rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] transition ${
+                    activeTab === i
+                      ? "bg-sky-500/20 text-sky-200"
+                      : "text-slate-400 hover:text-slate-200"
+                  }`}
+                >
+                  {img.label}
+                </button>
+              ))}
+            </div>
+          ) : (
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+              {cert.title}
+            </span>
+          )}
+          <button
+            type="button"
+            className="rounded-full bg-slate-800/80 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-slate-100 transition hover:bg-slate-700"
+            onClick={onClose}
+          >
+            {labels.close}
+          </button>
+        </div>
+
+        <div className="overflow-auto">
+          <img
+            key={currentUrl}
+            src={currentUrl}
+            alt={cert.title}
+            className="max-h-[82vh] max-w-[92vw] object-contain"
+          />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default function SkillsSection() {
   const { content } = useLanguage();
   const { skills } = content;
-  const [selectedCertificate, setSelectedCertificate] = useState(null);
-
-  useEffect(() => {
-    if (!selectedCertificate) return undefined;
-
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") {
-        setSelectedCertificate(null);
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [selectedCertificate]);
+  const { selected, activeTab, setActiveTab, open, close } = useCertificateModal();
 
   return (
     <section className="py-20">
@@ -106,22 +152,17 @@ export default function SkillsSection() {
                 >
                   <button
                     type="button"
-                    className="group/cert block overflow-hidden rounded-t-[var(--radius-card)] border-b border-white/10 text-left"
-                    onClick={() =>
-                      setSelectedCertificate({
-                        title: item.title,
-                        imageUrl: resolveAssetUrl(item.imageUrl),
-                      })
-                    }
+                    className="group/cert block overflow-hidden rounded-t-(--radius-card) border-b border-white/10 text-left"
+                    onClick={() => open(item)}
                   >
-                    <div className="relative aspect-[4/3] overflow-hidden bg-slate-950/60">
+                    <div className="relative aspect-4/3 overflow-hidden bg-slate-950/60">
                       <img
-                        src={resolveAssetUrl(item.imageUrl)}
+                        src={certThumbnail(item)}
                         alt={item.title}
                         className="h-full w-full object-cover object-top transition duration-500 group-hover/cert:scale-[1.02]"
                         loading="lazy"
                       />
-                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-transparent" />
+                      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-slate-950/45 via-transparent to-transparent" />
                     </div>
                   </button>
 
@@ -136,12 +177,7 @@ export default function SkillsSection() {
                     <button
                       type="button"
                       className="text-xs font-semibold uppercase tracking-[0.24em] text-sky-200/85 transition hover:text-sky-100"
-                      onClick={() =>
-                        setSelectedCertificate({
-                          title: item.title,
-                          imageUrl: resolveAssetUrl(item.imageUrl),
-                        })
-                      }
+                      onClick={() => open(item)}
                     >
                       {skills.openCertificateLabel}
                     </button>
@@ -153,29 +189,14 @@ export default function SkillsSection() {
         </div>
       </Container>
 
-      {selectedCertificate ? (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/88 p-4 backdrop-blur-sm"
-          onClick={() => setSelectedCertificate(null)}
-        >
-          <div
-            className="relative max-h-[92vh] max-w-[92vw] overflow-hidden rounded-[var(--radius-card)] border border-white/10 bg-slate-950/80 shadow-2xl"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <button
-              type="button"
-              className="absolute right-3 top-3 z-10 rounded-full bg-slate-950/80 px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-100 transition hover:bg-slate-900"
-              onClick={() => setSelectedCertificate(null)}
-            >
-              {skills.closeCertificateLabel}
-            </button>
-            <img
-              src={selectedCertificate.imageUrl}
-              alt={selectedCertificate.title}
-              className="max-h-[92vh] max-w-[92vw] object-contain"
-            />
-          </div>
-        </div>
+      {selected ? (
+        <CertificateModal
+          cert={selected}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          onClose={close}
+          labels={{ close: skills.closeCertificateLabel }}
+        />
       ) : null}
     </section>
   );

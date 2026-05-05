@@ -18,6 +18,17 @@ export default function AboutSection() {
             subtitle={about.description}
           />
 
+          <div className="space-y-4">
+            <h3 className="heading text-lg">{about.werdegang.title}</h3>
+            <div className="space-y-3">
+              {about.werdegang.paragraphs.map((paragraph) => (
+                <p key={paragraph} className="text-sm sm:text-base text-muted leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+
           <div className="grid gap-6 lg:grid-cols-3">
             {about.workStyle.map((item) => (
               <FeatureCard
@@ -26,6 +37,15 @@ export default function AboutSection() {
                 description={item.description}
               />
             ))}
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="heading text-lg">{about.ihkTitle}</h3>
+            <div className="flex flex-wrap gap-2">
+              {about.ihkCertifications.map((cert) => (
+                <Tag key={cert} label={cert} />
+              ))}
+            </div>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">

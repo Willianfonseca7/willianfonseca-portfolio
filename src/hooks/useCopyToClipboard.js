@@ -9,7 +9,7 @@ export default function useCopyToClipboard() {
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
       return true;
-    } catch (error) {
+    } catch {
       setCopied(false);
       return false;
     }
