@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { LanguageProvider } from "../../hooks/useLanguage.jsx";
+import { LanguageProvider } from "../../context/LanguageContext.jsx";
 import ContactForm from "../../components/sections/ContactForm.jsx";
 
 describe("ContactForm", () => {

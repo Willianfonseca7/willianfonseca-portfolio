@@ -18,7 +18,7 @@
   "hero": {
     "title": "Desenvolvedor Fullstack",
     "subtitle": "React · Node.js · PostgreSQL · REST APIs",
-    "description": "Aplicações web completas — do React UI ao PostgreSQL. Autenticação real, APIs estruturadas e deploy em produção.",
+    "description": "Aplicações web completas, do React UI ao PostgreSQL. Autenticação real, APIs estruturadas e deploy em produção.",
     "ctas": {
       "primary": {
         "label": "Ver projetos",
@@ -46,7 +46,7 @@
       },
       {
         "title": "Certificado IHK",
-        "description": "Desenvolvedor Web Fullstack — prova concluída com sucesso. Certificado oficial em emissão."
+        "description": "Três certificados IHK oficiais: IT-Fachkraft für Web Development, Web Development Specialist e Digital Product Designer."
       }
     ]
   },
@@ -64,7 +64,21 @@
   "about": {
     "eyebrow": "Perfil",
     "title": "Sobre mim",
-    "description": "Sou desenvolvedor Fullstack com foco em React, Node.js e PostgreSQL. Após concluir minha formação no Syntax Institut e passar na prova IHK, desenvolvo aplicações que vão além de demos de UI: schemas de banco estruturados, endpoints de API protegidos e lógica de negócio clara. Projetos como o LEGO Set Explorer e o ContainerHub mostram como conecto frontend, backend e banco em um produto coeso.",
+    "description": "Desenvolvedor Fullstack com foco em React, Node.js e PostgreSQL. Três certificados IHK e projetos com requisitos reais, prontos para produção.",
+    "werdegang": {
+      "title": "Trajetória",
+      "paragraphs": [
+        "Sou Willian, tenho 31 anos, nasci no Rio de Janeiro e moro em Düsseldorf há alguns anos.",
+        "Minha formação profissional é na área de logística: após um Ausbildung de 3 anos como motorista (Berufskraftfahrer) e uma especialização como transportador de produtos perigosos (Gefahrgutfahrer), trabalhei na empresa Hoyer, abastecendo diariamente a linha de produção da Bayer AG em Dormagen.",
+        "Após um acidente de trabalho, tive direito a uma requalificação profissional. A escolha foi clara: desenvolvimento de software, a carreira que sempre sonhei. Em dois anos construí minha base em desenvolvimento fullstack, obtive três certificados IHK e desenvolvi projetos prontos para produção."
+      ]
+    },
+    "ihkTitle": "Certificados IHK",
+    "ihkCertifications": [
+      "IT-Fachkraft für Web Development IHK",
+      "Web Development Specialist IHK",
+      "Digital Product Designer IHK"
+    ],
     "valuesTitle": "O que valorizo",
     "languagesTitle": "Idiomas",
     "workStyle": [
@@ -100,10 +114,10 @@
     "conceptsTitle": "Conceitos & Padrões",
     "learningTitle": "Aprendendo agora",
     "statusTitle": "Status atual",
-    "statusSummary": "Prova IHK na área fullstack aprovada com sucesso — certificado oficial em emissão. Formação no Syntax Institut concluída. Buscando ativamente uma vaga de Desenvolvedor Fullstack Júnior em Düsseldorf ou remoto.",
+    "statusSummary": "Três certificados IHK obtidos: IT-Fachkraft für Web Development, Web Development Specialist e Digital Product Designer. Formação no Syntax Institut concluída. Buscando ativamente uma vaga de Desenvolvedor Fullstack Júnior em Düsseldorf ou remoto.",
     "statusTags": [
       "Desenvolvedor Fullstack",
-      "Prova IHK aprovada",
+      "Certificado IHK",
       "Aberto a oportunidades"
     ],
     "certificationsTitle": "Formação, currículo e certificados",
@@ -177,10 +191,31 @@
     ],
     "certifications": [
       {
-        "title": "Certificado Junior Web Developer IHK",
-        "status": "Aprovado",
-        "description": "A prova já foi concluída com sucesso. O certificado oficial da IHK ainda está em processo de emissão.",
-        "imageUrl": "/cert-ihk-fullstack.png"
+        "title": "IT-Fachkraft für Web Development IHK",
+        "status": "Concluído",
+        "description": "Certificado IHK geral, concluído em 01.04.2026. Abrange Digital Product Designer, Junior Web Developer e Web Development Specialist.",
+        "images": [
+          { "label": "Certificado", "url": "/zertifikatbilder/certificado-todos-cursos-IHK-conteudo.png" },
+          { "label": "Conteúdo", "url": "/zertifikatbilder/certificado-IT-fachkraft-web-development-IHK.png" }
+        ]
+      },
+      {
+        "title": "Web Development Specialist IHK",
+        "status": "Concluído",
+        "description": "React.js, gerenciamento de estado, roteamento, frameworks CSS modernos e otimização de performance. Concluído em 01.04.2026.",
+        "images": [
+          { "label": "Certificado", "url": "/zertifikatbilder/certificado-web-development-specialist-IHK.png" },
+          { "label": "Conteúdo", "url": "/zertifikatbilder/certificado-web-development-specialist-IHK-conteudo.png" }
+        ]
+      },
+      {
+        "title": "Digital Product Designer IHK",
+        "status": "Concluído",
+        "description": "Princípios de UI/UX, wireframing, prototipagem, pesquisa com usuários e gerenciamento de produto e projeto (Scrum). Concluído em 02.04.2026.",
+        "images": [
+          { "label": "Certificado", "url": "/zertifikatbilder/certificado-digital-product-designer-IHK.png" },
+          { "label": "Conteúdo", "url": "/zertifikatbilder/certificado-digital-product-designer-IHK-conteudo.png" }
+        ]
       },
       {
         "title": "Currículo 2026",

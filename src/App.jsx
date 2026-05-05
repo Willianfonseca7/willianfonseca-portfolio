@@ -1,5 +1,3 @@
-// src/App.jsx
-// Configuração das rotas principais
 import { Routes, Route } from "react-router-dom";
 import useScrollToHash from "./hooks/useScrollToHash.js";
 
@@ -14,19 +12,10 @@ export default function App() {
 
   return (
     <Routes>
-      {/* Startseite / Übersicht */}
       <Route path="/" element={<Home />} />
-
-      {/* Seite über mich */}
       <Route path="/about" element={<AboutMePage />} />
-
-      {/* Seite nur für Skills */}
       <Route path="/skills" element={<Skills />} />
-
-      {/* Seite nur für Projekte */}
       <Route path="/projekte" element={<ProjectsPage />} />
-
-      {/* Seite nur für Kontakt */}
       <Route path="/kontakt" element={<ContactPage />} />
     </Routes>
   );

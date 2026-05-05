@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { LanguageProvider } from "../../context/LanguageContext.jsx";
 import ProjectCard from "../../components/ui/ProjectCard.jsx";
 
 const project = {
@@ -13,9 +14,13 @@ const project = {
 
 describe("ProjectCard", () => {
   it("renders title and tags", () => {
-    render(<ProjectCard project={project} />);
+    render(
+      <LanguageProvider>
+        <ProjectCard project={project} />
+      </LanguageProvider>
+    );
 
-    expect(screen.getByText("ContainerHub")).toBeInTheDocument();
+    expect(screen.getAllByText("ContainerHub").length).toBeGreaterThan(0);
     expect(screen.getByText("React")).toBeInTheDocument();
     expect(screen.getByText("Tailwind")).toBeInTheDocument();
   });
