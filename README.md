@@ -1,125 +1,115 @@
-# Willian Fonseca – Portfolio
+# Willian Fonseca — Portfolio
 
-Willkommen! Dieses Repository enthält mein persönliches Portfolio als Frontend‑Entwickler. Die Seite zeigt ausgewählte Projekte, Skills und Kontaktmöglichkeiten und ist für Recruiter und Unternehmen optimiert.
+**Live:** [willianfonseca7.github.io/willianfonseca-portfolio](https://willianfonseca7.github.io/willianfonseca-portfolio/)
 
-**Live‑Website (GitHub Pages):**
+Personal portfolio built with React + Vite, showcasing my projects, skills and certificates. Fully responsive, multilingual (DE / EN / PT) and deployed automatically via GitHub Actions.
 
-```
-https://willianfonseca7.github.io/willianfonseca-portfolio/
-```
+![Portfolio Preview](https://willianfonseca7.github.io/willianfonseca-portfolio/og-preview.png)
 
 ---
 
-## Inhalte
+## Tech Stack
 
-- [Über das Projekt](#über-das-projekt)
-- [Features](#features)
-- [Tech‑Stack](#tech-stack)
-- [Projektstruktur](#projektstruktur)
-- [Lokal ausführen](#lokal-ausführen)
-- [Build & Deployment](#build--deployment)
-- [Tests](#tests)
-- [Kontakt](#kontakt)
-
----
-
-## Über das Projekt
-
-Das Portfolio präsentiert meine Arbeit als Frontend‑Entwickler. Es ist responsiv, mehrsprachig und fokussiert auf klare Informationsarchitektur, saubere UI‑Komponenten und gute Performance. Inhalte sind modular aufgebaut, damit neue Projekte und Texte schnell ergänzt werden können.
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=flat-square&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-7-CA4245?style=flat-square&logo=reactrouter&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-unit_tests-6E9F18?style=flat-square&logo=vitest&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-e2e_tests-45BA4B?style=flat-square&logo=playwright&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI%2FCD-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-deployed-222222?style=flat-square&logo=github&logoColor=white)
 
 ---
 
 ## Features
 
-- Moderne, responsive UI
-- Mehrsprachigkeit (DE/EN/PT)
-- Projekte‑Sektion mit strukturierten Daten
-- Saubere Komponenten‑Architektur
-- Client‑seitiges Routing
+- Responsive design — mobile, tablet and desktop
+- Multilingual support (German / English / Portuguese) with context-based i18n
+- Projects gallery with live demos and source links
+- Skills section with certificates
+- Contact form
+- Automated CI/CD deploy to GitHub Pages on every push to `main`
+- Unit tests (Vitest) + End-to-end tests (Playwright)
 
 ---
 
-## Tech‑Stack
-
-- **Framework:** React (Vite)
-- **Routing:** React Router
-- **Styling:** CSS + Tailwind (PostCSS)
-- **Tests:** Vitest + Playwright
-- **Deployment:** GitHub Pages (via GitHub Actions)
-
----
-
-## Projektstruktur
+## Project Structure
 
 ```
 willianfonseca-portfolio/
-├─ src/
-│  ├─ components/
-│  ├─ pages/
-│  ├─ data/
-│  ├─ hooks/
-│  ├─ locales/
-│  └─ main.jsx
-├─ public/
-├─ index.html
-├─ vite.config.js
-└─ package.json
+├── src/
+│   ├── components/
+│   │   ├── sections/       # Page sections (Hero, Projects, Skills, Contact…)
+│   │   └── ui/             # Reusable UI components (Card, Button, Tag…)
+│   ├── pages/              # Route-level pages
+│   ├── hooks/              # Custom React hooks
+│   ├── context/            # LanguageContext (i18n)
+│   ├── data/               # Projects data
+│   ├── locales/            # Translation files (de.json, en.json, pt.json)
+│   └── main.jsx
+├── public/                 # Static assets, screenshots, certificates
+├── e2e/                    # Playwright E2E tests
+├── index.html
+├── vite.config.js
+└── package.json
 ```
 
 ---
 
-## Lokal ausführen
+## Run Locally
 
 ```bash
+# Clone the repository
+git clone https://github.com/Willianfonseca7/willianfonseca-portfolio.git
+cd willianfonseca-portfolio
+
+# Install dependencies
 npm install
+
+# Start development server
 npm run dev
 ```
 
-Öffne dann:
-
-```
-http://localhost:5173
-```
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
-## Build & Deployment
-
-**Build lokal:**
+## Build & Deploy
 
 ```bash
+# Production build
 npm run build
-```
 
-**Deployment (GitHub Pages):**
-
-```bash
+# Manual deploy to GitHub Pages
 npm run deploy
 ```
 
-Der Deploy wird zusätzlich automatisch per GitHub Actions ausgeführt, sobald auf `main` gepusht wird.
+Deployment also runs **automatically** via GitHub Actions on every push to `main`.
 
 ---
 
 ## Tests
 
-**Unit Tests:**
-
 ```bash
+# Unit tests
 npm run test
-```
 
-**E2E Tests:**
+# Unit tests with UI
+npm run test:ui
 
-```bash
+# End-to-end tests (Playwright)
 npm run test:e2e
 ```
 
 ---
 
-## Kontakt
+## Contact
 
-Wenn Sie Fragen haben oder ein Interview vereinbaren möchten, melden Sie sich gern.
+**Willian Fonseca** — Frontend Developer  
+Düsseldorf, Deutschland | Available for new opportunities
+
+- Portfolio: [willianfonseca7.github.io/willianfonseca-portfolio](https://willianfonseca7.github.io/willianfonseca-portfolio/)
+- GitHub: [@Willianfonseca7](https://github.com/Willianfonseca7)
 
 ---
 
