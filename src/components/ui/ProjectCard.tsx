@@ -4,20 +4,34 @@ import Tag from "./Tag";
 import Button from "./Button";
 import { useLanguage } from "../../hooks/useLanguage";
 
-function resolveImageUrl(imageUrl) {
+interface ProjectImage {
+  url: string;
+  label: string;
+}
+
+export interface LocaleProject {
+  id: string;
+  title: string;
+  description: string;
+  stack: string[];
+  highlights: string[];
+  demoUrl: string | null;
+  codeUrl: string | null;
+  imageUrl?: string;
+  type?: string;
+  role?: string;
+  hidden?: boolean;
+  images?: ProjectImage[];
+}
+
+function resolveImageUrl(imageUrl: string | undefined): string | null {
   if (!imageUrl) return null;
-  if (imageUrl.startsWith("http://") || imageUrl.startsWith("https://")) {
-    return imageUrl;
-  }
-
-  if (imageUrl.startsWith("/")) {
-    return `${import.meta.env.BASE_URL}${imageUrl.slice(1)}`;
-  }
-
+  if (imageUrl.startsWith("http://") || imageUrl.startsWith("https://")) return imageUrl;
+  if (imageUrl.startsWith("/")) return `${import.meta.env.BASE_URL}${imageUrl.slice(1)}`;
   return imageUrl;
 }
 
-function ProjectCard({ project }) {
+function ProjectCard({ project }: { project: LocaleProject }) {
   const { content } = useLanguage();
   const labels = content.projects.ui;
   const hasDemo = Boolean(project.demoUrl);
@@ -31,7 +45,7 @@ function ProjectCard({ project }) {
         {hasImage ? (
           <div className="group/image relative aspect-[16/9] overflow-hidden bg-slate-950/60">
             <img
-              src={resolvedImageUrl}
+              src={resolvedImageUrl!}
               alt={`${project.title} preview`}
               className="h-full w-full object-cover object-top transition duration-500 group-hover/image:scale-[1.03]"
               loading="lazy"
@@ -85,7 +99,7 @@ function ProjectCard({ project }) {
       <div className="mt-auto flex flex-wrap gap-3 pt-2">
         <div className="relative group">
           <Button
-            href={hasDemo ? project.demoUrl : undefined}
+            href={hasDemo ? project.demoUrl! : undefined}
             variant="primary"
             disabled={!hasDemo}
             className="min-w-[140px] justify-center"
@@ -94,13 +108,11 @@ function ProjectCard({ project }) {
           >
             {labels.demo}
           </Button>
-          {!hasDemo && (
-            <span className="tooltip">{labels.comingSoon}</span>
-          )}
+          {!hasDemo && <span className="tooltip">{labels.comingSoon}</span>}
         </div>
         <div className="relative group">
           <Button
-            href={hasCode ? project.codeUrl : undefined}
+            href={hasCode ? project.codeUrl! : undefined}
             variant="secondary"
             disabled={!hasCode}
             className="min-w-[140px] justify-center"
@@ -109,9 +121,7 @@ function ProjectCard({ project }) {
           >
             {labels.code}
           </Button>
-          {!hasCode && (
-            <span className="tooltip">{labels.comingSoon}</span>
-          )}
+          {!hasCode && <span className="tooltip">{labels.comingSoon}</span>}
         </div>
       </div>
     </Card>

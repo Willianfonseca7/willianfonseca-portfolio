@@ -1,25 +1,33 @@
 import { useLanguage } from "../../hooks/useLanguage";
-import { useCertificateModal } from "../../hooks/useCertificateModal";
+import { useCertificateModal, type Certificate } from "../../hooks/useCertificateModal";
 import Container from "../ui/Container";
 import SectionHeader from "../ui/SectionHeader";
 import Card from "../ui/Card";
 import Tag from "../ui/Tag";
 
-function resolveAssetUrl(url) {
+function resolveAssetUrl(url: string | undefined): string | null {
   if (!url) return null;
   if (url.startsWith("http://") || url.startsWith("https://")) return url;
   if (url.startsWith("/")) return `${import.meta.env.BASE_URL}${url.slice(1)}`;
   return url;
 }
 
-function certThumbnail(cert) {
+function certThumbnail(cert: Certificate): string | null {
   if (cert.images?.length) return resolveAssetUrl(cert.images[0].url);
   return resolveAssetUrl(cert.imageUrl);
 }
 
-function CertificateModal({ cert, activeTab, setActiveTab, onClose, labels }) {
-  const hasMultiple = cert.images?.length > 1;
-  const currentUrl = hasMultiple
+interface ModalProps {
+  cert: Certificate;
+  activeTab: number;
+  setActiveTab: (i: number) => void;
+  onClose: () => void;
+  labels: { close: string };
+}
+
+function CertificateModal({ cert, activeTab, setActiveTab, onClose, labels }: ModalProps) {
+  const hasMultiple = (cert.images?.length ?? 0) > 1;
+  const currentUrl = hasMultiple && cert.images
     ? resolveAssetUrl(cert.images[activeTab].url)
     : resolveAssetUrl(cert.imageUrl);
 
@@ -33,7 +41,7 @@ function CertificateModal({ cert, activeTab, setActiveTab, onClose, labels }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between gap-4 px-4 pt-3 pb-2">
-          {hasMultiple ? (
+          {hasMultiple && cert.images ? (
             <div className="flex gap-1">
               {cert.images.map((img, i) => (
                 <button
@@ -67,7 +75,7 @@ function CertificateModal({ cert, activeTab, setActiveTab, onClose, labels }) {
         <div className="overflow-auto">
           <img
             key={currentUrl}
-            src={currentUrl}
+            src={currentUrl ?? ""}
             alt={cert.title}
             className="max-h-[82vh] max-w-[92vw] object-contain"
           />
@@ -153,11 +161,11 @@ export default function SkillsSection() {
                   <button
                     type="button"
                     className="group/cert block overflow-hidden rounded-t-(--radius-card) border-b border-white/10 text-left"
-                    onClick={() => open(item)}
+                    onClick={() => open(item as Certificate)}
                   >
                     <div className="relative aspect-4/3 overflow-hidden bg-slate-950/60">
                       <img
-                        src={certThumbnail(item)}
+                        src={certThumbnail(item as Certificate) ?? ""}
                         alt={item.title}
                         className="h-full w-full object-cover object-top transition duration-500 group-hover/cert:scale-[1.02]"
                         loading="lazy"
@@ -177,7 +185,7 @@ export default function SkillsSection() {
                     <button
                       type="button"
                       className="text-xs font-semibold uppercase tracking-[0.24em] text-sky-200/85 transition hover:text-sky-100"
-                      onClick={() => open(item)}
+                      onClick={() => open(item as Certificate)}
                     >
                       {skills.openCertificateLabel}
                     </button>

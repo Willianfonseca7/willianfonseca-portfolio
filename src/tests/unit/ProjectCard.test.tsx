@@ -1,8 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import { LanguageProvider } from "../../context/LanguageContext";
 import ProjectCard from "../../components/ui/ProjectCard";
+import type { LocaleProject } from "../../components/ui/ProjectCard";
 
-const project = {
+const project: LocaleProject = {
   id: "kontainer",
   title: "ContainerHub",
   description: "Test",

@@ -4,7 +4,7 @@ import SectionHeader from "../ui/SectionHeader";
 import Card from "../ui/Card";
 import ContactForm from "./ContactForm";
 
-const iconMap = {
+const iconMap: Record<string, string> = {
   mail: "✉️",
   github: "🐙",
   linkedin: "💼",
@@ -37,7 +37,7 @@ export default function ContactSection() {
                     aria-label={link.label}
                   >
                     <span className="text-lg">
-                      {iconMap[link.icon] || "🔗"}
+                      {iconMap[link.icon] ?? "🔗"}
                     </span>
                     <span className="text-sm font-medium text-primary">
                       {link.label}

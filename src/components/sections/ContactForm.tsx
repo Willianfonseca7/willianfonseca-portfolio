@@ -36,20 +36,20 @@ export default function ContactForm() {
 
   const isValid = !errors.name && !errors.email && !errors.message;
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     setStatus("");
     setPreparedMailto("");
   };
 
-  const handleBlur = (event) => {
-    const { name } = event.target;
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name } = e.target;
     setTouched((prev) => ({ ...prev, [name]: true }));
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     setTouched({ name: true, email: true, message: true });
 
     if (!isValid) return;
@@ -59,10 +59,8 @@ export default function ContactForm() {
     await copy(messageBody);
     setStatus(form.successMessage);
 
-    const mailto = `mailto:${content.contact.links[0].href.replace(
-      "mailto:",
-      ""
-    )}?subject=Portfolio%20Kontakt&body=${encodeURIComponent(messageBody)}`;
+    const emailHref = content.contact.links[0]?.href.replace("mailto:", "") ?? "";
+    const mailto = `mailto:${emailHref}?subject=Portfolio%20Kontakt&body=${encodeURIComponent(messageBody)}`;
     setPreparedMailto(mailto);
 
     setFormData({ name: "", email: "", message: "" });
