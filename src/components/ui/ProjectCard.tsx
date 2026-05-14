@@ -17,14 +17,14 @@ export interface LocaleProject {
   highlights: string[];
   demoUrl: string | null;
   codeUrl: string | null;
-  imageUrl?: string;
+  imageUrl?: string | null;
   type?: string;
   role?: string;
   hidden?: boolean;
   images?: ProjectImage[];
 }
 
-function resolveImageUrl(imageUrl: string | undefined): string | null {
+function resolveImageUrl(imageUrl: string | null | undefined): string | null {
   if (!imageUrl) return null;
   if (imageUrl.startsWith("http://") || imageUrl.startsWith("https://")) return imageUrl;
   if (imageUrl.startsWith("/")) return `${import.meta.env.BASE_URL}${imageUrl.slice(1)}`;

@@ -22,7 +22,8 @@
     "ctas": {
       "primary": {
         "label": "View projects",
-        "href": "/projekte"
+        "href": "/projekte",
+        "target": "_self"
       },
       "secondary": {
         "label": "GitHub",
@@ -195,8 +196,14 @@
         "status": "Completed",
         "description": "Official IHK combined certificate, completed on 01.04.2026. Covers Digital Product Designer, Junior Web Developer, and Web Development Specialist.",
         "images": [
-          { "label": "Certificate", "url": "/zertifikatbilder/certificado-todos-cursos-IHK-conteudo.png" },
-          { "label": "Contents", "url": "/zertifikatbilder/certificado-IT-fachkraft-web-development-IHK.png" }
+          {
+            "label": "Certificate",
+            "url": "/zertifikatbilder/certificado-todos-cursos-IHK-conteudo.png"
+          },
+          {
+            "label": "Contents",
+            "url": "/zertifikatbilder/certificado-IT-fachkraft-web-development-IHK.png"
+          }
         ]
       },
       {
@@ -204,8 +211,14 @@
         "status": "Completed",
         "description": "React.js, state management, routing, modern CSS frameworks, and performance optimization. Completed on 01.04.2026.",
         "images": [
-          { "label": "Certificate", "url": "/zertifikatbilder/certificado-web-development-specialist-IHK.png" },
-          { "label": "Contents", "url": "/zertifikatbilder/certificado-web-development-specialist-IHK-conteudo.png" }
+          {
+            "label": "Certificate",
+            "url": "/zertifikatbilder/certificado-web-development-specialist-IHK.png"
+          },
+          {
+            "label": "Contents",
+            "url": "/zertifikatbilder/certificado-web-development-specialist-IHK-conteudo.png"
+          }
         ]
       },
       {
@@ -213,8 +226,14 @@
         "status": "Completed",
         "description": "UI/UX principles, wireframing, prototyping, user research, and product and project management (Scrum). Completed on 02.04.2026.",
         "images": [
-          { "label": "Certificate", "url": "/zertifikatbilder/certificado-digital-product-designer-IHK.png" },
-          { "label": "Contents", "url": "/zertifikatbilder/certificado-digital-product-designer-IHK-conteudo.png" }
+          {
+            "label": "Certificate",
+            "url": "/zertifikatbilder/certificado-digital-product-designer-IHK.png"
+          },
+          {
+            "label": "Contents",
+            "url": "/zertifikatbilder/certificado-digital-product-designer-IHK-conteudo.png"
+          }
         ]
       },
       {

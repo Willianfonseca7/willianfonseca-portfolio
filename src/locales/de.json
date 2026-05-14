@@ -22,7 +22,8 @@
     "ctas": {
       "primary": {
         "label": "Projekte ansehen",
-        "href": "/projekte"
+        "href": "/projekte",
+        "target": "_self"
       },
       "secondary": {
         "label": "GitHub",
@@ -195,8 +196,14 @@
         "status": "Abgeschlossen",
         "description": "Offizieller IHK-Gesamtabschluss, abgeschlossen am 01.04.2026. Umfasst Digital Product Designer, Junior Web Developer und Web Development Specialist.",
         "images": [
-          { "label": "Zertifikat", "url": "/zertifikatbilder/certificado-todos-cursos-IHK-conteudo.png" },
-          { "label": "Inhalte", "url": "/zertifikatbilder/certificado-IT-fachkraft-web-development-IHK.png" }
+          {
+            "label": "Zertifikat",
+            "url": "/zertifikatbilder/certificado-todos-cursos-IHK-conteudo.png"
+          },
+          {
+            "label": "Inhalte",
+            "url": "/zertifikatbilder/certificado-IT-fachkraft-web-development-IHK.png"
+          }
         ]
       },
       {
@@ -204,8 +211,14 @@
         "status": "Abgeschlossen",
         "description": "React.js, State Management, Routing, moderne CSS-Frameworks und Performance-Optimierung. Abgeschlossen am 01.04.2026.",
         "images": [
-          { "label": "Zertifikat", "url": "/zertifikatbilder/certificado-web-development-specialist-IHK.png" },
-          { "label": "Inhalte", "url": "/zertifikatbilder/certificado-web-development-specialist-IHK-conteudo.png" }
+          {
+            "label": "Zertifikat",
+            "url": "/zertifikatbilder/certificado-web-development-specialist-IHK.png"
+          },
+          {
+            "label": "Inhalte",
+            "url": "/zertifikatbilder/certificado-web-development-specialist-IHK-conteudo.png"
+          }
         ]
       },
       {
@@ -213,8 +226,14 @@
         "status": "Abgeschlossen",
         "description": "UI/UX-Prinzipien, Wireframing, Prototyping, User Research und Produkt- und Projektmanagement (Scrum). Abgeschlossen am 02.04.2026.",
         "images": [
-          { "label": "Zertifikat", "url": "/zertifikatbilder/certificado-digital-product-designer-IHK.png" },
-          { "label": "Inhalte", "url": "/zertifikatbilder/certificado-digital-product-designer-IHK-conteudo.png" }
+          {
+            "label": "Zertifikat",
+            "url": "/zertifikatbilder/certificado-digital-product-designer-IHK.png"
+          },
+          {
+            "label": "Inhalte",
+            "url": "/zertifikatbilder/certificado-digital-product-designer-IHK-conteudo.png"
+          }
         ]
       },
       {
