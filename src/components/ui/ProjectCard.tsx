@@ -1,131 +1,105 @@
 import { memo } from "react";
-import Card from "./Card";
+import type { Project } from "../../data/projects";
+import { useLanguage } from "../../hooks/useLanguage";
+import { useProjectCopy } from "../../hooks/useProjectCopy";
+import ProjectMedia from "./ProjectMedia";
 import Tag from "./Tag";
 import Button from "./Button";
-import { useLanguage } from "../../hooks/useLanguage";
 
-interface ProjectImage {
-  url: string;
-  label: string;
-}
-
-export interface LocaleProject {
-  id: string;
-  title: string;
-  description: string;
-  stack: string[];
-  highlights: string[];
-  demoUrl: string | null;
-  codeUrl: string | null;
-  imageUrl?: string;
-  type?: string;
-  role?: string;
-  hidden?: boolean;
-  images?: ProjectImage[];
-}
-
-function resolveImageUrl(imageUrl: string | undefined): string | null {
-  if (!imageUrl) return null;
-  if (imageUrl.startsWith("http://") || imageUrl.startsWith("https://")) return imageUrl;
-  if (imageUrl.startsWith("/")) return `${import.meta.env.BASE_URL}${imageUrl.slice(1)}`;
-  return imageUrl;
-}
-
-function ProjectCard({ project }: { project: LocaleProject }) {
+function ProjectCard({
+  project,
+  featured = false,
+}: {
+  project: Project;
+  featured?: boolean;
+}) {
   const { content } = useLanguage();
   const labels = content.projects.ui;
-  const hasDemo = Boolean(project.demoUrl);
-  const hasCode = Boolean(project.codeUrl);
-  const resolvedImageUrl = resolveImageUrl(project.imageUrl);
-  const hasImage = Boolean(resolvedImageUrl);
-
+  const copy = useProjectCopy(project.id);
+  const status =
+    project.status === "development"
+      ? labels.development
+      : project.status === "migration"
+        ? labels.migrationStatus
+        : labels.demoStatus;
   return (
-    <Card className="flex h-full flex-col gap-5">
-      <div className="-mx-6 -mt-6 overflow-hidden border-b border-white/10 sm:-mx-7 sm:-mt-7">
-        {hasImage ? (
-          <div className="group/image relative aspect-[16/9] overflow-hidden bg-slate-950/60">
-            <img
-              src={resolvedImageUrl!}
-              alt={`${project.title} preview`}
-              className="h-full w-full object-cover object-top transition duration-500 group-hover/image:scale-[1.03]"
-              loading="lazy"
-            />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/55 via-transparent to-transparent" />
-          </div>
-        ) : (
-          <div className="flex aspect-[16/9] items-end bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.3),_transparent_45%),linear-gradient(135deg,_rgba(15,23,42,0.95),_rgba(30,41,59,0.92))] p-5">
-            <div className="space-y-2">
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-sky-200/80">
-                {labels.previewComingSoon}
-              </p>
-              <h3 className="heading text-lg">{project.title}</h3>
+    <article
+      className={`project-card ${featured ? "project-card--featured" : ""}`}
+      data-project={project.id}
+    >
+      <ProjectMedia project={project} />
+      <div className="project-copy">
+        <div className="project-topline">
+          <span className="eyebrow">{copy.kicker}</span>
+          <span className="status-badge">{status}</span>
+        </div>
+        <h3>{copy.title}</h3>
+        {copy.role && <p className="project-role">{copy.role}</p>}
+        <p className="project-summary">{copy.summary}</p>
+        <div className="flex flex-wrap gap-2">
+          {project.stack.map((tech) => (
+            <Tag key={tech} label={tech} />
+          ))}
+        </div>
+        {featured && (
+          <dl className="featured-facts">
+            <div>
+              <dt>{labels.problem}</dt>
+              <dd>{copy.problem}</dd>
             </div>
-          </div>
+            <div>
+              <dt>{labels.solution}</dt>
+              <dd>{copy.solution}</dd>
+            </div>
+          </dl>
         )}
-      </div>
-
-      <div className="space-y-2">
-        <div className="flex flex-wrap items-center gap-2">
-          <h3 className="heading text-xl">{project.title}</h3>
-          {project.type && (
-            <span className="rounded-full bg-sky-400/15 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-sky-300/90">
-              {project.type}
-            </span>
+        <div className="project-actions">
+          <Button href={`/projekte/${project.id}`}>
+            {labels.details} <span aria-hidden="true">↗</span>
+          </Button>
+          {project.demoUrl && (
+            <Button
+              href={project.demoUrl}
+              variant="secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {labels.demo}
+            </Button>
+          )}
+          {project.codeUrl && (
+            <a
+              className="text-link"
+              href={project.codeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {labels.code}
+            </a>
           )}
         </div>
-        {project.role && (
-          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-sky-300/55">
-            {project.role}
+        {project.visibility === "private" && (
+          <p className="private-note">
+            {labels.private} · {labels.noDemo}
           </p>
         )}
-        <p className="text-sm text-muted">{project.description}</p>
+        {project.evidence.length > 0 && (
+          <div className="project-evidence">
+            <span>{labels.evidence}:</span>
+            {project.evidence.map((e) => (
+              <a
+                href={e.url}
+                key={e.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {e.label === "Source" ? labels.source : e.label}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
-
-      <div className="flex flex-wrap gap-2">
-        {project.stack.map((item) => (
-          <Tag key={item} label={item} />
-        ))}
-      </div>
-
-      <ul className="space-y-2 text-sm text-muted">
-        {project.highlights.map((item) => (
-          <li key={item} className="flex items-start gap-2">
-            <span className="mt-1 h-1.5 w-1.5 rounded-full bg-sky-300/80" />
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
-
-      <div className="mt-auto flex flex-wrap gap-3 pt-2">
-        <div className="relative group">
-          <Button
-            href={hasDemo ? project.demoUrl! : undefined}
-            variant="primary"
-            disabled={!hasDemo}
-            className="min-w-[140px] justify-center"
-            target={hasDemo ? "_blank" : undefined}
-            rel={hasDemo ? "noreferrer" : undefined}
-          >
-            {labels.demo}
-          </Button>
-          {!hasDemo && <span className="tooltip">{labels.comingSoon}</span>}
-        </div>
-        <div className="relative group">
-          <Button
-            href={hasCode ? project.codeUrl! : undefined}
-            variant="secondary"
-            disabled={!hasCode}
-            className="min-w-[140px] justify-center"
-            target={hasCode ? "_blank" : undefined}
-            rel={hasCode ? "noreferrer" : undefined}
-          >
-            {labels.code}
-          </Button>
-          {!hasCode && <span className="tooltip">{labels.comingSoon}</span>}
-        </div>
-      </div>
-    </Card>
+    </article>
   );
 }
-
 export default memo(ProjectCard);

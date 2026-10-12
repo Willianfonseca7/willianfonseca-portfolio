@@ -6,7 +6,7 @@ export default function Projekte() {
   return (
     <div className="min-h-screen text-primary">
       <Navbar />
-      <main>
+      <main id="main-content">
         <ProjectsSection />
       </main>
       <Footer />

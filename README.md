@@ -1,116 +1,51 @@
-# Willian Fonseca — Portfolio
+# Willian Santos Fonseca — Portfolio
 
-**Live:** [willianfonseca7.github.io/willianfonseca-portfolio](https://willianfonseca7.github.io/willianfonseca-portfolio/)
+Multilingual React / TypeScript portfolio for junior frontend and fullstack roles.
+German is the default language; Portuguese and English have equivalent content.
 
-Personal portfolio built with React + Vite, showcasing my projects, skills and certificates. Fully responsive, multilingual (DE / EN / PT) and deployed automatically via GitHub Actions.
+Published site: <https://willianfonseca7.github.io/willianfonseca-portfolio/>.
 
-![Portfolio Preview](https://willianfonseca7.github.io/willianfonseca-portfolio/og-preview.png)
+## Current structure
 
----
+- Hero: professional positioning, React, Next.js, TypeScript, Node.js and AI integration.
+- Waiturn: main case with a product visualization; private repository.
+- ORLA+: frontend collaboration with public PR evidence; Next.js migration in progress, API integration pending.
+- GrowthBot-DE: Telegram / OpenAI integration, input and response validation, SQLite persistence.
+- InvestAgent: React dashboard, Node.js API, worker and modular market-data processing.
+- Earlier projects: Heilpraktiker-Bleialf, LEGO Set Explorer, ContainerHub and Pokédex.
+- Technology groups, IHK certificates, profile and contact.
 
-## Tech Stack
+Technical facts, links, visibility and screenshots live in `src/data/projects.ts`.
+Narrative copy lives in `src/locales/{de,en,pt}.json`. `src/data/projects.json` is a
+retained historical file and is not imported by the application.
 
-![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=flat-square&logo=vite&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
-![React Router](https://img.shields.io/badge/React_Router-7-CA4245?style=flat-square&logo=reactrouter&logoColor=white)
-![Vitest](https://img.shields.io/badge/Vitest-unit_tests-6E9F18?style=flat-square&logo=vitest&logoColor=white)
-![Playwright](https://img.shields.io/badge/Playwright-e2e_tests-45BA4B?style=flat-square&logo=playwright&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI%2FCD-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-deployed-222222?style=flat-square&logo=github&logoColor=white)
+Image galleries support thumbnails, arrows and Escape. Native dialogs provide
+keyboard focus handling. The contact form prepares and copies an email draft and
+opens the visitor's email app; it does not send email automatically.
 
----
+## Run and verify locally
 
-## Features
-
-- Responsive design — mobile, tablet and desktop
-- Multilingual support (German / English / Portuguese) with context-based i18n
-- Projects gallery with live demos and source links
-- Skills section with certificates
-- Contact form
-- Automated CI/CD deploy to GitHub Pages on every push to `main`
-- Unit tests (Vitest) + End-to-end tests (Playwright)
-
----
-
-## Project Structure
-
-```
-willianfonseca-portfolio/
-├── src/
-│   ├── components/
-│   │   ├── sections/       # Page sections (Hero, Projects, Skills, Contact…)
-│   │   └── ui/             # Reusable UI components (Card, Button, Tag…)
-│   ├── pages/              # Route-level pages
-│   ├── hooks/              # Custom React hooks
-│   ├── context/            # LanguageContext (i18n)
-│   ├── data/               # Projects data
-│   ├── locales/            # Translation files (de.json, en.json, pt.json)
-│   └── main.jsx
-├── public/                 # Static assets, screenshots, certificates
-├── e2e/                    # Playwright E2E tests
-├── index.html
-├── vite.config.js
-└── package.json
-```
-
----
-
-## Run Locally
+Node.js 22.12+ or compatible Node.js 24 is recommended for the configured toolchain.
 
 ```bash
-# Clone the repository
-git clone https://github.com/Willianfonseca7/willianfonseca-portfolio.git
-cd willianfonseca-portfolio
-
-# Install dependencies
-npm install
-
-# Start development server
+npm ci
 npm run dev
-```
-
-Open [http://localhost:5173](http://localhost:5173) in your browser.
-
----
-
-## Build & Deploy
-
-```bash
-# Production build
-npm run build
-
-# Manual deploy to GitHub Pages
-npm run deploy
-```
-
-Deployment also runs **automatically** via GitHub Actions on every push to `main`.
-
----
-
-## Tests
-
-```bash
-# Unit tests
-npm run test
-
-# Unit tests with UI
-npm run test:ui
-
-# End-to-end tests (Playwright)
+npm run lint
+npm run typecheck
+npm test
 npm run test:e2e
+npm run build
+npm run preview -- --host 127.0.0.1 --port 4174
 ```
 
----
+Local production preview: <http://127.0.0.1:4174/willianfonseca-portfolio/>.
+Playwright uses the same project basename. The suite checks image galleries,
+certificates, private project handling, contact email drafts, responsive navigation,
+DE/EN/PT and theme persistence, reduced motion and automated WCAG AA checks.
+Automated checks supplement manual visual and keyboard review.
 
-## Contact
+## Publication
 
-**Willian Fonseca** — Frontend Developer  
-Düsseldorf, Deutschland | Available for new opportunities
-
-- Portfolio: [willianfonseca7.github.io/willianfonseca-portfolio](https://willianfonseca7.github.io/willianfonseca-portfolio/)
-- GitHub: [@Willianfonseca7](https://github.com/Willianfonseca7)
-
----
-
-© 2026 Willian Fonseca
+GitHub Actions publishes pushes to `main` after lint, unit tests, browser tests and
+the TypeScript/build checks pass. The production build is served through GitHub
+Pages. Local build and preview commands do not publish anything.

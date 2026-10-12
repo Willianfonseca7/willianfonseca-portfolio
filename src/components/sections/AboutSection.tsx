@@ -13,16 +13,20 @@ export default function AboutSection() {
       <Container>
         <div className="space-y-12">
           <SectionHeader
+            level={1}
             eyebrow={about.eyebrow}
             title={about.title}
             subtitle={about.description}
           />
 
           <div className="space-y-4">
-            <h3 className="heading text-lg">{about.werdegang.title}</h3>
+            <h2 className="small-heading">{about.werdegang.title}</h2>
             <div className="space-y-3">
               {about.werdegang.paragraphs.map((paragraph) => (
-                <p key={paragraph} className="text-sm sm:text-base text-muted leading-relaxed">
+                <p
+                  key={paragraph}
+                  className="text-sm sm:text-base text-muted leading-relaxed"
+                >
                   {paragraph}
                 </p>
               ))}
@@ -40,7 +44,7 @@ export default function AboutSection() {
           </div>
 
           <div className="space-y-4">
-            <h3 className="heading text-lg">{about.ihkTitle}</h3>
+            <h2 className="small-heading">{about.ihkTitle}</h2>
             <div className="flex flex-wrap gap-2">
               {about.ihkCertifications.map((cert) => (
                 <Tag key={cert} label={cert} />
@@ -50,15 +54,7 @@ export default function AboutSection() {
 
           <div className="grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
             <div className="space-y-4">
-              <h3 className="heading text-lg">{about.valuesTitle}</h3>
-              <div className="flex flex-wrap gap-2">
-                {about.values.map((value) => (
-                  <Tag key={value} label={value} />
-                ))}
-              </div>
-            </div>
-            <div className="space-y-4">
-              <h3 className="heading text-lg">{about.languagesTitle}</h3>
+              <h2 className="small-heading">{about.languagesTitle}</h2>
               <div className="flex flex-wrap gap-2">
                 {about.languages.map((language) => (
                   <Tag key={language} label={language} />

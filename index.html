@@ -1,30 +1,68 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="de" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Willian Fonseca Portfolio</title>
+    <title>
+      Junior Frontend- / Fullstack-Entwickler | Willian Santos Fonseca
+    </title>
+    <meta
+      name="description"
+      content="Willian Santos Fonseca, Junior Frontend- / Fullstack-Entwickler in Düsseldorf. React, Next.js, TypeScript, APIs und KI-Integration mit nachvollziehbaren Projektbeispielen."
+    />
+    <meta name="theme-color" content="#0c131b" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Willian Santos Fonseca — Frontend / Fullstack"
+    />
+    <meta
+      property="og:description"
+      content="React, Next.js, TypeScript und KI-Integration. Projekte, technische Entscheidungen und Zusammenarbeit."
+    />
+    <meta property="og:locale" content="de_DE" />
+    <meta
+      property="og:url"
+      content="https://willianfonseca7.github.io/willianfonseca-portfolio/"
+    />
+    <meta
+      property="og:image"
+      content="https://willianfonseca7.github.io/willianfonseca-portfolio/og-preview.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="canonical"
+      href="https://willianfonseca7.github.io/willianfonseca-portfolio/"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/willianfonseca-portfolio/favicon.svg"
+    />
     <script>
-      (function () {
-        const redirect = window.location.search.match(/[?&]p=([^&]+)/);
-        if (!redirect) return;
-
-        const decodedPath = redirect[1]
-          .replace(/~and~/g, "&")
-          .replace(/%2F/g, "/");
-
-        const newUrl =
-          window.location.pathname.replace(/\/$/, "") +
-          decodedPath +
-          window.location.hash;
-
-        window.history.replaceState(null, "", newUrl);
+      (() => {
+        try {
+          document.documentElement.dataset.theme =
+            localStorage.getItem("theme") === "light" ? "light" : "dark";
+        } catch {}
+        const redirect = new URLSearchParams(location.search).get("p");
+        if (
+          redirect &&
+          redirect.startsWith("/") &&
+          !redirect.startsWith("//")
+        ) {
+          const base = location.pathname.replace(/\/$/, "");
+          history.replaceState(
+            null,
+            "",
+            base + redirect.replace(/~and~/g, "&") + location.hash,
+          );
+        }
       })();
     </script>
   </head>
-  <body class="scroll-smooth">
+  <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-    
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

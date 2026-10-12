@@ -1,14 +1,13 @@
 import Container from "../ui/Container";
 import { useLanguage } from "../../hooks/useLanguage";
-
 export default function Footer() {
   const { content } = useLanguage();
-
   return (
-    <footer className="py-10">
+    <footer className="site-footer">
       <Container>
-        <div className="flex flex-col items-center justify-between gap-4 pt-6 text-xs text-muted sm:flex-row">
-          <span>{content.meta.name}</span>
+        <div>
+          <span>© {new Date().getFullYear()} Willian Santos Fonseca</span>
+          <span>{content.projects.ui.footer}</span>
           <span>{content.meta.location}</span>
         </div>
       </Container>

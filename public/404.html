@@ -1,25 +1,24 @@
 <!doctype html>
-<html>
+<html lang="de">
   <head>
     <meta charset="utf-8" />
-    <title>Redirecting…</title>
+    <title>Weiterleitung — Willian Fonseca</title>
     <script>
-      (function () {
-        var path = window.location.pathname
-          .replace("/willianfonseca-portfolio", "")
-          .replace(/\/$/, "");
-        var search = window.location.search
-          ? window.location.search.slice(1).replace(/&/g, "~and~")
-          : "";
-        var target =
-          "/willianfonseca-portfolio/?" +
-          "p=" +
-          encodeURIComponent(path + (search ? "?" + search : "")) +
-          window.location.hash;
-
-        window.location.replace(target);
+      (() => {
+        const base = "/willianfonseca-portfolio";
+        const path = location.pathname.startsWith(base + "/")
+          ? location.pathname.slice(base.length)
+          : "/";
+        location.replace(
+          base +
+            "/?p=" +
+            encodeURIComponent(path + location.search) +
+            location.hash,
+        );
       })();
     </script>
   </head>
-  <body></body>
+  <body>
+    <a href="/willianfonseca-portfolio/">Zur Startseite</a>
+  </body>
 </html>

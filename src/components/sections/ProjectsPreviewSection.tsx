@@ -1,38 +1,39 @@
+import { projects } from "../../data/projects";
 import { useLanguage } from "../../hooks/useLanguage";
 import Container from "../ui/Container";
-import SectionHeader from "../ui/SectionHeader";
 import ProjectCard from "../ui/ProjectCard";
 import Button from "../ui/Button";
-
 export default function ProjectsPreviewSection() {
   const { content } = useLanguage();
-  const featuredProject = content.projects.list.find(
-    (project) => project.id === "heilpratika"
+  const featured = projects.find(
+    (project) => project.priority === "featured" && !project.hidden,
   );
-
   return (
-    <section className="py-20">
+    <section id="projekte" className="section-space">
       <Container>
-        <div className="space-y-10">
-          <SectionHeader
-            eyebrow={content.projects.title}
-            title={content.projects.featuredTitle}
-            subtitle={content.home.projectsPreviewSubtitle}
-          />
-
-          {featuredProject ? (
-            <div className="space-y-6">
-              <div className="grid gap-8 lg:grid-cols-1">
-                <ProjectCard project={featuredProject} />
-              </div>
-
-              <div className="flex justify-center">
-                <Button href="/projekte" variant="secondary">
-                  {content.home.projectsPreviewCta}
-                </Button>
-              </div>
-            </div>
-          ) : null}
+        <div className="section-heading">
+          <p className="eyebrow">{content.home.featuredEyebrow}</p>
+          <h2>{content.home.featuredTitle}</h2>
+        </div>
+        {featured && <ProjectCard project={featured} featured />}
+        <div className="section-heading selected-heading">
+          <p className="eyebrow">02 / {content.projects.ui.selectedLabel}</p>
+          <h2>{content.home.selectedTitle}</h2>
+          <p className="text-muted">{content.home.selectedSubtitle}</p>
+        </div>
+        <div className="selected-projects">
+          {projects
+            .filter(
+              (project) => project.priority === "selected" && !project.hidden,
+            )
+            .map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+        </div>
+        <div className="section-end">
+          <Button href="/projekte" variant="secondary">
+            {content.home.projectsPreviewCta} <span aria-hidden="true">→</span>
+          </Button>
         </div>
       </Container>
     </section>

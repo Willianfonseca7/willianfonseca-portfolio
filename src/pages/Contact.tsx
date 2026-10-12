@@ -6,7 +6,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen text-primary">
       <Navbar />
-      <main>
+      <main id="main-content">
         <ContactSection />
       </main>
       <Footer />

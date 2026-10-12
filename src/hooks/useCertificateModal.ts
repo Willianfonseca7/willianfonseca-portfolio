@@ -1,10 +1,8 @@
-import { useState, useEffect } from "react";
-
+import { useCallback, useState } from "react";
 export interface CertImage {
   url: string;
   label: string;
 }
-
 export interface Certificate {
   title: string;
   status: string;
@@ -12,26 +10,13 @@ export interface Certificate {
   imageUrl?: string;
   images?: CertImage[];
 }
-
 export function useCertificateModal() {
   const [selected, setSelected] = useState<Certificate | null>(null);
   const [activeTab, setActiveTab] = useState(0);
-
-  const open = (cert: Certificate) => {
+  const open = useCallback((cert: Certificate) => {
     setSelected(cert);
     setActiveTab(0);
-  };
-
-  const close = () => setSelected(null);
-
-  useEffect(() => {
-    if (!selected) return;
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") close();
-    };
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, [selected]);
-
+  }, []);
+  const close = useCallback(() => setSelected(null), []);
   return { selected, activeTab, setActiveTab, open, close };
 }

@@ -1,9 +1,9 @@
 {
   "meta": {
     "name": "Willian Santos Fonseca",
-    "role": "Desenvolvedor Fullstack (React / Node.js / PostgreSQL)",
-    "location": "Düsseldorf",
-    "tagline": "Düsseldorf / Remote · Disponível"
+    "role": "Desenvolvedor Frontend / Fullstack Júnior",
+    "location": "Düsseldorf, Alemanha",
+    "tagline": "Düsseldorf · Disponível em curto prazo"
   },
   "nav": {
     "home": "Início",
@@ -16,61 +16,75 @@
     "themeLight": "Claro"
   },
   "hero": {
-    "title": "Desenvolvedor Fullstack",
-    "subtitle": "React · Node.js · PostgreSQL · REST APIs",
-    "description": "Aplicações web completas, do React UI ao PostgreSQL. Autenticação real, APIs estruturadas e deploy em produção.",
+    "title": "Desenvolvedor Frontend / Fullstack Júnior",
+    "subtitle": "React · Next.js · TypeScript · Node.js",
+    "description": "Desenvolvo aplicações web com React, Next.js e TypeScript, de interfaces claras a APIs e bancos de dados relacionais. Meus projetos combinam regras de negócio, autenticação, testes automatizados e integração de IA.",
+    "eyebrow": "Construir software. Explicar decisões.",
+    "note": "Preferência por presencial ou híbrido · aberto a remoto",
     "ctas": {
       "primary": {
-        "label": "Ver projetos",
-        "href": "/projekte"
+        "label": "Explorar projetos",
+        "href": "/#projekte"
       },
       "secondary": {
+        "label": "Entrar em contato",
+        "href": "/#kontakt"
+      },
+      "tertiary": {
         "label": "GitHub",
         "href": "https://github.com/Willianfonseca7",
         "target": "_blank"
-      },
-      "tertiary": {
-        "label": "LinkedIn",
-        "href": "https://www.linkedin.com/in/willian-fonseca-b146b7240/",
-        "target": "_blank"
       }
     },
-    "highlights": [
-      {
-        "title": "Arquitetura Fullstack",
-        "description": "Frontend com React, backend com Node.js/Next.js, banco com PostgreSQL — aplicações completas com lógica de negócio real, não demos de tutorial."
-      },
-      {
-        "title": "Design de API & Auth",
-        "description": "Endpoints REST protegidos, autenticação JWT e controle de acesso baseado em roles a partir de projetos prontos para produção."
-      },
-      {
-        "title": "Certificado IHK",
-        "description": "Três certificados IHK oficiais: IT-Fachkraft für Web Development, Web Development Specialist e Digital Product Designer."
-      }
-    ]
+    "highlights": []
   },
   "home": {
-    "aboutPreviewTitle": "Sobre mim em 3 frases",
-    "aboutPreviewSubtitle": "Quem sou e como trabalho.",
-    "projectsPreviewSubtitle": "Plataforma de saúde com agendamento, autenticação, painel admin e e-mails transacionais.",
+    "aboutPreviewTitle": "Sobre mim",
+    "aboutPreviewSubtitle": "Sou Willian Santos Fonseca, desenvolvedor Frontend / Fullstack Júnior em Düsseldorf. Meu foco é React, Next.js, TypeScript e aplicações web baseadas em APIs.",
+    "projectsPreviewSubtitle": "Colaboração, integração de IA e processamento de dados de mercado.",
     "projectsPreviewCta": "Ver todos os projetos",
     "intro": [
-      "Sou Willian, desenvolvedor Fullstack com foco em React, Node.js e PostgreSQL.",
-      "Construo aplicações web completas: da arquitetura de API e modelagem de banco até o frontend amigável ao usuário.",
-      "Meus projetos são prontos para produção — com autenticação, schemas estruturados e deploy limpo no Vercel e Railway."
-    ]
+      "Depois de iniciar minha carreira na logística, direcionei minha trajetória para desenvolvimento de software com a Weiterbildung Web- & WebApp-Entwicklung no Syntax Institut Berlin (04/2025–04/2026).",
+      "Hoje desenvolvo aplicações próprias como Waiturn, GrowthBot-DE e InvestAgent. No projeto de cliente ORLA+, colaboro com Pedro e contribuo com alterações frontend por pull requests.",
+      "Busco uma posição júnior em Frontend ou Fullstack. Posso começar em curto prazo e prefiro presencial ou híbrido em Düsseldorf, com abertura para trabalho remoto."
+    ],
+    "featuredTitle": "Um produto próprio, da interface ao banco de dados.",
+    "featuredEyebrow": "01 / Projeto principal",
+    "selectedTitle": "Três projetos. Três perspectivas.",
+    "selectedSubtitle": "Colaboração, integração de IA e processamento de dados de mercado.",
+    "workTitle": "Como desenvolvo",
+    "workSubtitle": "Implementações concretas, em vez de uma lista de promessas.",
+    "workItems": [
+      {
+        "title": "Estrutura e dados",
+        "description": "Waiturn separa interface, lógica da aplicação e acesso a dados. Prisma modela os dados relacionais no PostgreSQL.",
+        "projectId": "waiturn"
+      },
+      {
+        "title": "Validação e testes",
+        "description": "GrowthBot-DE valida dados de webhook e respostas do modelo com Zod. Testes unitários e de integração documentam fluxos relevantes.",
+        "projectId": "growthbot-de"
+      },
+      {
+        "title": "Colaboração e revisão",
+        "description": "Minhas contribuições frontend no ORLA+ foram integradas em três pull requests. Alterações e feedback de revisão podem ser consultados publicamente.",
+        "projectId": "orla-plus"
+      }
+    ],
+    "educationTitle": "Base e evolução contínua",
+    "educationBody": "Weiterbildung Web- & WebApp-Entwicklung no Syntax Institut Berlin, 04/2025–04/2026. Complementada por certificados IHK e pelo desenvolvimento de aplicações próprias.",
+    "certLink": "Ver certificados"
   },
   "about": {
     "eyebrow": "Perfil",
     "title": "Sobre mim",
-    "description": "Desenvolvedor Fullstack com foco em React, Node.js e PostgreSQL. Três certificados IHK e projetos com requisitos reais, prontos para produção.",
+    "description": "Sou Willian Santos Fonseca, desenvolvedor Frontend / Fullstack Júnior em Düsseldorf. Meu foco é React, Next.js, TypeScript e aplicações web baseadas em APIs.",
     "werdegang": {
       "title": "Trajetória",
       "paragraphs": [
-        "Sou Willian, tenho 31 anos, nasci no Rio de Janeiro e moro em Düsseldorf há alguns anos.",
-        "Minha formação profissional é na área de logística: após um Ausbildung de 3 anos como motorista (Berufskraftfahrer) e uma especialização como transportador de produtos perigosos (Gefahrgutfahrer), trabalhei na empresa Hoyer, abastecendo diariamente a linha de produção da Bayer AG em Dormagen.",
-        "Após um acidente de trabalho, tive direito a uma requalificação profissional. A escolha foi clara: desenvolvimento de software, a carreira que sempre sonhei. Em dois anos construí minha base em desenvolvimento fullstack, obtive três certificados IHK e desenvolvi projetos prontos para produção."
+        "Depois de iniciar minha carreira na logística, direcionei minha trajetória para desenvolvimento de software com a Weiterbildung Web- & WebApp-Entwicklung no Syntax Institut Berlin (04/2025–04/2026).",
+        "Hoje desenvolvo aplicações próprias como Waiturn, GrowthBot-DE e InvestAgent. No projeto de cliente ORLA+, colaboro com Pedro e contribuo com alterações frontend por pull requests.",
+        "Busco uma posição júnior em Frontend ou Fullstack. Posso começar em curto prazo e prefiro presencial ou híbrido em Düsseldorf, com abertura para trabalho remoto."
       ]
     },
     "ihkTitle": "Certificados IHK",
@@ -83,44 +97,35 @@
     "languagesTitle": "Idiomas",
     "workStyle": [
       {
-        "title": "Arquitetura primeiro",
-        "description": "Planejo componentes, endpoints de API e schemas de banco antes de implementar — para código estruturado e fácil de manter."
+        "title": "Estrutura e dados",
+        "description": "Waiturn separa interface, lógica da aplicação e acesso a dados. Prisma modela os dados relacionais no PostgreSQL."
       },
       {
-        "title": "Controle de versão & colaboração",
-        "description": "Branches, pull requests e commits descritivos são prática padrão para mim, não exceção."
+        "title": "Validação e testes",
+        "description": "GrowthBot-DE valida dados de webhook e respostas do modelo com Zod. Testes unitários e de integração documentam fluxos relevantes."
       },
       {
-        "title": "Pensamento de produto",
-        "description": "Penso em fluxos de usuário e requisitos. UX e lógica de backend precisam se complementar — não ser projetados isoladamente."
+        "title": "Colaboração e revisão",
+        "description": "Minhas contribuições frontend no ORLA+ foram integradas em três pull requests. Alterações e feedback de revisão podem ser consultados publicamente."
       }
     ],
-    "values": [
-      "Arquitetura limpa",
-      "Soluções completas",
-      "Confiabilidade",
-      "Aprendizado contínuo",
-      "Comunicação direta"
-    ],
+    "values": [],
     "languages": [
+      "Alemão (C1)",
       "Português (nativo)",
-      "Alemão (B2)",
-      "Inglês (básico)"
+      "Espanhol (B1)",
+      "Inglês (A2)"
     ]
   },
   "skills": {
-    "title": "Competências & Tecnologias",
-    "subtitle": "Uma visão realista do meu stack atual — da camada de banco de dados até a interface.",
+    "title": "Tecnologias no contexto dos projetos",
+    "subtitle": "Uma visão objetiva das ferramentas que utilizo nos projetos.",
     "conceptsTitle": "Conceitos & Padrões",
     "learningTitle": "Aprendendo agora",
     "statusTitle": "Status atual",
-    "statusSummary": "Três certificados IHK obtidos: IT-Fachkraft für Web Development, Web Development Specialist e Digital Product Designer. Formação no Syntax Institut concluída. Buscando ativamente uma vaga de Desenvolvedor Fullstack Júnior em Düsseldorf ou remoto.",
-    "statusTags": [
-      "Desenvolvedor Fullstack",
-      "Certificado IHK",
-      "Aberto a oportunidades"
-    ],
-    "certificationsTitle": "Formação, currículo e certificados",
+    "statusSummary": "Busco uma posição júnior em Frontend ou Fullstack. Posso começar em curto prazo e prefiro presencial ou híbrido em Düsseldorf, com abertura para trabalho remoto.",
+    "statusTags": ["Desenvolvedor Frontend / Fullstack Júnior", "Düsseldorf"],
+    "certificationsTitle": "Certificados IHK e formação",
     "certificationsHint": "Clique em um documento para abrir a imagem em tamanho original.",
     "openCertificateLabel": "Abrir documento",
     "closeCertificateLabel": "Fechar",
@@ -128,75 +133,48 @@
       {
         "title": "Frontend",
         "items": [
-          "HTML5",
-          "CSS3",
-          "JavaScript (ES6+)",
           "React",
-          "React Router",
-          "Vite",
-          "Tailwind CSS"
+          "Next.js",
+          "TypeScript",
+          "HTML / CSS",
+          "UI responsiva"
         ]
       },
       {
-        "title": "Backend",
+        "title": "APIs e dados",
         "items": [
           "Node.js",
-          "Express.js",
-          "TypeScript",
-          "Next.js API Routes",
-          "REST API",
-          "JWT / Session Auth",
-          "Prisma ORM",
-          "Strapi CMS"
-        ]
-      },
-      {
-        "title": "Banco & Ferramentas",
-        "items": [
+          "REST APIs",
           "PostgreSQL",
-          "SQL Básico",
-          "Docker & Docker Compose",
-          "Git & GitHub",
-          "Postman",
-          "npm / pnpm",
-          "VS Code"
+          "Prisma",
+          "Autenticação"
         ]
       },
       {
-        "title": "Testes",
-        "items": [
-          "Vitest",
-          "React Testing Library",
-          "Playwright"
-        ]
+        "title": "IA e integrações",
+        "items": ["OpenAI API", "Telegram", "Zod", "SQLite"]
+      },
+      {
+        "title": "Qualidade e colaboração",
+        "items": ["Vitest", "Playwright", "Git / Pull Requests", "Docker", "CI"]
       }
     ],
-    "concepts": [
-      "Componentização",
-      "Props & State",
-      "Custom Hooks",
-      "Renderização condicional",
-      "Fetch / REST",
-      "Async/Await",
-      "Tratamento de erros",
-      "Fluxo JWT",
-      "Modelagem de banco",
-      "Rotas de API (Next.js)",
-      "Responsividade",
-      "Performance básica"
-    ],
-    "learning": [
-      "AI Agents",
-      "Angular"
-    ],
+    "concepts": [],
+    "learning": ["LLM integrations"],
     "certifications": [
       {
         "title": "IT-Fachkraft für Web Development IHK",
         "status": "Concluído",
-        "description": "Certificado IHK geral, concluído em 01.04.2026. Abrange Digital Product Designer, Junior Web Developer e Web Development Specialist.",
+        "description": "Certificado IHK IT-Fachkraft für Web Development, concluído em 01.04.2026.",
         "images": [
-          { "label": "Certificado", "url": "/zertifikatbilder/certificado-todos-cursos-IHK-conteudo.png" },
-          { "label": "Conteúdo", "url": "/zertifikatbilder/certificado-IT-fachkraft-web-development-IHK.png" }
+          {
+            "label": "Certificado",
+            "url": "/zertifikatbilder/certificado-todos-cursos-IHK-conteudo.png"
+          },
+          {
+            "label": "Conteúdo",
+            "url": "/zertifikatbilder/certificado-IT-fachkraft-web-development-IHK.png"
+          }
         ]
       },
       {
@@ -204,8 +182,14 @@
         "status": "Concluído",
         "description": "React.js, gerenciamento de estado, roteamento, frameworks CSS modernos e otimização de performance. Concluído em 01.04.2026.",
         "images": [
-          { "label": "Certificado", "url": "/zertifikatbilder/certificado-web-development-specialist-IHK.png" },
-          { "label": "Conteúdo", "url": "/zertifikatbilder/certificado-web-development-specialist-IHK-conteudo.png" }
+          {
+            "label": "Certificado",
+            "url": "/zertifikatbilder/certificado-web-development-specialist-IHK.png"
+          },
+          {
+            "label": "Conteúdo",
+            "url": "/zertifikatbilder/certificado-web-development-specialist-IHK-conteudo.png"
+          }
         ]
       },
       {
@@ -213,15 +197,15 @@
         "status": "Concluído",
         "description": "Princípios de UI/UX, wireframing, prototipagem, pesquisa com usuários e gerenciamento de produto e projeto (Scrum). Concluído em 02.04.2026.",
         "images": [
-          { "label": "Certificado", "url": "/zertifikatbilder/certificado-digital-product-designer-IHK.png" },
-          { "label": "Conteúdo", "url": "/zertifikatbilder/certificado-digital-product-designer-IHK-conteudo.png" }
+          {
+            "label": "Certificado",
+            "url": "/zertifikatbilder/certificado-digital-product-designer-IHK.png"
+          },
+          {
+            "label": "Conteúdo",
+            "url": "/zertifikatbilder/certificado-digital-product-designer-IHK-conteudo.png"
+          }
         ]
-      },
-      {
-        "title": "Currículo 2026",
-        "status": "Atualizado",
-        "description": "Currículo profissional com resumo do perfil, stack atual, projetos, formação e direcionamento para vagas de Desenvolvedor Fullstack.",
-        "imageUrl": "/cert-frontend-2026.png"
       },
       {
         "title": "Certificado do curso Web & WebApp Developer",
@@ -245,146 +229,179 @@
   },
   "projects": {
     "title": "Projetos",
-    "featuredTitle": "Projetos em destaque",
-    "subtitle": "Projetos prontos para produção com requisitos reais — arquitetura fullstack, autenticação e modelagem de banco de dados.",
+    "featuredTitle": "Três projetos. Três perspectivas.",
+    "subtitle": "Colaboração, integração de IA e processamento de dados de mercado.",
     "ui": {
       "demo": "Demo",
       "code": "Código",
       "comingSoon": "em breve",
-      "previewComingSoon": "prévia em breve"
+      "previewComingSoon": "prévia em breve",
+      "closePreview": "Fechar",
+      "previousPreview": "Imagem anterior",
+      "nextPreview": "Próxima imagem",
+      "details": "Ver case",
+      "private": "Repositório privado",
+      "noDemo": "Sem demo pública",
+      "imagePending": "Captura real do produto pendente",
+      "imagePendingBody": "Este espaço está reservado para uma captura aprovada do Waiturn.",
+      "noImage": "Projeto sem captura de tela",
+      "openImage": "Abrir imagem",
+      "overview": "Visão geral",
+      "charts": "Gráficos",
+      "landing": "Landing page",
+      "status": "Status",
+      "role": "Meu papel",
+      "problem": "Problema",
+      "solution": "Implementação",
+      "architecture": "Arquitetura e stack",
+      "challenges": "Decisões técnicas",
+      "validation": "Validação",
+      "evidence": "Evidências",
+      "back": "Voltar aos projetos",
+      "migration": "Migração em andamento",
+      "source": "Código-fonte",
+      "development": "Em desenvolvimento",
+      "migrationStatus": "Website público · migração em andamento",
+      "demoStatus": "Demo pública",
+      "featuredLabel": "Projeto principal",
+      "selectedLabel": "Projetos selecionados",
+      "notFound": "Projeto não encontrado",
+      "noEvidence": "Implementação técnica verificada; repositório não público.",
+      "skip": "Ir para o conteúdo",
+      "navLabel": "Navegação principal",
+      "mobileNav": "Navegação mobile",
+      "languageLabel": "Idioma",
+      "themeToggle": "Alterar tema de cores",
+      "footer": "Desenvolvido com React e TypeScript",
+      "caseLink": "Ver o case",
+      "imageCount": "Imagem",
+      "productVisual": "Visualização do produto · fornecida pelo autor"
     },
-    "list": [
-      {
-        "id": "lego-set-explore",
-        "title": "LEGO Set Explorer",
-        "type": "Fullstack",
-        "description": "Banco de dados de sets LEGO pesquisável e filtrável, com gestão de coleção pessoal e dashboard de estatísticas. Aplicação fullstack com React, Node.js/Express em TypeScript, PostgreSQL e Docker Compose — frontend no Vercel, backend no Railway.",
-        "stack": [
-          "React",
-          "Node.js",
-          "Express",
-          "TypeScript",
-          "PostgreSQL",
-          "Docker",
-          "Railway"
-        ],
-        "highlights": [
-          "Desenvolvimento de REST API em TypeScript (Node.js/Express) com 9 endpoints: Sets, Auth, Collections e Estatísticas",
-          "Implementação de autenticação por sessão com registro, login e controle de acesso",
-          "Queries SQL complexas com múltiplos filtros (tema, ano, peças) e paginação server-side",
-          "PostgreSQL connection pooling com inicialização automática do schema na primeira execução",
-          "Dashboard de estatísticas com queries SQL agregadas",
-          "Docker Compose local · Vercel (frontend) + Railway (backend + PostgreSQL) em produção"
-        ],
-        "imageUrl": "/lego-set-explore-home.png",
-        "demoUrl": "https://lego-set-explore.vercel.app",
-        "codeUrl": "https://github.com/Willianfonseca7/Lego-Set-Explore",
-        "featured": true,
-        "role": "Desenvolvedor Fullstack · Projeto próprio"
+    "archiveTitle": "Outros projetos",
+    "archiveSubtitle": "Trabalhos anteriores e projetos de aprendizado continuam acessíveis com demo e código.",
+    "entries": {
+      "waiturn": {
+        "title": "Waiturn",
+        "kicker": "Projeto próprio de software",
+        "role": "Desenvolvimento Fullstack · projeto próprio",
+        "summary": "Agendamentos, filas e operação diária para barbearias. Um projeto próprio com banco relacional, APIs protegidas e atualizações em tempo real.",
+        "problem": "Agendamentos e filas de clientes sem reserva precisam funcionar juntos em uma aplicação.",
+        "solution": "Fluxos públicos de agendamento e fila, além de processos internos de gestão, estão implementados no repositório.",
+        "architecture": "Next.js e TypeScript; Prisma com PostgreSQL; Better Auth para autenticação. Lógica da aplicação, acesso a dados e interfaces HTTP são separados.",
+        "challenges": "Verificação de acesso por estabelecimento e papel, processamento consistente de agendamentos e transmissão de eventos com Socket.IO.",
+        "validation": "Há testes unitários para lógica de negócio e acesso, além de cenários Playwright para autenticação e múltiplas abas. Não são declarados resultados atuais das suítes.",
+        "statusNote": "Desenvolvimento ativo. O código é privado; nenhuma demo pública está vinculada atualmente.",
+        "migrationNote": ""
       },
-      {
-        "id": "heilpratika",
+      "orla-plus": {
+        "title": "ORLA+",
+        "kicker": "Colaboração em projeto de cliente",
+        "role": "Contribuições frontend · colaboração com Pedro",
+        "summary": "Hero, CTAs, navegação mobile e landing page multilíngue. Três pull requests integrados mostram minhas contribuições em uma aplicação existente.",
+        "problem": "A landing page precisava oferecer navegação mais clara em telas pequenas e suporte a visitantes internacionais.",
+        "solution": "Melhorias de Hero e CTA (#5), navegação mobile (#6) e internacionalização em PT-BR, EN e ES (#8).",
+        "architecture": "As contribuições comprovadas na landing page usam HTML, CSS e JavaScript. A migração para Next.js App Router é uma frente separada, ainda em andamento.",
+        "challenges": "Evoluir o design e a navegação existentes sem reconstruir o website; adaptar layouts para desktop, tablet e mobile.",
+        "validation": "Três PRs de autoria de Willianfonseca7 foram integrados em develop; os PRs documentam verificações visuais e feedback de revisão.",
+        "statusNote": "Website público; a migração Next.js ainda não foi concluída.",
+        "migrationNote": "Status atual (informado por mim): layouts, páginas e componentes com Next.js App Router estão estruturados. A integração das APIs ainda está pendente."
+      },
+      "growthbot-de": {
+        "title": "GrowthBot-DE",
+        "kicker": "IA em um fluxo definido",
+        "role": "Desenvolvimento de assistente Telegram · projeto próprio",
+        "summary": "Processamento de mensagens Telegram, classificação de interesses e recomendações pela OpenAI API, com validação estruturada e persistência em SQLite.",
+        "problem": "Um assistente Telegram precisa transformar mensagens em um fluxo de recomendação rastreável.",
+        "solution": "Processamento de mensagens e callbacks, classificação por palavras-chave e geração de respostas estruturadas de LLM.",
+        "architecture": "Next.js / TypeScript, integração Telegram e OpenAI API. Zod valida webhooks e respostas JSON; SQLite guarda o histórico de conversa.",
+        "challenges": "Reconhecer atualizações duplicadas de webhook, validar entradas e tratar erros de serviços externos. A classificação de interesses é baseada em regras.",
+        "validation": "Há testes unitários e de integração para handlers, classificação, persistência e fluxo de recomendação; também um cenário Playwright.",
+        "statusNote": "Demo web pública e repositório. O funcionamento do bot depende dos serviços externos configurados.",
+        "migrationNote": ""
+      },
+      "invest-agent": {
+        "title": "InvestAgent",
+        "kicker": "Arquitetura e dados de mercado",
+        "role": "Desenvolvimento Fullstack · projeto próprio",
+        "summary": "Monorepo TypeScript com dashboard React, API Node.js e worker. Análise de mercado, gestão de capital e avaliação de risco ficam em módulos separados.",
+        "problem": "Dados de mercado, análise e processamento em background precisam compartilhar lógica de domínio e permanecer separados da interface.",
+        "solution": "Consulta de dados Binance, cálculo de indicadores técnicos e apresentação de informações estruturadas de análise e risco no dashboard.",
+        "architecture": "npm Workspaces com web, API e worker; módulos compartilhados de estratégia, capital, portfólio e risco. Há configurações Docker e CI.",
+        "challenges": "Tipos compartilhados entre API e UI, processamento independente no worker e verificações de risco rastreáveis.",
+        "validation": "Há testes de módulos selecionados de risco, capital, portfólio e execução. A CI inclui jobs de lint e build.",
+        "statusNote": "Demo pública. Existem código de execução e caminhos de simulação; não são afirmadas operações reais ou resultados financeiros.",
+        "migrationNote": ""
+      },
+      "heilpratika": {
         "title": "Heilpraktiker-Bleialf",
-        "type": "Fullstack",
-        "description": "O site existente da clínica estava tecnicamente desatualizado e sem funcionalidades digitais. Reconstrução completa em Next.js com TypeScript: design moderno, agendamento online, portal do paciente com autenticação baseada em roles e painel admin.",
-        "stack": [
-          "Next.js",
-          "React",
-          "TypeScript",
-          "Prisma ORM",
-          "PostgreSQL",
-          "Tailwind CSS"
-        ],
-        "highlights": [
-          "Implementação de autenticação JWT com bcrypt e separação de roles (Admin / Paciente)",
-          "API de agendamento com validação de médico/tratamento e fluxo de status (PENDING → CONFIRMED → CANCELED)",
-          "E-mails automáticos no login, criação e atualização de consultas",
-          "Prisma ORM + PostgreSQL: schemas estruturados para Users, Appointments e Patients",
-          "Painel admin com gestão de consultas, verificação de disponibilidade e sistema de notificações",
-          "Next.js App Router · TypeScript completo · deploy no Vercel"
-        ],
-        "imageUrl": "/heilpraktiker-bleialf-home.png",
-        "demoUrl": "https://heilpraktiker-bleialf.vercel.app/",
-        "codeUrl": "https://github.com/Willianfonseca7/heilpraktiker-bleialf",
-        "featured": true,
-        "role": "Desenvolvedor Fullstack · Projeto para cliente"
+        "kicker": "Outros projetos",
+        "role": "",
+        "summary": "Projeto Fullstack para website de consultório com interfaces de agendamento e administração.",
+        "problem": "",
+        "solution": "",
+        "architecture": "",
+        "challenges": "",
+        "validation": "",
+        "statusNote": "",
+        "migrationNote": ""
       },
-      {
-        "id": "containerhub",
+      "lego-set-explore": {
+        "title": "LEGO Set Explorer",
+        "kicker": "Outros projetos",
+        "role": "",
+        "summary": "Busca e filtros de sets LEGO, gestão de coleções e visualização de estatísticas no dashboard.",
+        "problem": "",
+        "solution": "",
+        "architecture": "",
+        "challenges": "",
+        "validation": "",
+        "statusNote": "",
+        "migrationNote": ""
+      },
+      "containerhub": {
         "title": "ContainerHub",
-        "type": "Fullstack",
-        "description": "Uma empresa de aluguel de containers precisava de plataforma digital de gestão de estoque com fluxo de status rastreável. Desenvolvido com frontend React, Strapi como CMS headless e PostgreSQL — fluxo CRUD completo com persistência baseada em status, deploy no Vercel.",
-        "stack": [
-          "React",
-          "Vite",
-          "Tailwind CSS",
-          "Strapi CMS",
-          "PostgreSQL",
-          "REST API"
-        ],
-        "highlights": [
-          "Integração da REST API do Strapi via /api/containers (GET, POST, PUT, DELETE)",
-          "Implementação de lógica de status: draft → active com persistência no PostgreSQL",
-          "Strapi headless CMS com gestão de conteúdo e permissões configurável",
-          "Gerenciamento de estado React controlado para transições dinâmicas de status",
-          "Deploy no Vercel com variáveis de ambiente e pipeline de build automatizado"
-        ],
-        "imageUrl": "/containerhub-home.png",
-        "demoUrl": "https://kontainer-flame.vercel.app/",
-        "codeUrl": "https://github.com/Willianfonseca7/ContainerHub",
-        "featured": true,
-        "role": "Desenvolvedor Fullstack · Projeto próprio"
+        "kicker": "Outros projetos",
+        "role": "",
+        "summary": "Interface React para gestão de containers com integração Strapi e fluxo de status.",
+        "problem": "",
+        "solution": "",
+        "architecture": "",
+        "challenges": "",
+        "validation": "",
+        "statusNote": "",
+        "migrationNote": ""
       },
-      {
-        "id": "pokedex-web",
+      "pokedex-web": {
         "title": "Pokédex WebApp",
-        "type": "Frontend",
-        "description": "Projeto inicial para aprender comunicação assíncrona de dados, arquitetura de componentes e gerenciamento de estado em React. SPA interativa com busca em tempo real na PokéAPI, filtro de pesquisa e visualização detalhada em modal.",
-        "stack": [
-          "React",
-          "JavaScript (ES6+)",
-          "PokéAPI",
-          "CSS3",
-          "GitHub Pages"
-        ],
-        "highlights": [
-          "Implementação de comunicação assíncrona com a API via fetch() e async/await",
-          "State controlado para filtros de busca, paginação e visualização de detalhes",
-          "Arquitetura de componentes: App → PokémonList → PokémonCard",
-          "Grid responsivo com overlay modal dinâmico",
-          "Deploy via GitHub Pages — acessível publicamente"
-        ],
-        "imageUrl": "/pokedex-home.png",
-        "demoUrl": "https://willianfonseca7.github.io/Pokedex-web/",
-        "codeUrl": "https://github.com/Willianfonseca7/Pokemon-App",
-        "featured": true,
-        "role": "Desenvolvedor Frontend · Primeiro projeto completo"
+        "kicker": "Outros projetos",
+        "role": "",
+        "summary": "Projeto inicial de aprendizado React: chamadas assíncronas de API, busca e detalhes de Pokémon.",
+        "problem": "",
+        "solution": "",
+        "architecture": "",
+        "challenges": "",
+        "validation": "",
+        "statusNote": "",
+        "migrationNote": ""
       },
-      {
-        "id": "toytopia",
+      "toytopia": {
         "title": "Toytopia",
-        "type": "Frontend",
-        "description": "Interface de e-commerce com foco em layout, componentes e experiência do usuário.",
-        "stack": [
-          "React",
-          "UI/UX",
-          "Estado"
-        ],
-        "highlights": [
-          "Cards de produto & filtros",
-          "Gerenciamento de estado do carrinho"
-        ],
-        "imageUrl": null,
-        "demoUrl": null,
-        "codeUrl": null,
-        "hidden": true,
-        "featured": true
+        "kicker": "Outros projetos",
+        "role": "",
+        "summary": "Interface anterior de e-commerce desenvolvida com React.",
+        "problem": "",
+        "solution": "",
+        "architecture": "",
+        "challenges": "",
+        "validation": "",
+        "statusNote": "",
+        "migrationNote": ""
       }
-    ]
+    }
   },
   "contact": {
     "title": "Contato",
-    "description": "Estou animado com projetos interessantes e novas oportunidades. Pode me escrever — costumo responder em até 24 horas.",
+    "description": "Busco uma posição júnior em desenvolvimento Frontend ou Fullstack. Podemos conversar sobre meus projetos e uma oportunidade compatível.",
     "linksTitle": "Links e perfis",
     "links": [
       {
@@ -408,15 +425,21 @@
       "nameLabel": "Nome",
       "emailLabel": "E-mail",
       "messageLabel": "Mensagem",
-      "submitLabel": "Enviar mensagem",
-      "successMessage": "Copiado! Clique no botão abaixo para abrir seu cliente de email e enviar a mensagem.",
+      "submitLabel": "Preparar mensagem",
+      "successMessage": "Mensagem preparada e copiada. Abra seu aplicativo de e-mail para enviá-la.",
       "minMessageLength": 20,
-      "helper": "Responderei o mais rápido possível.",
+      "helper": "A mensagem será preparada para seu aplicativo de e-mail. Este formulário não envia e-mails automaticamente.",
       "copiedMessage": "Mensagem copiada para a área de transferência.",
       "nameError": "Digite pelo menos 2 caracteres.",
       "emailError": "Digite um e-mail válido.",
       "messageError": "Escreva pelo menos 20 caracteres.",
-      "mailClientLabel": "Abrir cliente de e-mail"
-    }
+      "mailClientLabel": "Abrir aplicativo de e-mail",
+      "copyFailedMessage": "Mensagem preparada. Não foi possível copiar; você ainda pode enviá-la pelo aplicativo de e-mail.",
+      "namePlaceholder": "Seu nome",
+      "emailPlaceholder": "nome@exemplo.com",
+      "messagePlaceholder": "Sobre qual oportunidade ou projeto você gostaria de conversar?",
+      "subject": "Contato pelo portfólio"
+    },
+    "availability": "Düsseldorf · início em curto prazo · presencial / híbrido / remoto"
   }
 }

@@ -1,56 +1,164 @@
 export interface Project {
-  id: number;
-  title: string;
-  description: string;
-  techs: string[];
-  playUrl: string;
-  codeUrl: string;
+  id: string;
+  stack: string[];
+  demoUrl: string | null;
+  codeUrl: string | null;
+  visibility: "public" | "private";
+  status: "development" | "migration" | "demo";
+  priority: "featured" | "selected" | "archive";
+  images: string[];
+  evidence: { label: string; url: string }[];
+  hidden?: boolean;
 }
 
+// Technical facts and URLs live here; narrative copy lives in locales/*.json.
+// A private repository has no outbound code URL. Screenshots must be real and approved.
 export const projects: Project[] = [
   {
-    id: 1,
-    title: "ContainerHub",
-    description:
-      "Full-stack monorepo for container rental management. React + Vite frontend consuming a Strapi CMS REST API backed by PostgreSQL. Implements draft/active status workflow and admin panel.",
-    techs: ["React", "Vite", "Tailwind", "Strapi", "PostgreSQL"],
-    playUrl: "https://kontainer-flame.vercel.app/",
-    codeUrl: "https://github.com/Willianfonseca7/ContainerHub",
+    id: "waiturn",
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "Better Auth",
+      "Socket.IO",
+      "Vitest",
+      "Playwright",
+    ],
+    demoUrl: null,
+    codeUrl: null,
+    visibility: "private",
+    status: "development",
+    priority: "featured",
+    images: ["/waiturn-presentation.jpg"],
+    evidence: [],
   },
   {
-    id: 2,
-    title: "Heilpraktiker-Bleialf",
-    description:
-      "Production-grade platform for a German alternative medicine practice. Next.js App Router with Prisma ORM, PostgreSQL, JWT authentication, appointment booking, admin panel and transactional emails.",
-    techs: ["Next.js", "React", "Tailwind", "Prisma", "PostgreSQL"],
-    playUrl: "https://heilpraktiker-bleialf.vercel.app/",
+    id: "orla-plus",
+    stack: ["HTML", "CSS", "JavaScript", "i18n", "Git / Pull Requests"],
+    demoUrl: "https://www.orlamais.com.br/",
+    codeUrl: "https://github.com/polifilho/orlamais-website",
+    visibility: "public",
+    status: "migration",
+    priority: "selected",
+    images: ["/orla-landing.jpg"],
+    evidence: [5, 6, 8].map((number) => ({
+      label: `PR #${number}`,
+      url: `https://github.com/polifilho/orlamais-website/pull/${number}`,
+    })),
+  },
+  {
+    id: "growthbot-de",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "OpenAI API",
+      "Telegram",
+      "Zod",
+      "SQLite",
+      "Vitest",
+      "Playwright",
+    ],
+    demoUrl: "https://growthbot-de.vercel.app/",
+    codeUrl: "https://github.com/Willianfonseca7/growthbot-de",
+    visibility: "public",
+    status: "demo",
+    priority: "selected",
+    images: ["/growthbot-de-demo.jpg"],
+    evidence: [
+      {
+        label: "Source",
+        url: "https://github.com/Willianfonseca7/growthbot-de/tree/main/src",
+      },
+    ],
+  },
+  {
+    id: "invest-agent",
+    stack: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "Binance API",
+      "Docker",
+      "GitHub Actions",
+    ],
+    demoUrl: "https://invest-agent-1.onrender.com/",
+    codeUrl: "https://github.com/Willianfonseca7/invest-agent",
+    visibility: "public",
+    status: "demo",
+    priority: "selected",
+    images: ["/investagent-overview.jpg", "/investagent-charts.png"],
+    evidence: [
+      {
+        label: "Source",
+        url: "https://github.com/Willianfonseca7/invest-agent/tree/main/packages",
+      },
+    ],
+  },
+  {
+    id: "heilpratika",
+    stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
+    demoUrl: "https://heilpraktiker-bleialf.vercel.app/",
     codeUrl: "https://github.com/Willianfonseca7/heilpraktiker-bleialf",
+    visibility: "public",
+    status: "demo",
+    priority: "archive",
+    images: ["/heilpraktiker-bleialf-home.png"],
+    evidence: [],
   },
   {
-    id: 3,
-    title: "Lego Set Explorer",
-    description:
-      "Full-stack app with React + TypeScript frontend and Node.js/Express API. Features search and filters, JWT auth, personal collections and a statistics dashboard. Dockerized PostgreSQL for local dev.",
-    techs: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Docker"],
-    playUrl: "https://lego-set-explore.vercel.app",
+    id: "lego-set-explore",
+    stack: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Docker",
+    ],
+    demoUrl: "https://lego-set-explore.vercel.app/",
     codeUrl: "https://github.com/Willianfonseca7/Lego-Set-Explore",
+    visibility: "public",
+    status: "demo",
+    priority: "archive",
+    images: ["/lego-set-explore-home.png"],
+    evidence: [],
   },
   {
-    id: 4,
-    title: "Pokedex-Web",
-    description:
-      "Pokémon search app consuming the PokéAPI. Built to practice React component composition, async state management and responsive CSS layout.",
-    techs: ["React", "JavaScript", "PokéAPI"],
-    playUrl: "https://willianfonseca7.github.io/Pokedex-web/",
-    codeUrl: "https://github.com/Willianfonseca7/Pokedex-web",
+    id: "containerhub",
+    stack: ["React", "Vite", "Strapi", "PostgreSQL"],
+    demoUrl: "https://kontainer-flame.vercel.app/",
+    codeUrl: "https://github.com/Willianfonseca7/ContainerHub",
+    visibility: "public",
+    status: "demo",
+    priority: "archive",
+    images: ["/containerhub-home.png"],
+    evidence: [],
   },
   {
-    id: 5,
-    title: "Portfolio",
-    description:
-      "This portfolio — React + Vite, Tailwind CSS, multilingual support (DE/EN/PT) with context-based i18n, and automated CI/CD deploy to GitHub Pages via GitHub Actions.",
-    techs: ["React", "TypeScript", "Vite", "Tailwind CSS", "i18n", "GitHub Actions"],
-    playUrl: "https://willianfonseca7.github.io/willianfonseca-portfolio/",
-    codeUrl: "https://github.com/Willianfonseca7/willianfonseca-portfolio",
+    id: "pokedex-web",
+    stack: ["React", "JavaScript", "PokéAPI"],
+    demoUrl: "https://willianfonseca7.github.io/Pokedex-web/",
+    codeUrl: "https://github.com/Willianfonseca7/Pokemon-App",
+    visibility: "public",
+    status: "demo",
+    priority: "archive",
+    images: ["/pokedex-home.png"],
+    evidence: [],
+  },
+  {
+    id: "toytopia",
+    stack: ["React", "UI/UX"],
+    demoUrl: null,
+    codeUrl: null,
+    visibility: "public",
+    status: "development",
+    priority: "archive",
+    images: [],
+    evidence: [],
+    hidden: true,
   },
 ];

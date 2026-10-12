@@ -36,14 +36,18 @@ export default function ContactForm() {
 
   const isValid = !errors.name && !errors.email && !errors.message;
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     setStatus("");
     setPreparedMailto("");
   };
 
-  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleBlur = (
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name } = e.target;
     setTouched((prev) => ({ ...prev, [name]: true }));
   };
@@ -54,13 +58,14 @@ export default function ContactForm() {
 
     if (!isValid) return;
 
-    const messageBody = `Name: ${formData.name}\nE-Mail: ${formData.email}\n\n${formData.message}`;
+    const messageBody = `${form.nameLabel}: ${formData.name}\n${form.emailLabel}: ${formData.email}\n\n${formData.message}`;
 
-    await copy(messageBody);
-    setStatus(form.successMessage);
+    const didCopy = await copy(messageBody);
+    setStatus(didCopy ? form.successMessage : form.copyFailedMessage);
 
-    const emailHref = content.contact.links[0]?.href.replace("mailto:", "") ?? "";
-    const mailto = `mailto:${emailHref}?subject=Portfolio%20Kontakt&body=${encodeURIComponent(messageBody)}`;
+    const emailHref =
+      content.contact.links[0]?.href.replace("mailto:", "") ?? "";
+    const mailto = `mailto:${emailHref}?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(messageBody)}`;
     setPreparedMailto(mailto);
 
     setFormData({ name: "", email: "", message: "" });
@@ -70,7 +75,7 @@ export default function ContactForm() {
   return (
     <Card className="space-y-6">
       <div className="space-y-2">
-        <h3 className="heading text-xl">{form.title}</h3>
+        <h2 className="small-heading">{form.title}</h2>
         <p className="text-sm text-muted">
           {copied ? form.copiedMessage : form.helper}
         </p>
@@ -89,11 +94,17 @@ export default function ContactForm() {
             onChange={handleChange}
             onBlur={handleBlur}
             aria-invalid={touched.name && errors.name}
+            aria-describedby={
+              touched.name && errors.name ? "name-error" : undefined
+            }
             className="input-field"
-            placeholder="Willian Santos"
+            placeholder={form.namePlaceholder}
+            autoComplete="name"
           />
           {touched.name && errors.name && (
-            <p className="text-xs text-rose-300">{form.nameError}</p>
+            <p id="name-error" className="field-error">
+              {form.nameError}
+            </p>
           )}
         </div>
 
@@ -109,11 +120,17 @@ export default function ContactForm() {
             onChange={handleChange}
             onBlur={handleBlur}
             aria-invalid={touched.email && errors.email}
+            aria-describedby={
+              touched.email && errors.email ? "email-error" : undefined
+            }
             className="input-field"
-            placeholder="du@example.com"
+            placeholder={form.emailPlaceholder}
+            autoComplete="email"
           />
           {touched.email && errors.email && (
-            <p className="text-xs text-rose-300">{form.emailError}</p>
+            <p id="email-error" className="field-error">
+              {form.emailError}
+            </p>
           )}
         </div>
 
@@ -129,11 +146,16 @@ export default function ContactForm() {
             onChange={handleChange}
             onBlur={handleBlur}
             aria-invalid={touched.message && errors.message}
+            aria-describedby={
+              touched.message && errors.message ? "message-error" : undefined
+            }
             className="input-field resize-none"
-            placeholder={`Bitte mindestens ${form.minMessageLength} Zeichen...`}
+            placeholder={form.messagePlaceholder}
           />
           {touched.message && errors.message && (
-            <p className="text-xs text-rose-300">{form.messageError}</p>
+            <p id="message-error" className="field-error">
+              {form.messageError}
+            </p>
           )}
         </div>
 
@@ -143,7 +165,7 @@ export default function ContactForm() {
 
         {status && (
           <div className="space-y-2" role="status">
-            <p className="text-sm text-emerald-300">{status}</p>
+            <p className="form-status">{status}</p>
             {preparedMailto && (
               <Button href={preparedMailto} variant="ghost">
                 {form.mailClientLabel}

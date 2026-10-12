@@ -1,100 +1,115 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import useTheme from "../../hooks/useTheme";
 import { useLanguage } from "../../hooks/useLanguage";
 import type { Language } from "../../context/LanguageContext";
-
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
   const { language, setLanguage, content } = useLanguage();
+  const labels = content.projects.ui;
   const [isOpen, setIsOpen] = useState(false);
-
+  const menuButton = useRef<HTMLButtonElement>(null);
   const navItems = [
     { to: "/", label: content.nav.home },
+    { to: "/projekte", label: content.nav.projects },
     { to: "/about", label: content.nav.about },
     { to: "/skills", label: content.nav.skills },
-    { to: "/projekte", label: content.nav.projects },
     { to: "/kontakt", label: content.nav.contact },
   ];
-
-  const linkClass = ({ isActive }: { isActive: boolean }) =>
-    isActive ? "nav-link active" : "nav-link";
-
-  const langs: { key: Language; label: string }[] = [
-    { key: "de", label: "DE" },
-    { key: "pt", label: "PT" },
-    { key: "en", label: "EN" },
+  const languages: { key: Language; label: string; name: string }[] = [
+    { key: "de", label: "DE", name: "Deutsch" },
+    { key: "en", label: "EN", name: "English" },
+    { key: "pt", label: "PT", name: "Português" },
   ];
-
+  useEffect(() => {
+    const query = window.matchMedia("(min-width: 1024px)");
+    const closeOnDesktop = () => {
+      if (query.matches) setIsOpen(false);
+    };
+    query.addEventListener("change", closeOnDesktop);
+    return () => query.removeEventListener("change", closeOnDesktop);
+  }, []);
+  const links = navItems.map((item) => (
+    <NavLink
+      key={item.to}
+      to={item.to}
+      end
+      className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
+      onClick={() => setIsOpen(false)}
+    >
+      {item.label}
+    </NavLink>
+  ));
   return (
-    <header className="nav-header">
+    <header
+      className="nav-header"
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && isOpen) {
+          setIsOpen(false);
+          menuButton.current?.focus();
+        }
+      }}
+    >
+      <a className="skip-link" href="#main-content">
+        {labels.skip}
+      </a>
       <div className="nav-inner">
-        <div className="flex items-center gap-4">
-          <Link
-            to="/"
-            className="text-xs font-semibold uppercase tracking-[0.35em] text-sky-300/80 hover:text-sky-200 transition-colors"
-          >
-            {content.meta.name}
-          </Link>
-        </div>
-
-        <nav className="nav-links">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              className={linkClass}
-              end
-              onClick={() => setIsOpen(false)}
-            >
-              {item.label}
-            </NavLink>
-          ))}
+        <Link to="/" className="brand" aria-label={content.meta.name}>
+          <span className="brand-mark" aria-hidden="true">
+            W<span>/</span>F
+          </span>
+          <span className="brand-name">Willian Fonseca</span>
+        </Link>
+        <nav className="nav-links" aria-label={labels.navLabel}>
+          {links}
         </nav>
-
-        <div className="flex items-center gap-3">
+        <div className="nav-controls">
+          <div
+            className="lang-toggle"
+            role="group"
+            aria-label={labels.languageLabel}
+          >
+            {languages.map((item) => (
+              <button
+                key={item.key}
+                type="button"
+                aria-label={item.name}
+                aria-pressed={language === item.key}
+                className={`lang-button ${language === item.key ? "active" : ""}`}
+                onClick={() => setLanguage(item.key)}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
           <button
             type="button"
-            className="chip-button lg:hidden"
+            onClick={toggleTheme}
+            className="theme-button"
+            aria-label={`${labels.themeToggle}: ${theme === "dark" ? content.nav.themeLight : content.nav.themeDark}`}
+          >
+            <span aria-hidden="true">{theme === "dark" ? "☀" : "◐"}</span>
+          </button>
+          <button
+            ref={menuButton}
+            type="button"
+            className="chip-button menu-toggle"
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
             onClick={() => setIsOpen((prev) => !prev)}
           >
             {content.nav.menu}
           </button>
-          <div className="lang-toggle">
-            {langs.map((item) => (
-              <button
-                key={item.key}
-                type="button"
-                onClick={() => setLanguage(item.key)}
-                className={`lang-button ${language === item.key ? "active" : ""}`}
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
-          <button type="button" onClick={toggleTheme} className="chip-button">
-            {theme === "dark" ? content.nav.themeDark : content.nav.themeLight}
-          </button>
         </div>
       </div>
-
-      <div id="mobile-menu" className={`mobile-panel ${isOpen ? "open" : ""}`}>
-        <nav className="mobile-links">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              className={linkClass}
-              end
-              onClick={() => setIsOpen(false)}
-            >
-              {item.label}
-            </NavLink>
-          ))}
-        </nav>
-      </div>
+      <nav
+        id="mobile-menu"
+        hidden={!isOpen}
+        className="mobile-links"
+        aria-label={labels.mobileNav}
+      >
+        {links}
+      </nav>
     </header>
   );
 }

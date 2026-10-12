@@ -1,24 +1,15 @@
 import { useEffect, useState } from "react";
-
+import { readPreference, savePreference } from "../lib/localization";
 type Theme = "dark" | "light";
-const STORAGE_KEY = "theme";
-
 export default function useTheme() {
-  const [theme, setTheme] = useState<Theme>("dark");
-
+  const [theme, setTheme] = useState<Theme>(() =>
+    readPreference("theme") === "light" ? "light" : "dark",
+  );
   useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    const nextTheme: Theme = stored === "light" ? "light" : "dark";
-    setTheme(nextTheme);
-    document.documentElement.dataset.theme = nextTheme;
-  }, []);
-
-  const toggleTheme = () => {
-    const nextTheme: Theme = theme === "dark" ? "light" : "dark";
-    setTheme(nextTheme);
-    document.documentElement.dataset.theme = nextTheme;
-    localStorage.setItem(STORAGE_KEY, nextTheme);
-  };
-
+    document.documentElement.dataset.theme = theme;
+    savePreference("theme", theme);
+  }, [theme]);
+  const toggleTheme = () =>
+    setTheme((current) => (current === "dark" ? "light" : "dark"));
   return { theme, toggleTheme };
 }
