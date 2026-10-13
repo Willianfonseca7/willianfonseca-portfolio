@@ -11,15 +11,14 @@ export default function HeroSection() {
         <div className="hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">{hero.eyebrow}</p>
-            <p className="hero-name">Willian Santos Fonseca</p>
             <h1 id="hero-title">{hero.title}</h1>
             <p className="hero-stack">
-              {hero.subtitle} <span>· {content.skills.groups[2].title}</span>
+              {hero.subtitle}
             </p>
             <p className="hero-description">{hero.description}</p>
             <div className="hero-actions">
               <Button href={hero.ctas.primary.href}>
-                {hero.ctas.primary.label} <span aria-hidden="true">↓</span>
+                {hero.ctas.primary.label}
               </Button>
               <Button href={hero.ctas.secondary.href} variant="secondary">
                 {hero.ctas.secondary.label}
@@ -50,8 +49,8 @@ export default function HeroSection() {
           </figure>
         </div>
         <div className="hero-bottom">
-          <span>Frontend / Fullstack</span>
-          <span>APIs · PostgreSQL · {content.skills.groups[2].title}</span>
+          <span>{content.meta.role}</span>
+          <span>APIs · PostgreSQL · KI & Automatisierung</span>
           <span aria-hidden="true">01 — Portfolio</span>
         </div>
       </Container>

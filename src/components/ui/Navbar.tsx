@@ -2,10 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import useTheme from "../../hooks/useTheme";
 import { useLanguage } from "../../hooks/useLanguage";
-import type { Language } from "../../context/LanguageContext";
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
-  const { language, setLanguage, content } = useLanguage();
+  const { content } = useLanguage();
   const labels = content.projects.ui;
   const [isOpen, setIsOpen] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
@@ -15,11 +14,6 @@ export default function Navbar() {
     { to: "/about", label: content.nav.about },
     { to: "/skills", label: content.nav.skills },
     { to: "/kontakt", label: content.nav.contact },
-  ];
-  const languages: { key: Language; label: string; name: string }[] = [
-    { key: "de", label: "DE", name: "Deutsch" },
-    { key: "en", label: "EN", name: "English" },
-    { key: "pt", label: "PT", name: "Português" },
   ];
   useEffect(() => {
     const query = window.matchMedia("(min-width: 1024px)");
@@ -64,24 +58,6 @@ export default function Navbar() {
           {links}
         </nav>
         <div className="nav-controls">
-          <div
-            className="lang-toggle"
-            role="group"
-            aria-label={labels.languageLabel}
-          >
-            {languages.map((item) => (
-              <button
-                key={item.key}
-                type="button"
-                aria-label={item.name}
-                aria-pressed={language === item.key}
-                className={`lang-button ${language === item.key ? "active" : ""}`}
-                onClick={() => setLanguage(item.key)}
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
           <button
             type="button"
             onClick={toggleTheme}

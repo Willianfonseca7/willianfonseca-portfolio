@@ -1,14 +1,15 @@
 {
   "meta": {
     "name": "Willian Santos Fonseca",
-    "role": "Junior Frontend- / Fullstack-Entwickler",
+    "role": "Frontend- & Junior Fullstack-Entwickler",
     "location": "Düsseldorf, Deutschland",
-    "tagline": "Düsseldorf · Kurzfristig verfügbar"
+    "tagline": "Kurzfristig verfügbar",
+    "description": "Frontend- und Junior Fullstack-Entwickler in Düsseldorf. React, Next.js App Router, TypeScript, Supabase/PostgreSQL, KI-Integration und Automatisierung mit nachvollziehbaren Projektbeispielen."
   },
   "nav": {
     "home": "Startseite",
     "about": "Über mich",
-    "skills": "Skills",
+    "skills": "Technologien",
     "projects": "Projekte",
     "contact": "Kontakt",
     "menu": "Menü",
@@ -16,19 +17,19 @@
     "themeLight": "Hell"
   },
   "hero": {
-    "title": "Junior Frontend- / Fullstack-Entwickler",
-    "subtitle": "React · Next.js · TypeScript · Node.js",
-    "description": "Ich entwickle Webanwendungen mit React, Next.js und TypeScript – von klaren Benutzeroberflächen bis zu APIs und relationalen Datenbanken. Meine Projekte verbinden Geschäftslogik, Authentifizierung, automatisierte Tests und die Integration von KI.",
+    "title": "Willian Santos Fonseca",
+    "subtitle": "Frontend- & Junior Fullstack-Entwickler | Next.js | Supabase | KI & Automatisierung",
+    "description": "Frontend- und Fullstack-Entwickler mit abgeschlossener IHK-Weiterbildung, Freelance-Kundenprojekt und eigenem SaaS-Produkt. Praktische Entwicklung mit Next.js App Router, TypeScript, Supabase/PostgreSQL, Authentifizierung und API-Integration. Erfahrung mit Row Level Security, Backend-Mandantentrennung und LLM-basierten Workflows. Besonderes Interesse an KI-Agenten, Tool Use und zuverlässiger Prozessautomatisierung.",
     "eyebrow": "Software entwickeln. Entscheidungen erklären.",
-    "note": "Offen für Präsenz und Hybrid · auch Remote",
+    "note": "Präsenz in Bochum möglich",
     "ctas": {
       "primary": {
-        "label": "Projekte entdecken",
-        "href": "/#projekte"
+        "label": "GitHub",
+        "href": "https://github.com/Willianfonseca7"
       },
       "secondary": {
-        "label": "Kontakt aufnehmen",
-        "href": "/#kontakt"
+        "label": "E-Mail",
+        "href": "mailto:wfonseca7@hotmail.com"
       },
       "tertiary": {
         "label": "GitHub",
@@ -40,18 +41,18 @@
   },
   "home": {
     "aboutPreviewTitle": "Über mich",
-    "aboutPreviewSubtitle": "Ich bin Willian Santos Fonseca, Junior Frontend- / Fullstack-Entwickler in Düsseldorf. Mein Fokus liegt auf React, Next.js, TypeScript und API-basierten Webanwendungen.",
-    "projectsPreviewSubtitle": "Zusammenarbeit, KI-Integration und Verarbeitung von Marktdaten.",
+    "aboutPreviewSubtitle": "Frontend- und Fullstack-Entwickler mit abgeschlossener IHK-Weiterbildung, Freelance-Kundenprojekt und eigenem SaaS-Produkt. Praktische Entwicklung mit Next.js App Router, TypeScript, Supabase/PostgreSQL, Authentifizierung und API-Integration. Erfahrung mit Row Level Security, Backend-Mandantentrennung und LLM-basierten Workflows. Besonderes Interesse an KI-Agenten, Tool Use und zuverlässiger Prozessautomatisierung.",
+    "projectsPreviewSubtitle": "Frontend, Fullstack, LLM-Workflows und Automatisierung.",
     "projectsPreviewCta": "Alle Projekte ansehen",
     "intro": [
-      "Nach meinem beruflichen Einstieg in der Logistik habe ich mich in der Weiterbildung Web- & WebApp-Entwicklung am Syntax Institut Berlin (04/2025–04/2026) auf Softwareentwicklung ausgerichtet.",
-      "Heute entwickle ich eigene Anwendungen wie Waiturn, GrowthBot-DE und InvestAgent. Im Kundenprojekt ORLA+ arbeite ich mit Pedro zusammen und bringe Frontend-Änderungen über Pull Requests ein.",
-      "Für meinen nächsten beruflichen Schritt suche ich eine Junior-Position im Frontend- oder Fullstack-Bereich. Ich kann kurzfristig beginnen und bevorzuge Präsenz oder Hybrid in Düsseldorf, bin aber auch für Remote offen."
+      "Frontend- und Fullstack-Entwickler mit abgeschlossener IHK-Weiterbildung, Freelance-Kundenprojekt und eigenem SaaS-Produkt. Praktische Entwicklung mit Next.js App Router, TypeScript, Supabase/PostgreSQL, Authentifizierung und API-Integration. Erfahrung mit Row Level Security, Backend-Mandantentrennung und LLM-basierten Workflows. Besonderes Interesse an KI-Agenten, Tool Use und zuverlässiger Prozessautomatisierung.",
+      "ORLA+ | Frontend Developer, Freelance-Kundenprojekt | 01/2026 bis heute",
+      "Kurzfristig verfügbar | Präsenz in Bochum möglich"
     ],
-    "featuredTitle": "Ein eigenes Produkt, von der Oberfläche bis zur Datenbank.",
-    "featuredEyebrow": "01 / Hauptprojekt",
-    "selectedTitle": "Drei Projekte. Drei Perspektiven.",
-    "selectedSubtitle": "Zusammenarbeit, KI-Integration und Verarbeitung von Marktdaten.",
+    "featuredTitle": "Berufserfahrung und ausgewählte Projekte",
+    "featuredEyebrow": "01 / Projekte",
+    "selectedTitle": "Ausgewählte Projekte",
+    "selectedSubtitle": "Frontend, Fullstack, LLM-Workflows und Automatisierung.",
     "workTitle": "Wie ich entwickle",
     "workSubtitle": "Konkrete Implementierungen statt einer Liste von Versprechen.",
     "workItems": [
@@ -71,27 +72,28 @@
         "projectId": "orla-plus"
       }
     ],
-    "educationTitle": "Fundament und Weiterentwicklung",
-    "educationBody": "Weiterbildung Web- & WebApp-Entwicklung am Syntax Institut Berlin, 04/2025–04/2026. Ergänzt durch IHK-Zertifikate und die Entwicklung eigener Anwendungen.",
+    "educationTitle": "Web- und WebApp-Entwicklung (Fullstack)",
+    "educationBody": "Web- und WebApp-Entwicklung (Fullstack) | Syntax Institut Berlin | 04/2025 bis 04/2026",
     "certLink": "Zertifikate ansehen"
   },
   "about": {
     "eyebrow": "Profil",
     "title": "Über mich",
-    "description": "Ich bin Willian Santos Fonseca, Junior Frontend- / Fullstack-Entwickler in Düsseldorf. Mein Fokus liegt auf React, Next.js, TypeScript und API-basierten Webanwendungen.",
+    "description": "Frontend- und Fullstack-Entwickler mit abgeschlossener IHK-Weiterbildung, Freelance-Kundenprojekt und eigenem SaaS-Produkt. Praktische Entwicklung mit Next.js App Router, TypeScript, Supabase/PostgreSQL, Authentifizierung und API-Integration. Erfahrung mit Row Level Security, Backend-Mandantentrennung und LLM-basierten Workflows. Besonderes Interesse an KI-Agenten, Tool Use und zuverlässiger Prozessautomatisierung.",
     "werdegang": {
       "title": "Werdegang",
       "paragraphs": [
-        "Nach meinem beruflichen Einstieg in der Logistik habe ich mich in der Weiterbildung Web- & WebApp-Entwicklung am Syntax Institut Berlin (04/2025–04/2026) auf Softwareentwicklung ausgerichtet.",
-        "Heute entwickle ich eigene Anwendungen wie Waiturn, GrowthBot-DE und InvestAgent. Im Kundenprojekt ORLA+ arbeite ich mit Pedro zusammen und bringe Frontend-Änderungen über Pull Requests ein.",
-        "Für meinen nächsten beruflichen Schritt suche ich eine Junior-Position im Frontend- oder Fullstack-Bereich. Ich kann kurzfristig beginnen und bevorzuge Präsenz oder Hybrid in Düsseldorf, bin aber auch für Remote offen."
+        "Frontend- und Fullstack-Entwickler mit abgeschlossener IHK-Weiterbildung, Freelance-Kundenprojekt und eigenem SaaS-Produkt. Praktische Entwicklung mit Next.js App Router, TypeScript, Supabase/PostgreSQL, Authentifizierung und API-Integration. Erfahrung mit Row Level Security, Backend-Mandantentrennung und LLM-basierten Workflows. Besonderes Interesse an KI-Agenten, Tool Use und zuverlässiger Prozessautomatisierung.",
+        "ORLA+ | Frontend Developer, Freelance-Kundenprojekt | 01/2026 bis heute",
+        "Kurzfristig verfügbar | Präsenz in Bochum möglich"
       ]
     },
     "ihkTitle": "IHK-Zertifizierungen",
     "ihkCertifications": [
-      "IT-Fachkraft für Web Development IHK",
-      "Web Development Specialist IHK",
-      "Digital Product Designer IHK"
+      "IT-Fachkraft für Web Development",
+      "Web Development Specialist",
+      "Junior Web Developer",
+      "Digital Product Designer"
     ],
     "valuesTitle": "Was mir wichtig ist",
     "languagesTitle": "Sprachen",
@@ -111,10 +113,10 @@
     ],
     "values": [],
     "languages": [
-      "Deutsch (C1)",
-      "Portugiesisch (Muttersprache)",
-      "Spanisch (B1)",
-      "Englisch (A2)"
+      "Deutsch C2",
+      "Portugiesisch Muttersprache",
+      "Spanisch B1",
+      "Englisch A2"
     ]
   },
   "skills": {
@@ -123,8 +125,11 @@
     "conceptsTitle": "Konzepte & Patterns",
     "learningTitle": "Aktuell am Lernen",
     "statusTitle": "Aktueller Stand",
-    "statusSummary": "Für meinen nächsten beruflichen Schritt suche ich eine Junior-Position im Frontend- oder Fullstack-Bereich. Ich kann kurzfristig beginnen und bevorzuge Präsenz oder Hybrid in Düsseldorf, bin aber auch für Remote offen.",
-    "statusTags": ["Junior Frontend- / Fullstack-Entwickler", "Düsseldorf"],
+    "statusSummary": "Kurzfristig verfügbar | Präsenz in Bochum möglich",
+    "statusTags": [
+      "Frontend- & Junior Fullstack-Entwickler",
+      "Düsseldorf"
+    ],
     "certificationsTitle": "IHK-Zertifikate & Weiterbildung",
     "certificationsHint": "Klicke auf ein Dokument, um die Vorschau in Originalgröße zu öffnen.",
     "openCertificateLabel": "Dokument öffnen",
@@ -134,33 +139,56 @@
         "title": "Frontend",
         "items": [
           "React",
-          "Next.js",
+          "Next.js App Router",
           "TypeScript",
-          "HTML / CSS",
-          "Responsive UI"
+          "JavaScript",
+          "Tailwind CSS",
+          "HTML",
+          "CSS"
         ]
       },
       {
-        "title": "APIs & Daten",
+        "title": "Backend & Daten",
         "items": [
           "Node.js",
+          "Next.js Route Handlers",
           "REST APIs",
           "PostgreSQL",
+          "Supabase",
           "Prisma",
-          "Authentifizierung"
+          "SQL",
+          "Zod"
         ]
       },
       {
-        "title": "KI & Integrationen",
-        "items": ["OpenAI API", "Telegram", "Zod", "SQLite"]
+        "title": "Sicherheit",
+        "items": [
+          "Row Level Security",
+          "Mandantentrennung",
+          "Sessionvalidierung",
+          "Authentifizierung",
+          "Autorisierung"
+        ]
       },
       {
-        "title": "Qualität & Zusammenarbeit",
-        "items": ["Vitest", "Playwright", "Git / Pull Requests", "Docker", "CI"]
+        "title": "KI & Qualität",
+        "items": [
+          "OpenAI API",
+          "Anthropic API",
+          "LLM-Integration",
+          "Prompt-Logik",
+          "Tool-Use-Datenformate",
+          "Vitest",
+          "Playwright",
+          "Git",
+          "Docker"
+        ]
       }
     ],
     "concepts": [],
-    "learning": ["LLM integrations"],
+    "learning": [
+      "LLM integrations"
+    ],
     "certifications": [
       {
         "title": "IT-Fachkraft für Web Development IHK",
@@ -230,7 +258,7 @@
   "projects": {
     "title": "Projekte",
     "featuredTitle": "Drei Projekte. Drei Perspektiven.",
-    "subtitle": "Zusammenarbeit, KI-Integration und Verarbeitung von Marktdaten.",
+    "subtitle": "Frontend, Fullstack, LLM-Workflows und Automatisierung.",
     "ui": {
       "demo": "Demo",
       "code": "Code",
@@ -247,7 +275,7 @@
       "noImage": "Projekt ohne Bildschirmaufnahme",
       "openImage": "Bild öffnen",
       "overview": "Übersicht",
-      "charts": "Charts",
+      "charts": "Diagramme",
       "landing": "Landingpage",
       "status": "Status",
       "role": "Meine Rolle",
@@ -281,56 +309,73 @@
     "archiveSubtitle": "Frühere Arbeiten und Lernprojekte bleiben mit Demo und Quellcode zugänglich.",
     "entries": {
       "waiturn": {
-        "title": "Waiturn",
-        "kicker": "Eigenes Softwareprojekt",
-        "role": "Fullstack-Entwicklung · Eigenprojekt",
-        "summary": "Termine, Warteschlangen und tägliche Abläufe für Barbershops. Ein eigenes Projekt mit relationaler Datenbank, geschützten APIs und Echtzeitaktualisierungen.",
+        "title": "WAITURN",
+        "kicker": "Schwerpunktprojekt",
+        "role": "Eigenes Fullstack-SaaS-Projekt | 2026 bis heute",
+        "summary": "Next.js, TypeScript, Prisma und PostgreSQL für Termin- und Warteschlangenverwaltung; Route Handlers, Authentifizierung, Rollenberechtigungen und Socket.IO-Echtzeitaktualisierungen.",
         "problem": "Terminplanung und spontane Warteschlangen sollen in einer Anwendung zusammenlaufen.",
-        "solution": "Öffentliche Buchungs- und Warteschlangen-Flows sowie interne Verwaltungsabläufe sind im Repository implementiert.",
+        "solution": "Migration zur Aktivierung von Row Level Security in 27 öffentlichen PostgreSQL-Tabellen implementiert; ohne Policies ist der direkte Supabase-API-Zugriff für Rollen ohne RLS-Bypass standardmäßig gesperrt. Mandantentrennung im Prisma-Backend über Session, Rollen und shopId.",
         "architecture": "Next.js und TypeScript; Prisma mit PostgreSQL; Better Auth für Authentifizierung. Anwendungslogik, Datenzugriff und HTTP-Schnittstellen sind getrennt.",
-        "challenges": "Zugriffsprüfungen nach Betrieb und Rolle, konsistente Terminverarbeitung und Ereignisübermittlung mit Socket.IO.",
-        "validation": "Unit-Tests für Geschäftslogik und Zugriffsprüfungen sowie Playwright-Szenarien für Authentifizierung und mehrere Tabs sind vorhanden. Aktuelle Testergebnisse werden hier nicht behauptet.",
+        "challenges": "Backend-Mandantentrennung über Session, Rollen und shopId. RLS sperrt direkten Supabase-API-Zugriff ohne Policies; es sind keine RLS-Policies pro Mandant implementiert.",
+        "validation": "Unit-Prüfung: 2149 Tests bestanden, 4 fehlgeschlagen. E2E-Prüfung ohne produktive Zugangsdaten: 3 bestanden, 3 fehlgeschlagen, 3 übersprungen, 184 nicht ausgeführt und 1 unterbrochen; Abbruch nach drei Fehlern.",
         "statusNote": "Aktive Entwicklung. Der Code ist privat; eine öffentliche Demo ist derzeit nicht verlinkt.",
-        "migrationNote": ""
+        "migrationNote": "",
+        "bullets": [
+          "Next.js, TypeScript, Prisma und PostgreSQL für Termin- und Warteschlangenverwaltung; Route Handlers, Authentifizierung, Rollenberechtigungen und Socket.IO-Echtzeitaktualisierungen.",
+          "Migration zur Aktivierung von Row Level Security in 27 öffentlichen PostgreSQL-Tabellen implementiert; ohne Policies ist der direkte Supabase-API-Zugriff für Rollen ohne RLS-Bypass standardmäßig gesperrt. Mandantentrennung im Prisma-Backend über Session, Rollen und shopId.",
+          "Unit- und E2E-Tests mit Vitest und Playwright implementiert und ausgeführt; die aktuelle Prüfung bestätigt keinen vollständig erfolgreichen Testlauf."
+        ]
       },
       "orla-plus": {
         "title": "ORLA+",
         "kicker": "Zusammenarbeit im Kundenprojekt",
-        "role": "Frontend-Beiträge · Zusammenarbeit mit Pedro",
-        "summary": "Hero, CTAs, mobile Navigation und mehrsprachige Landingpage. Drei integrierte Pull Requests zeigen meine Beiträge in einer bestehenden Anwendung.",
+        "role": "Frontend Developer, Freelance-Kundenprojekt | 01/2026 bis heute",
+        "summary": "Weiterentwicklung einer Kundenwebsite für eine Buchungsplattform: responsives Layout, mobile Navigation und Mehrsprachigkeit mit HTML, CSS und JavaScript; drei gemergte Pull Requests.",
         "problem": "Die Landingpage sollte auf kleinen Displays besser navigierbar und für internationale Besucher verständlich sein.",
-        "solution": "Verbesserungen an Hero und CTA (#5), mobiler Navigation (#6) und Internationalisierung in PT-BR, EN und ES (#8).",
-        "architecture": "Die belegten Landingpage-Beiträge verwenden HTML, CSS und JavaScript. Die Migration zu Next.js App Router ist ein separater, laufender Arbeitsstand.",
+        "solution": "Frontend-Architektur für die laufende Migration zu Next.js App Router umgesetzt, einschließlich Layouts, Seitenstruktur und Komponenten; Zusammenarbeit mit technischem Projektleiter.",
+        "architecture": "Frontend-Architektur für die laufende Migration zu Next.js App Router umgesetzt, einschließlich Layouts, Seitenstruktur und Komponenten; Zusammenarbeit mit technischem Projektleiter.",
         "challenges": "Bestehende Gestaltung und Navigation weiterentwickeln, ohne die Website neu aufzubauen; Layouts an Desktop, Tablet und Mobile anpassen.",
         "validation": "Drei PRs von Willianfonseca7 wurden in develop integriert; die PRs dokumentieren visuelle Prüfungen und Review-Rückmeldungen.",
         "statusNote": "Öffentliche Website; die Next.js-Migration ist noch nicht abgeschlossen.",
-        "migrationNote": "Aktueller Arbeitsstand (eigene Angabe): Layouts, Seiten und Komponenten mit Next.js App Router sind strukturiert. Die API-Integration steht noch aus."
+        "migrationNote": "Die Migration zu Next.js App Router läuft. Layouts, Seiten und Komponenten sind strukturiert; die API-Integration steht noch aus.",
+        "bullets": [
+          "Weiterentwicklung einer Kundenwebsite für eine Buchungsplattform: responsives Layout, mobile Navigation und Mehrsprachigkeit mit HTML, CSS und JavaScript; drei gemergte Pull Requests.",
+          "Frontend-Architektur für die laufende Migration zu Next.js App Router umgesetzt, einschließlich Layouts, Seitenstruktur und Komponenten; Zusammenarbeit mit technischem Projektleiter."
+        ]
       },
       "growthbot-de": {
-        "title": "GrowthBot-DE",
+        "title": "GROWTHBOT-DE",
         "kicker": "KI in einem definierten Workflow",
-        "role": "Entwicklung eines Telegram-Assistenten · Eigenprojekt",
-        "summary": "Telegram-Nachrichten verarbeiten, Interessen zuordnen und Empfehlungen mit der OpenAI API erzeugen – mit strukturierter Validierung und SQLite-Persistenz.",
+        "role": "LLM-Workflows und Automatisierung | 2026",
+        "summary": "Telegram-Assistent mit Next.js, TypeScript und OpenAI API: Intent-Erkennung, Gesprächsverlauf, Prompt-Logik und strukturierte, mit Zod validierte LLM-Ausgaben.",
         "problem": "Ein Telegram-Assistent soll Nachrichten in einen nachvollziehbaren Empfehlungsablauf übersetzen.",
-        "solution": "Nachrichten und Callback-Daten verarbeiten, Interessen per Schlüsselwörtern klassifizieren und strukturierte LLM-Antworten erzeugen.",
+        "solution": "Gesprächsorchestrierung mit Produktauswahl und Follow-ups; Integrationstest für Empfehlungsablauf und persistierten Gesprächszustand.",
         "architecture": "Next.js / TypeScript, Telegram-Anbindung und OpenAI API. Zod validiert Webhook-Daten und JSON-Antworten; SQLite speichert den Gesprächsverlauf.",
         "challenges": "Doppelte Webhook-Updates erkennen, Eingaben validieren und Fehler externer Dienste behandeln. Die Interessenklassifikation ist regelbasiert.",
-        "validation": "Unit- und Integrationstests für Handler, Klassifikation, Datenhaltung und den Empfehlungsablauf sind vorhanden; außerdem ein Playwright-Szenario.",
+        "validation": "Vier Integrationstests in drei Dateien bestanden, einschließlich Empfehlung, SQLite-Gesprächsverlauf und persistiertem Follow-up-Zustand. Der LLM-Aufruf ist im Test gemockt.",
         "statusNote": "Öffentliche Web-Demo und Repository. Der Bot-Betrieb ist von konfigurierten externen Diensten abhängig.",
-        "migrationNote": ""
+        "migrationNote": "",
+        "bullets": [
+          "Telegram-Assistent mit Next.js, TypeScript und OpenAI API: Intent-Erkennung, Gesprächsverlauf, Prompt-Logik und strukturierte, mit Zod validierte LLM-Ausgaben.",
+          "Gesprächsorchestrierung mit Produktauswahl und Follow-ups; Integrationstest für Empfehlungsablauf und persistierten Gesprächszustand."
+        ]
       },
       "invest-agent": {
-        "title": "InvestAgent",
-        "kicker": "Architektur & Marktdaten",
-        "role": "Fullstack-Entwicklung · Eigenprojekt",
-        "summary": "TypeScript-Monorepo mit React-Dashboard, Node.js-API und Worker. Marktdatenanalyse, Kapitalverwaltung und Risikoprüfung sind in eigene Module getrennt.",
+        "title": "INVESTAGENT",
+        "kicker": "Schwerpunktprojekt",
+        "role": "Automatisierung, Daten und KI-Integration | 2026",
+        "summary": "TypeScript-Monorepo mit React-Dashboard, Node.js-API und automatisiertem Worker für Marktdaten, RSI/EMA-Analysen, Risikoprüfung und operative Kennzahlen.",
         "problem": "Marktdaten, Analyse und Hintergrundverarbeitung sollen dieselbe Fachlogik nutzen und getrennt von der Oberfläche bleiben.",
-        "solution": "Binance-Marktdaten abrufen, technische Indikatoren auswerten und strukturierte Analyse- und Risikodaten im Dashboard darstellen.",
-        "architecture": "npm Workspaces mit Web, API und Worker; gemeinsame Module für Strategie, Kapital, Portfolio und Risiko. Docker und CI-Konfigurationen sind vorhanden.",
-        "challenges": "Gemeinsame Typen zwischen API und UI, unabhängige Verarbeitung im Worker und nachvollziehbare Risikoprüfungen.",
+        "solution": "Claude-API-Client mit Nachrichtenvalidierung; strukturierte Tool-Use- und Tool-Result-Datentypen implementiert. Docker Compose und CI-Konfiguration.",
+        "architecture": "TypeScript-Monorepo mit React-Dashboard, Node.js-API, Worker und gemeinsamen Modulen. Ein separates Paket implementiert den Claude-API-Client und Nachrichtenvalidierung.",
+        "challenges": "Tool-Use- und Tool-Result-Datenformate sind implementiert. Ein LLM-gesteuerter Werkzeug-Executor oder eine Sandbox ist im geprüften Code nicht nachgewiesen.",
         "validation": "Tests für ausgewählte Risiko-, Kapital-, Portfolio- und Ausführungsmodule sind vorhanden. CI enthält Lint- und Build-Jobs.",
         "statusNote": "Öffentliche Demo. Ausführungscode und Simulationspfade existieren; realer Handelsbetrieb und finanzielle Ergebnisse werden nicht behauptet.",
-        "migrationNote": ""
+        "migrationNote": "",
+        "bullets": [
+          "TypeScript-Monorepo mit React-Dashboard, Node.js-API und automatisiertem Worker für Marktdaten, RSI/EMA-Analysen, Risikoprüfung und operative Kennzahlen.",
+          "Claude-API-Client mit Nachrichtenvalidierung; strukturierte Tool-Use- und Tool-Result-Datentypen implementiert. Docker Compose und CI-Konfiguration."
+        ]
       },
       "heilpratika": {
         "title": "Heilpraktiker-Bleialf",
@@ -343,7 +388,8 @@
         "challenges": "",
         "validation": "",
         "statusNote": "",
-        "migrationNote": ""
+        "migrationNote": "",
+        "bullets": []
       },
       "lego-set-explore": {
         "title": "LEGO Set Explorer",
@@ -356,7 +402,8 @@
         "challenges": "",
         "validation": "",
         "statusNote": "",
-        "migrationNote": ""
+        "migrationNote": "",
+        "bullets": []
       },
       "containerhub": {
         "title": "ContainerHub",
@@ -369,7 +416,8 @@
         "challenges": "",
         "validation": "",
         "statusNote": "",
-        "migrationNote": ""
+        "migrationNote": "",
+        "bullets": []
       },
       "pokedex-web": {
         "title": "Pokédex WebApp",
@@ -382,7 +430,8 @@
         "challenges": "",
         "validation": "",
         "statusNote": "",
-        "migrationNote": ""
+        "migrationNote": "",
+        "bullets": []
       },
       "toytopia": {
         "title": "Toytopia",
@@ -395,13 +444,14 @@
         "challenges": "",
         "validation": "",
         "statusNote": "",
-        "migrationNote": ""
+        "migrationNote": "",
+        "bullets": []
       }
     }
   },
   "contact": {
     "title": "Kontakt",
-    "description": "Ich suche eine Junior-Position in der Frontend- oder Fullstack-Entwicklung. Lassen Sie uns über meine Projekte und eine passende Rolle sprechen.",
+    "description": "Frontend- & Junior Fullstack-Entwickler in Düsseldorf. Lassen Sie uns über meine Projekte und eine passende Rolle sprechen.",
     "linksTitle": "Links & Profile",
     "links": [
       {
@@ -413,11 +463,6 @@
         "label": "GitHub",
         "href": "https://github.com/Willianfonseca7",
         "icon": "github"
-      },
-      {
-        "label": "LinkedIn",
-        "href": "https://www.linkedin.com/in/willian-fonseca-b146b7240/",
-        "icon": "linkedin"
       }
     ],
     "form": {
@@ -440,6 +485,6 @@
       "messagePlaceholder": "Welche Rolle oder welches Projekt möchten Sie besprechen?",
       "subject": "Kontakt zum Portfolio"
     },
-    "availability": "Düsseldorf · kurzfristiger Einstieg · Präsenz / Hybrid / Remote"
+    "availability": "Kurzfristig verfügbar | Präsenz in Bochum möglich"
   }
 }
