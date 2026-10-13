@@ -9,10 +9,13 @@ import Button from "./Button";
 function ProjectCard({
   project,
   featured = false,
+  headingLevel = 3,
 }: {
   project: Project;
   featured?: boolean;
+  headingLevel?: 2 | 3;
 }) {
+  const Heading = headingLevel === 2 ? "h2" : "h3";
   const { content } = useLanguage();
   const labels = content.projects.ui;
   const copy = useProjectCopy(project.id);
@@ -30,12 +33,16 @@ function ProjectCard({
       <ProjectMedia project={project} />
       <div className="project-copy">
         <div className="project-topline">
-          <span className="eyebrow">{copy.kicker}</span>
+          <span className={copy.kicker === "Schwerpunktprojekt" ? "status-badge" : "eyebrow"}>{copy.kicker}</span>
           <span className="status-badge">{status}</span>
         </div>
-        <h3>{copy.title}</h3>
+        <Heading>{copy.title}</Heading>
         {copy.role && <p className="project-role">{copy.role}</p>}
-        <p className="project-summary">{copy.summary}</p>
+        {copy.bullets.length > 0 ? (
+          <ul className="project-summary project-bullets">
+            {copy.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
+          </ul>
+        ) : <p className="project-summary">{copy.summary}</p>}
         <div className="flex flex-wrap gap-2">
           {project.stack.map((tech) => (
             <Tag key={tech} label={tech} />

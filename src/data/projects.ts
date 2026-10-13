@@ -13,11 +13,11 @@ export interface Project {
 
 // Technical facts and URLs live here; narrative copy lives in locales/*.json.
 // A private repository has no outbound code URL. Screenshots must be real and approved.
-export const projects: Project[] = [
+const projectList: Project[] = [
   {
     id: "waiturn",
     stack: [
-      "Next.js",
+      "Next.js App Router",
       "React",
       "TypeScript",
       "PostgreSQL",
@@ -52,7 +52,7 @@ export const projects: Project[] = [
   {
     id: "growthbot-de",
     stack: [
-      "Next.js",
+      "Next.js App Router",
       "TypeScript",
       "OpenAI API",
       "Telegram",
@@ -77,6 +77,8 @@ export const projects: Project[] = [
   {
     id: "invest-agent",
     stack: [
+      "Anthropic API",
+      "Tool-Use-Datenformate",
       "React",
       "TypeScript",
       "Node.js",
@@ -142,7 +144,7 @@ export const projects: Project[] = [
     id: "pokedex-web",
     stack: ["React", "JavaScript", "PokéAPI"],
     demoUrl: "https://willianfonseca7.github.io/Pokedex-web/",
-    codeUrl: "https://github.com/Willianfonseca7/Pokemon-App",
+    codeUrl: null,
     visibility: "public",
     status: "demo",
     priority: "archive",
@@ -162,3 +164,12 @@ export const projects: Project[] = [
     hidden: true,
   },
 ];
+
+const projectOrder = ["orla-plus", "waiturn", "growthbot-de", "invest-agent"];
+export const projects = [...projectList].sort((a, b) => {
+  const rank = (id: string) => {
+    const index = projectOrder.indexOf(id);
+    return index === -1 ? projectOrder.length : index;
+  };
+  return rank(a.id) - rank(b.id);
+});

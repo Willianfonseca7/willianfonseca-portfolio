@@ -21,6 +21,7 @@ export default function ProjectsSection() {
               <ProjectCard
                 key={project.id}
                 project={project}
+                headingLevel={2}
                 featured={project.priority === "featured"}
               />
             ))}

@@ -5,9 +5,6 @@ import ProjectCard from "../ui/ProjectCard";
 import Button from "../ui/Button";
 export default function ProjectsPreviewSection() {
   const { content } = useLanguage();
-  const featured = projects.find(
-    (project) => project.priority === "featured" && !project.hidden,
-  );
   return (
     <section id="projekte" className="section-space">
       <Container>
@@ -15,20 +12,10 @@ export default function ProjectsPreviewSection() {
           <p className="eyebrow">{content.home.featuredEyebrow}</p>
           <h2>{content.home.featuredTitle}</h2>
         </div>
-        {featured && <ProjectCard project={featured} featured />}
-        <div className="section-heading selected-heading">
-          <p className="eyebrow">02 / {content.projects.ui.selectedLabel}</p>
-          <h2>{content.home.selectedTitle}</h2>
-          <p className="text-muted">{content.home.selectedSubtitle}</p>
-        </div>
-        <div className="selected-projects">
-          {projects
-            .filter(
-              (project) => project.priority === "selected" && !project.hidden,
-            )
-            .map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
+        <div className="project-list">
+          {projects.filter((project) => project.priority !== "archive" && !project.hidden).map((project) => (
+            <ProjectCard key={project.id} project={project} featured={project.priority === "featured"} />
+          ))}
         </div>
         <div className="section-end">
           <Button href="/projekte" variant="secondary">

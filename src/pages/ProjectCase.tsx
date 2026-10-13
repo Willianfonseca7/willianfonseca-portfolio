@@ -29,7 +29,11 @@ export default function ProjectCase() {
               <header className="case-header">
                 <p className="eyebrow">{copy.kicker}</p>
                 <h1 className="page-title">{copy.title}</h1>
-                <p className="case-lead">{copy.summary}</p>
+                {copy.bullets.length > 0 ? (
+                  <ul className="case-lead project-bullets">
+                    {copy.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
+                  </ul>
+                ) : <p className="case-lead">{copy.summary}</p>}
                 {copy.role && <p className="project-role">{copy.role}</p>}
                 <div className="flex flex-wrap gap-2">
                   {project.stack.map((tech) => (
