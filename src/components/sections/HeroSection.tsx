@@ -38,8 +38,8 @@ export default function HeroSection() {
               <img
                 src={portrait}
                 alt="Willian Santos Fonseca"
-                width="1000"
-                height="1000"
+                width="1200"
+                height="1800"
                 fetchPriority="high"
               />
             </div>
