@@ -1,7 +1,7 @@
 import Button from "../ui/Button";
 import Container from "../ui/Container";
 import { useLanguage } from "../../hooks/useLanguage";
-import portrait from "../../assets/willian-portrait.jpg";
+import portrait from "../../assets/willian-portrait-black.jpg";
 export default function HeroSection() {
   const { content } = useLanguage();
   const { hero } = content;
@@ -38,8 +38,8 @@ export default function HeroSection() {
               <img
                 src={portrait}
                 alt="Willian Santos Fonseca"
-                width="1200"
-                height="1800"
+                width="1024"
+                height="1536"
                 fetchPriority="high"
               />
             </div>
