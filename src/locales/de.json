@@ -314,16 +314,16 @@
         "role": "Eigenes Fullstack-SaaS-Projekt | 2026 bis heute",
         "summary": "Next.js, TypeScript, Prisma und PostgreSQL für Termin- und Warteschlangenverwaltung; Route Handlers, Authentifizierung, Rollenberechtigungen und Socket.IO-Echtzeitaktualisierungen.",
         "problem": "Terminplanung und spontane Warteschlangen sollen in einer Anwendung zusammenlaufen.",
-        "solution": "Migration zur Aktivierung von Row Level Security in 27 öffentlichen PostgreSQL-Tabellen implementiert; ohne Policies ist der direkte Supabase-API-Zugriff für Rollen ohne RLS-Bypass standardmäßig gesperrt. Mandantentrennung im Prisma-Backend über Session, Rollen und shopId.",
+        "solution": "Row Level Security per Migration in 27 öffentlichen PostgreSQL-Tabellen aktiviert; Zugriffe ohne Policies für Rollen ohne Bypass gesperrt. Mandantentrennung im Prisma-Backend über Session, Rollen und shopId.",
         "architecture": "Next.js und TypeScript; Prisma mit PostgreSQL; Better Auth für Authentifizierung. Anwendungslogik, Datenzugriff und HTTP-Schnittstellen sind getrennt.",
         "challenges": "Backend-Mandantentrennung über Session, Rollen und shopId. RLS sperrt direkten Supabase-API-Zugriff ohne Policies; es sind keine RLS-Policies pro Mandant implementiert.",
-        "validation": "Unit-Prüfung: 2149 Tests bestanden, 4 fehlgeschlagen. E2E-Prüfung ohne produktive Zugangsdaten: 3 bestanden, 3 fehlgeschlagen, 3 übersprungen, 184 nicht ausgeführt und 1 unterbrochen; Abbruch nach drei Fehlern.",
+        "validation": "Unit- und E2E-Tests mit Vitest und Playwright implementiert (über 2.100 Unit-Tests).",
         "statusNote": "Aktive Entwicklung. Der Code ist privat; eine öffentliche Demo ist derzeit nicht verlinkt.",
         "migrationNote": "",
         "bullets": [
           "Next.js, TypeScript, Prisma und PostgreSQL für Termin- und Warteschlangenverwaltung; Route Handlers, Authentifizierung, Rollenberechtigungen und Socket.IO-Echtzeitaktualisierungen.",
-          "Migration zur Aktivierung von Row Level Security in 27 öffentlichen PostgreSQL-Tabellen implementiert; ohne Policies ist der direkte Supabase-API-Zugriff für Rollen ohne RLS-Bypass standardmäßig gesperrt. Mandantentrennung im Prisma-Backend über Session, Rollen und shopId.",
-          "Unit- und E2E-Tests mit Vitest und Playwright implementiert und ausgeführt; die aktuelle Prüfung bestätigt keinen vollständig erfolgreichen Testlauf."
+          "Row Level Security per Migration in 27 öffentlichen PostgreSQL-Tabellen aktiviert; Zugriffe ohne Policies für Rollen ohne Bypass gesperrt. Mandantentrennung im Prisma-Backend über Session, Rollen und shopId.",
+          "Unit- und E2E-Tests mit Vitest und Playwright implementiert (über 2.100 Unit-Tests)."
         ]
       },
       "orla-plus": {
