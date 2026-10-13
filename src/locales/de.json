@@ -463,6 +463,11 @@
         "label": "GitHub",
         "href": "https://github.com/Willianfonseca7",
         "icon": "github"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/willian-fonseca-b146b7240/",
+        "icon": "linkedin"
       }
     ],
     "form": {
