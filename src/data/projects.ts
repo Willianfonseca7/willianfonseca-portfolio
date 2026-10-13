@@ -144,7 +144,7 @@ const projectList: Project[] = [
     id: "pokedex-web",
     stack: ["React", "JavaScript", "PokéAPI"],
     demoUrl: "https://willianfonseca7.github.io/Pokedex-web/",
-    codeUrl: null,
+    codeUrl: "https://github.com/Willianfonseca7/Pokedex-web",
     visibility: "public",
     status: "demo",
     priority: "archive",
