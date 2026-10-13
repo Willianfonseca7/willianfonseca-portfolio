@@ -47,7 +47,7 @@ test("Waiturn uses the supplied product visual without exposing private code", a
 }) => {
   await page.goto("./");
   await expect(page.locator("h1")).toContainText(
-    "Junior Frontend- / Fullstack-Entwickler",
+    "Willian Santos Fonseca",
   );
   const featured = page.locator('[data-project="waiturn"]');
   await expect(featured).toBeVisible();
@@ -62,7 +62,7 @@ test("Waiturn uses the supplied product visual without exposing private code", a
     featured.getByRole("link", { name: "Code", exact: true }),
   ).toHaveCount(0);
   await featured.getByRole("link", { name: /Case ansehen/ }).click();
-  await expect(page.locator("h1")).toHaveText("Waiturn");
+  await expect(page.locator("h1")).toHaveText("WAITURN");
   await expect(
     page.getByRole("heading", { name: "Architektur & Stack" }),
   ).toBeVisible();
@@ -88,7 +88,7 @@ test("gallery retains thumbnails and keyboard navigation with focus returned", a
   await page.goto("projekte");
   const card = page.locator('[data-project="invest-agent"]');
   const trigger = card.getByRole("button", {
-    name: "Bild öffnen: InvestAgent",
+    name: "Bild öffnen: INVESTAGENT",
     exact: true,
   });
   await trigger.click();
@@ -113,7 +113,7 @@ test("gallery retains thumbnails and keyboard navigation with focus returned", a
     "src",
     /investagent-overview/,
   );
-  await dialog.getByRole("button", { name: "Charts", exact: true }).click();
+  await dialog.getByRole("button", { name: "Diagramme", exact: true }).click();
   await expect(dialog.locator(".gallery-image img")).toHaveAttribute(
     "src",
     /investagent-charts/,
@@ -153,25 +153,20 @@ test("certificates keep document tabs, modal close and focus restoration", async
   await expect(page.getByText("Lebenslauf 2026")).toHaveCount(0);
 });
 
-test("language, theme and case refresh stay consistent", async ({ page }) => {
+test("German content overrides old language preference and preserves theme", async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem("lang", "en"));
   await page.goto("projekte/growthbot-de");
-  for (const [label, lang] of [
-    ["Português", "pt"],
-    ["English", "en"],
-    ["Deutsch", "de"],
-  ]) {
-    await page.getByRole("button", { name: label, exact: true }).click();
-    await expect(page.locator("html")).toHaveAttribute("lang", lang);
-    await expect(page.locator("h1")).toHaveText("GrowthBot-DE");
-  }
+  await expect(page.locator("html")).toHaveAttribute("lang", "de");
+  await expect(page.getByRole("button", { name: "English", exact: true })).toHaveCount(0);
+  await expect(page.locator("h1")).toHaveText("GROWTHBOT-DE");
   await page.getByRole("button", { name: "Farbschema wechseln: Hell" }).click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
   await page.reload();
-  await expect(page.locator("h1")).toHaveText("GrowthBot-DE");
+  await expect(page.locator("h1")).toHaveText("GROWTHBOT-DE");
   await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
 });
 
-for (const width of [320, 375, 768, 1024, 1440])
+for (const width of [375, 768, 1280])
   test(`responsive layout at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.goto("./");

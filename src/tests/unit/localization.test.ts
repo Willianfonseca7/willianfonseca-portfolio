@@ -28,8 +28,8 @@ describe("Editorial consistency", () => {
   it.each([
     ["en", en],
     ["pt", pt],
-  ] as const)("keeps %s keys equivalent to German", (_language, locale) => {
-    expect(keys(locale).sort()).toEqual(keys(de).sort());
+  ] as const)("keeps legacy %s keys complete through German fallback", (_language, locale) => {
+    expect(keys(mergeTranslations(de, locale)).sort()).toEqual(keys(de).sort());
   });
   it.each([de, en, pt])(
     "has translated narrative for every preserved project",

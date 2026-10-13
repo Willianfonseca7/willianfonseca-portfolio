@@ -16,7 +16,7 @@ const renderProject = (id: string) =>
 describe("ProjectCard", () => {
   it("shows private status and case link without a private repository or fake demo button", () => {
     renderProject("waiturn");
-    expect(screen.getByRole("heading", { name: "Waiturn" })).toBeVisible();
+    expect(screen.getByRole("heading", { name: "WAITURN" })).toBeVisible();
     expect(screen.getByText(/Privates Repository/)).toBeVisible();
     expect(screen.getByRole("link", { name: /Case ansehen/ })).toHaveAttribute(
       "href",
