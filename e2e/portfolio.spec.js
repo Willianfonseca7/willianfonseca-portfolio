@@ -39,7 +39,7 @@ test("contact prepares an email and reports clipboard failure honestly", async (
   );
   await expect(
     page.getByRole("link", { name: "E-Mail-Programm öffnen" }),
-  ).toHaveAttribute("href", /mailto:willianfonseca7@gmail.com\?subject=/);
+  ).toHaveAttribute("href", /mailto:wfonseca7@hotmail.com\?subject=/);
 });
 
 test("Waiturn uses the supplied product visual without exposing private code", async ({

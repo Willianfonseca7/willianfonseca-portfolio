@@ -48,7 +48,7 @@ describe("ContactForm", () => {
       screen.getByRole("link", { name: "E-Mail-Programm öffnen" }),
     ).toHaveAttribute(
       "href",
-      expect.stringContaining("mailto:willianfonseca7@gmail.com"),
+      expect.stringContaining("mailto:wfonseca7@hotmail.com"),
     );
     expect(
       screen.getByRole("link", { name: "E-Mail-Programm öffnen" }),
