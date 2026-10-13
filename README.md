@@ -1,51 +1,57 @@
 # Willian Santos Fonseca — Portfolio
 
-Multilingual React / TypeScript portfolio for junior frontend and fullstack roles.
-German is the default language; Portuguese and English have equivalent content.
+Portfolio eines Frontend- & Junior Fullstack-Entwicklers in Düsseldorf.
+Die öffentlichen Inhalte sind auf Deutsch.
 
-Published site: <https://willianfonseca7.github.io/willianfonseca-portfolio/>.
+Website: <https://willianfonseca7.github.io/willianfonseca-portfolio/>.
 
-## Current structure
+## Projekte und Funktionen
 
-- Hero: professional positioning, React, Next.js, TypeScript, Node.js and AI integration.
-- Waiturn: main case with a product visualization; private repository.
-- ORLA+: frontend collaboration with public PR evidence; Next.js migration in progress, API integration pending.
-- GrowthBot-DE: Telegram / OpenAI integration, input and response validation, SQLite persistence.
-- InvestAgent: React dashboard, Node.js API, worker and modular market-data processing.
-- Earlier projects: Heilpraktiker-Bleialf, LEGO Set Explorer, ContainerHub and Pokédex.
-- Technology groups, IHK certificates, profile and contact.
+- ORLA+: Frontend-Zusammenarbeit; laufende Migration zu Next.js App Router.
+- WAITURN: eigenes Fullstack-SaaS-Projekt; privates Repository.
+- GROWTHBOT-DE: Telegram-Assistent mit OpenAI API, Zod und SQLite.
+- INVESTAGENT: React-Dashboard, Node.js-API und Worker für Marktdaten.
+- Frühere Projekte, Technologien, IHK-Zertifikate, Profil und Kontakt.
 
-Technical facts, links, visibility and screenshots live in `src/data/projects.ts`.
-Narrative copy lives in `src/locales/{de,en,pt}.json`. `src/data/projects.json` is a
-retained historical file and is not imported by the application.
+Projektinformationen und öffentliche Links stehen in `src/data/projects.ts`.
+Die verwendeten Texte stehen in `src/locales/de.json`. Frühere Übersetzungen
+und `src/data/projects.json` bleiben als nicht eingebundene Dateien erhalten.
 
-Image galleries support thumbnails, arrows and Escape. Native dialogs provide
-keyboard focus handling. The contact form prepares and copies an email draft and
-opens the visitor's email app; it does not send email automatically.
+Bildergalerien unterstützen Vorschaubilder, Pfeiltasten und Escape. Dialoge
+verwalten den Tastaturfokus. Das Kontaktformular bereitet einen E-Mail-Entwurf
+vor; der Versand erfolgt im E-Mail-Programm des Besuchers.
 
-## Run and verify locally
+## Lokal entwickeln und prüfen
 
-Node.js 22.12+ or compatible Node.js 24 is recommended for the configured toolchain.
+Die Werkzeugkette benötigt Node.js 22.12+ oder eine kompatible Node.js-24-Version.
 
 ```bash
 npm ci
 npm run dev
 npm run lint
-npm run typecheck
 npm test
-npm run test:e2e
 npm run build
+npm run test:e2e
 npm run preview -- --host 127.0.0.1 --port 4174
 ```
 
-Local production preview: <http://127.0.0.1:4174/willianfonseca-portfolio/>.
-Playwright uses the same project basename. The suite checks image galleries,
-certificates, private project handling, contact email drafts, responsive navigation,
-DE/EN/PT and theme persistence, reduced motion and automated WCAG AA checks.
-Automated checks supplement manual visual and keyboard review.
+Vorschau: <http://127.0.0.1:4174/willianfonseca-portfolio/>.
 
-## Publication
+Der Build erzeugt zuerst die Browser-Dateien, dann einen Vite-SSR-Build in
+`dist-ssr/`. `scripts/prerender.mjs` schreibt die Inhalte aller 13 bestehenden
+Routen in HTML-Dateien unter `dist/`. Im Browser übernimmt React die Hydration.
+Die Hauptinhalte sind auch ohne JavaScript lesbar; interaktive Funktionen
+benötigen JavaScript. Neue Abhängigkeiten sind dafür nicht erforderlich.
 
-GitHub Actions publishes pushes to `main` after lint, unit tests, browser tests and
-the TypeScript/build checks pass. The production build is served through GitHub
-Pages. Local build and preview commands do not publish anything.
+Die E2E-Prüfungen starten die gebaute Vorschau auf Port 4173. Sie prüfen unter
+anderem HTML ohne JavaScript, Hydration, Themen, Galerien, Zertifikate,
+E-Mail-Entwürfe, responsive Navigation und automatisierte WCAG-AA-Kriterien.
+
+## Veröffentlichung
+
+Ein Push auf `main` startet den bestehenden GitHub-Actions-Workflow. Nach
+Lint, Unit-Tests, Browser-Tests und Build wird GitHub Pages aktualisiert.
+Lokale Builds und Vorschauen veröffentlichen keine Änderungen.
+
+`docs/` enthält ausschließlich lokale Berichte und private Referenzen und
+wird nicht versioniert.

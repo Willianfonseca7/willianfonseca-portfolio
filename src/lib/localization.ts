@@ -22,6 +22,7 @@ export function mergeTranslations(
   );
 }
 export function readPreference(key: string): string | null {
+  if (typeof window === "undefined") return null;
   try {
     return localStorage.getItem(key);
   } catch {
@@ -29,6 +30,7 @@ export function readPreference(key: string): string | null {
   }
 }
 export function savePreference(key: string, value: string): void {
+  if (typeof window === "undefined") return;
   try {
     localStorage.setItem(key, value);
   } catch {

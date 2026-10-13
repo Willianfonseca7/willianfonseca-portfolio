@@ -36,6 +36,10 @@ export default function FoundationsSection() {
                 <li key={cert}>{cert}</li>
               ))}
             </ul>
+            <h3>{content.about.languagesTitle}</h3>
+            <ul className="certificate-list">
+              {content.about.languages.map((language) => <li key={language}>{language}</li>)}
+            </ul>
             <Button href="/skills#zertifikate" variant="secondary">
               {content.home.certLink} →
             </Button>

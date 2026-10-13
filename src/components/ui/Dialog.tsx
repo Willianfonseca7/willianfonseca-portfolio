@@ -27,6 +27,7 @@ export default function Dialog({
       trigger?.focus();
     };
   }, []);
+  if (typeof document === "undefined") return null;
   return createPortal(
     <dialog
       ref={ref}

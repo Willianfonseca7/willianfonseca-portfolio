@@ -2,13 +2,14 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ isSsrBuild }) => ({
   base: "/willianfonseca-portfolio/",
   plugins: [react()],
+  build: isSsrBuild ? { copyPublicDir: false } : {},
   test: {
     environment: "jsdom",
     setupFiles: "./src/tests/vitest.setup.ts",
     globals: true,
     exclude: ["**/node_modules/**", "**/e2e/**"],
   },
-});
+}));
