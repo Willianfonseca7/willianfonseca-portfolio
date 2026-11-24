@@ -1,12 +1,16 @@
+import argosappHero from "../assets/argosapp-hero.webp";
+
 export interface Project {
   id: string;
   stack: string[];
   demoUrl: string | null;
   codeUrl: string | null;
-  visibility: "public" | "private";
-  status: "development" | "migration" | "demo";
+  visibility: "public" | "private" | "unlisted";
+  status: "development" | "migration" | "demo" | "website";
   priority: "featured" | "selected" | "archive";
   images: string[];
+  imageSize?: { width: number; height: number };
+  imageFit?: "contain";
   evidence: { label: string; url: string }[];
   hidden?: boolean;
 }
@@ -14,6 +18,19 @@ export interface Project {
 // Technical facts and URLs live here; narrative copy lives in locales/*.json.
 // A private repository has no outbound code URL. Screenshots must be real and approved.
 const projectList: Project[] = [
+  {
+    id: "argosapp",
+    stack: ["Vue 3", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL"],
+    demoUrl: "https://www.argosapp.io/",
+    codeUrl: null,
+    visibility: "unlisted",
+    status: "website",
+    priority: "selected",
+    images: [argosappHero],
+    imageSize: { width: 1086, height: 1086 },
+    imageFit: "contain",
+    evidence: [],
+  },
   {
     id: "waiturn",
     stack: [
@@ -165,7 +182,7 @@ const projectList: Project[] = [
   },
 ];
 
-const projectOrder = ["orla-plus", "waiturn", "growthbot-de", "invest-agent"];
+const projectOrder = ["orla-plus", "argosapp", "waiturn", "growthbot-de", "invest-agent"];
 export const projects = [...projectList].sort((a, b) => {
   const rank = (id: string) => {
     const index = projectOrder.indexOf(id);

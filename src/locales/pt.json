@@ -396,6 +396,26 @@
         "validation": "",
         "statusNote": "",
         "migrationNote": ""
+      },
+      "argosapp": {
+        "title": "Argosapp",
+        "kicker": "SaaS / Gestão de estoque",
+        "role": "Desenvolvimento em equipe · Aplicação SaaS e website público",
+        "summary": "Plataforma SaaS para produtos, lotes, entradas, saídas, transferências entre estoques e datas de validade, com histórico de movimentações e indicadores operacionais no Dashboard.",
+        "bullets": [
+          "Plataforma SaaS para produtos, lotes, entradas, saídas, transferências entre estoques e datas de validade, com histórico de movimentações e indicadores operacionais no Dashboard.",
+          "Participação em equipe na aplicação SaaS e no website público: funcionalidades, interfaces, indicadores do Dashboard, integração do frontend com dados e melhorias de UI/UX e responsividade."
+        ],
+        "problem": "Empresas precisam acompanhar estoques, lotes, datas de validade e movimentações entre seus estoques.",
+        "solution": "O Argosapp reúne gestão de produtos e lotes, entradas e saídas, transferências, datas de validade, histórico de movimentações e Dashboard com indicadores operacionais.",
+        "architecture": "Vue 3, TypeScript e Tailwind CSS, com Supabase e PostgreSQL como base de dados. Minhas contribuições incluem funcionalidades de frontend e integração com serviços e dados.",
+        "challenges": "Desenvolvimento do website público com internacionalização em alemão, português e inglês, além de melhorias de UI/UX e responsividade. A aplicação e o website são desenvolvidos em equipe.",
+        "validation": "Colaboração utilizando Git, branches, Pull Requests e Code Review. Participo da aplicação SaaS e do website público; não desenvolvi sozinho toda a aplicação ou o backend.",
+        "statusNote": "O website público está disponível em argosapp.io. Nenhum repositório de código é vinculado aqui.",
+        "migrationNote": "",
+        "imageAlt": "Argosapp: dois smartphones com a visão de estoque em alemão e a navegação aberta no mockup oficial do website",
+        "websiteLabel": "Acessar website",
+        "statusLabel": "Website público"
       }
     }
   },

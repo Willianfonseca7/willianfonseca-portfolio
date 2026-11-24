@@ -38,7 +38,7 @@ npm run preview -- --host 127.0.0.1 --port 4174
 Vorschau: <http://127.0.0.1:4174/willianfonseca-portfolio/>.
 
 Der Build erzeugt zuerst die Browser-Dateien, dann einen Vite-SSR-Build in
-`dist-ssr/`. `scripts/prerender.mjs` schreibt die Inhalte aller 13 bestehenden
+`dist-ssr/`. `scripts/prerender.mjs` schreibt die Inhalte aller bestehenden
 Routen in HTML-Dateien unter `dist/`. Im Browser übernimmt React die Hydration.
 Die Hauptinhalte sind auch ohne JavaScript lesbar; interaktive Funktionen
 benötigen JavaScript. Neue Abhängigkeiten sind dafür nicht erforderlich.

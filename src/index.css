@@ -1131,3 +1131,12 @@
 .project-bullets li + li {
   margin-top: 0.7rem;
 }
+
+.project-image-trigger--contain {
+  aspect-ratio: 4/3;
+  background: #f3f6ff;
+}
+.project-image-trigger--contain img {
+  object-fit: contain;
+  object-position: center;
+}

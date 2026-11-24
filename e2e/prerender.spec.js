@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 
 const routes = [
   "./", "about", "skills", "projekte", "kontakt",
-  "projekte/orla-plus", "projekte/waiturn", "projekte/growthbot-de", "projekte/invest-agent",
+  "projekte/orla-plus", "projekte/argosapp", "projekte/waiturn", "projekte/growthbot-de", "projekte/invest-agent",
   "projekte/heilpratika", "projekte/lego-set-explore", "projekte/containerhub", "projekte/pokedex-web",
 ];
 
@@ -40,7 +40,10 @@ for (const theme of ["dark", "light"]) {
       await expect(page.locator("html")).toHaveAttribute("lang", "de");
       await expect(page.locator("html")).toHaveAttribute("data-theme", theme);
       await expect(page.getByRole("button", { name: `Farbschema wechseln: ${theme === "dark" ? "Hell" : "Dunkel"}` })).toBeVisible();
-      expect(await page.locator("img").evaluateAll((images) => images.every((image) => image.complete && image.naturalWidth > 0))).toBe(true);
+      for (const image of await page.locator("img").all()) {
+        await image.scrollIntoViewIfNeeded();
+        await expect.poll(() => image.evaluate((node) => node.complete && node.naturalWidth > 0)).toBe(true);
+      }
     }
     expect(errors).toEqual([]);
   });
@@ -59,3 +62,32 @@ test("restored contact and renamed public project links remain correct", async (
   await expect(waiturn.getByText("Unit- und E2E-Tests mit Vitest und Playwright implementiert (über 2.100 Unit-Tests).", { exact: true })).toBeVisible();
   await expect(waiturn.getByRole("link", { name: "Code", exact: true })).toHaveCount(0);
 });
+
+for (const width of [375, 768, 1280]) {
+  test(`Argosapp retains its original image and accessible case at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("projekte");
+    const card = page.locator('[data-project="argosapp"]');
+    await expect(card.getByRole("heading", { name: "Argosapp", exact: true })).toBeVisible();
+    await expect(card.getByText("Entwicklung im Team · SaaS-Anwendung und öffentliche Website", { exact: true })).toBeVisible();
+    const website = card.getByRole("link", { name: "Website besuchen", exact: true });
+    await expect(website).toHaveAttribute("href", "https://www.argosapp.io/");
+    await expect(website).toHaveAttribute("rel", "noopener noreferrer");
+    const image = card.locator("img");
+    await expect(image).toHaveAttribute("src", /argosapp-hero-.*\.webp$/);
+    await expect(image).toHaveAttribute("loading", "lazy");
+    await expect(image).toHaveCSS("object-fit", "contain");
+    await expect.poll(() => image.evaluate((node) => node.complete && node.naturalWidth === 1086 && node.naturalHeight === 1086)).toBe(true);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    if (width !== 768) await card.screenshot({ path: `docs/visual/argosapp-${width}.png` });
+    await card.getByRole("button", { name: "Bild öffnen: Argosapp", exact: true }).click();
+    await expect(page.getByRole("dialog").locator("img")).toHaveAttribute("src", /argosapp-hero-.*\.webp$/);
+    await page.keyboard.press("Escape");
+    await card.getByRole("link", { name: /Case ansehen/ }).click();
+    await expect(page.locator("h1")).toHaveText("Argosapp");
+    await expect(page.getByRole("heading", { name: "Architektur & Stack" })).toBeVisible();
+    await expect(page.getByText(/Deutsch, Portugiesisch und Englisch/)).toBeVisible();
+    await expect(page.getByRole("link", { name: "Website besuchen", exact: true })).toHaveAttribute("href", "https://www.argosapp.io/");
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  });
+}

@@ -34,17 +34,18 @@ export default function ProjectMedia({ project }: { project: Project }) {
       className={`project-media ${project.id === "waiturn" ? "project-media--waiturn" : ""}`}
     >
       <button
-        className="project-image-trigger"
+        className={`project-image-trigger ${project.imageFit === "contain" ? "project-image-trigger--contain" : ""}`}
         type="button"
         onClick={() => modal.open(project.images.length)}
         aria-label={`${labels.openImage}: ${copy.title}`}
       >
         <img
           src={assetUrl(project.images[0])}
-          alt={`${copy.title} — ${project.id === "waiturn" ? labels.productVisual : imageLabel(0)}`}
-          width={project.id === "waiturn" ? 1122 : 1600}
-          height={project.id === "waiturn" ? 1402 : 900}
+          alt={copy.imageAlt ?? `${copy.title} — ${project.id === "waiturn" ? labels.productVisual : imageLabel(0)}`}
+          width={project.imageSize?.width ?? (project.id === "waiturn" ? 1122 : 1600)}
+          height={project.imageSize?.height ?? (project.id === "waiturn" ? 1402 : 900)}
           loading="lazy"
+          decoding="async"
         />
         <span className="image-open-hint" aria-hidden="true">
           ↗
@@ -95,7 +96,7 @@ export default function ProjectMedia({ project }: { project: Project }) {
           <div className="gallery-image">
             <img
               src={assetUrl(project.images[modal.activeIndex])}
-              alt={`${copy.title} — ${imageLabel(modal.activeIndex)}`}
+              alt={copy.imageAlt ?? `${copy.title} — ${imageLabel(modal.activeIndex)}`}
             />
           </div>
           {modal.hasMultiple && (

@@ -1,6 +1,10 @@
 import { useLanguage } from "./useLanguage";
 import type { Locale } from "../context/LanguageContext";
-export type ProjectCopy = Locale["projects"]["entries"]["waiturn"];
+export type ProjectCopy = Locale["projects"]["entries"]["waiturn"] & {
+  imageAlt?: string;
+  websiteLabel?: string;
+  statusLabel?: string;
+};
 export function useProjectCopy(id: string): ProjectCopy {
   const { content } = useLanguage();
   const entries: Record<string, ProjectCopy> = content.projects.entries;

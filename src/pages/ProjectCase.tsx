@@ -95,7 +95,7 @@ export default function ProjectCase() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        {labels.demo}
+                        {copy.websiteLabel ?? labels.demo}
                       </Button>
                     )}
                     {project.codeUrl && (

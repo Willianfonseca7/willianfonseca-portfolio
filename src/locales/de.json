@@ -446,6 +446,26 @@
         "statusNote": "",
         "migrationNote": "",
         "bullets": []
+      },
+      "argosapp": {
+        "title": "Argosapp",
+        "kicker": "SaaS / Lagerverwaltung",
+        "role": "Entwicklung im Team · SaaS-Anwendung und öffentliche Website",
+        "summary": "SaaS-Plattform zur Verwaltung von Produkten, Chargen, Zu- und Abgängen, Lagertransfers und Verfallsdaten – mit Bewegungshistorie und operativen Dashboard-Kennzahlen.",
+        "bullets": [
+          "SaaS-Plattform für Produkte, Chargen, Zu- und Abgänge, Lagertransfers und Verfallsdaten – mit Bewegungshistorie und operativen Dashboard-Kennzahlen.",
+          "Mitarbeit im Team an der SaaS-Anwendung und der öffentlichen Website: Funktionen, Oberflächen, Dashboard-Kennzahlen, Frontend-Datenanbindung und responsives UI/UX."
+        ],
+        "problem": "Unternehmen benötigen einen Überblick über Bestände, Chargen, Verfallsdaten und Warenbewegungen zwischen ihren Lagern.",
+        "solution": "Argosapp verbindet Produkt- und Chargenverwaltung mit Zu- und Abgängen, Lagertransfers, Verfallsdaten, Bewegungshistorie und einem Dashboard mit operativen Kennzahlen.",
+        "architecture": "Vue 3, TypeScript und Tailwind CSS; Supabase und PostgreSQL als Datenbasis. Meine Mitarbeit umfasst Frontend-Funktionen und die Anbindung an Dienste und Daten.",
+        "challenges": "Entwicklung der öffentlichen Website mit Internationalisierung auf Deutsch, Portugiesisch und Englisch sowie Verbesserungen an UI/UX und responsiven Oberflächen. Die Anwendung und die Website entstehen gemeinsam im Team.",
+        "validation": "Zusammenarbeit mit Git, Branches, Pull Requests und Code Reviews. Meine Beiträge betreffen die SaaS-Anwendung und die öffentliche Website; die gesamte Anwendung und das Backend sind keine alleinige Entwicklung von mir.",
+        "statusNote": "Die öffentliche Website ist unter argosapp.io erreichbar. Ein Quellcode-Repository wird hier nicht verlinkt.",
+        "migrationNote": "",
+        "imageAlt": "Argosapp: zwei Smartphones mit deutscher Lageransicht und geöffneter Navigation aus dem offiziellen Website-Mockup",
+        "websiteLabel": "Website besuchen",
+        "statusLabel": "Öffentliche Website"
       }
     }
   },

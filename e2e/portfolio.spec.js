@@ -196,7 +196,7 @@ for (const theme of ["dark", "light"])
       (value) => localStorage.setItem("theme", value),
       theme,
     );
-    for (const path of ["./", "projekte/waiturn", "kontakt", "skills"]) {
+    for (const path of ["./", "projekte/waiturn", "projekte/argosapp", "kontakt", "skills"]) {
       await page.goto(path);
       await page.evaluate(() => document.fonts.ready);
       const results = await new AxeBuilder({ page })

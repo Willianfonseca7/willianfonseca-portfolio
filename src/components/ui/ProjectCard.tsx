@@ -20,7 +20,9 @@ function ProjectCard({
   const labels = content.projects.ui;
   const copy = useProjectCopy(project.id);
   const status =
-    project.status === "development"
+    project.status === "website"
+      ? copy.statusLabel
+      : project.status === "development"
       ? labels.development
       : project.status === "migration"
         ? labels.migrationStatus
@@ -71,7 +73,7 @@ function ProjectCard({
               target="_blank"
               rel="noopener noreferrer"
             >
-              {labels.demo}
+              {copy.websiteLabel ?? labels.demo}
             </Button>
           )}
           {project.codeUrl && (

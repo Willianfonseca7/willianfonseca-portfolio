@@ -396,6 +396,26 @@
         "validation": "",
         "statusNote": "",
         "migrationNote": ""
+      },
+      "argosapp": {
+        "title": "Argosapp",
+        "kicker": "SaaS / Inventory Management",
+        "role": "Team development · SaaS application and public website",
+        "summary": "SaaS inventory platform for products, batches, stock receipts and issues, warehouse transfers and expiry dates, with movement history and operational dashboard indicators.",
+        "bullets": [
+          "SaaS inventory platform for products, batches, stock receipts and issues, warehouse transfers and expiry dates, with movement history and operational dashboard indicators.",
+          "Team contributions to the SaaS application and public website: features, interfaces, dashboard indicators, frontend data integration and responsive UI/UX."
+        ],
+        "problem": "Businesses need visibility into stock, batches, expiry dates and movements between warehouses.",
+        "solution": "Argosapp combines product and batch management with stock receipts and issues, warehouse transfers, expiry dates, movement history and a dashboard with operational indicators.",
+        "architecture": "Vue 3, TypeScript and Tailwind CSS, with Supabase and PostgreSQL for data. My contributions include frontend features and integration with services and data.",
+        "challenges": "Development of the public website with German, Portuguese and English internationalization, plus UI/UX and responsive interface improvements. Both the application and website are developed collaboratively.",
+        "validation": "Collaboration using Git, branches, Pull Requests and Code Review. I contribute to the SaaS application and public website; I did not build the entire application or backend alone.",
+        "statusNote": "The public website is available at argosapp.io. No source repository is linked here.",
+        "migrationNote": "",
+        "imageAlt": "Argosapp: two smartphones showing the German inventory view and open navigation in the official website mockup",
+        "websiteLabel": "Visit website",
+        "statusLabel": "Public website"
       }
     }
   },
