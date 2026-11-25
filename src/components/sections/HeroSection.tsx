@@ -35,7 +35,10 @@ export default function HeroSection() {
       <Container className="product-hero-container">
         <div className="product-hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow hero-eyebrow">{hero.eyebrow}</p>
+            <div className="hero-identity">
+              <p className="hero-identity-name">Willian Fonseca</p>
+              <p className="eyebrow hero-eyebrow">{hero.eyebrow}</p>
+            </div>
             <h1 id="hero-title">{hero.title}<br /><span>{hero.titleAccent}</span></h1>
             <p className="hero-description">{hero.description}</p>
             <div className="hero-actions">
