@@ -59,8 +59,10 @@ test("restored contact and renamed public project links remain correct", async (
   await page.goto("projekte");
   await expect(page.locator('[data-project="pokedex-web"]').getByRole("link", { name: "Code", exact: true })).toHaveAttribute("href", "https://github.com/Willianfonseca7/Pokedex-web");
   const waiturn = page.locator('[data-project="waiturn"]');
-  await expect(waiturn.getByText("Unit- und E2E-Tests mit Vitest und Playwright implementiert (über 2.100 Unit-Tests).", { exact: true })).toBeVisible();
-  await expect(waiturn.getByRole("link", { name: "Code", exact: true })).toHaveCount(0);
+  await expect(waiturn.locator(".project-summary")).toContainText("Termin- und Warteschlangenverwaltung");
+  await waiturn.getByRole("link", { name: /Case ansehen/ }).click();
+  await expect(page.getByText("Unit- und E2E-Tests mit Vitest und Playwright implementiert (über 2.100 Unit-Tests).", { exact: true }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: "Code", exact: true })).toHaveCount(0);
 });
 
 for (const width of [375, 768, 1280]) {

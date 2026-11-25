@@ -1,7 +1,10 @@
 import { useLanguage } from "./useLanguage";
 import type { Locale } from "../context/LanguageContext";
-export type ProjectCopy = Locale["projects"]["entries"]["waiturn"] & {
+export type ProjectCopy = Omit<Locale["projects"]["entries"]["waiturn"], "catalogSummary" | "catalogContribution" | "catalogEngineering"> & {
   imageAlt?: string;
+  catalogSummary?: string;
+  catalogContribution?: string;
+  catalogEngineering?: string;
   websiteLabel?: string;
   statusLabel?: string;
 };

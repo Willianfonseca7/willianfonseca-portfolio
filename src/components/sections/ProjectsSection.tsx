@@ -12,7 +12,7 @@ export default function ProjectsSection() {
           <h1 className="page-title">{content.projects.title}</h1>
           <p className="text-muted">{content.projects.subtitle}</p>
         </div>
-        <div className="project-list">
+        <div className="project-list project-list--catalog">
           {projects
             .filter(
               (project) => project.priority !== "archive" && !project.hidden,
@@ -22,7 +22,7 @@ export default function ProjectsSection() {
                 key={project.id}
                 project={project}
                 headingLevel={2}
-                featured={project.priority === "featured"}
+                variant="catalog"
               />
             ))}
         </div>

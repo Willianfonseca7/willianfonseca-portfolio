@@ -232,6 +232,8 @@
     "featuredTitle": "Três projetos. Três perspectivas.",
     "subtitle": "Colaboração, integração de IA e processamento de dados de mercado.",
     "ui": {
+      "contributionLabel": "Minha contribuição",
+      "engineeringLabel": "Implementação e arquitetura",
       "demo": "Demo",
       "code": "Código",
       "comingSoon": "em breve",
@@ -281,6 +283,9 @@
     "archiveSubtitle": "Trabalhos anteriores e projetos de aprendizado continuam acessíveis com demo e código.",
     "entries": {
       "waiturn": {
+        "catalogSummary": "SaaS Fullstack para agendamentos e filas de barbearias. Fluxos públicos de reserva e interfaces internas de gestão conectam clientes agendados, filas espontâneas e a operação diária.",
+        "catalogContribution": "Desenvolvo o produto próprio do frontend aos Route Handlers e ao modelo de dados relacional: autenticação, permissões por função, fluxos de agendamento e gestão e atualizações em tempo real com Socket.IO.",
+        "catalogEngineering": "Next.js, TypeScript, Prisma e PostgreSQL, com Better Auth para login e sessões. Camadas separadas de aplicação e acesso a dados, verificações por sessão, função e shopId e testes Vitest e Playwright apoiam a evolução do produto.",
         "title": "Waiturn",
         "kicker": "Projeto próprio de software",
         "role": "Desenvolvimento Fullstack · projeto próprio",
@@ -294,6 +299,9 @@
         "migrationNote": ""
       },
       "orla-plus": {
+        "catalogSummary": "Website de cliente para uma plataforma de reservas de serviços de praia no Rio de Janeiro. Conteúdo multilíngue e navegação mobile tornam a oferta acessível em diferentes dispositivos.",
+        "catalogContribution": "Desenvolvi melhorias de layout responsivo, navegação mobile e internacionalização, com três Pull Requests integrados. Em colaboração com o líder técnico, estruturei layouts, páginas e componentes para a migração para Next.js.",
+        "catalogEngineering": "O website existente utiliza HTML, CSS e JavaScript. A migração para Next.js App Router estabelece uma estrutura de frontend reutilizável; a integração das APIs continua pendente. A migração não está concluída.",
         "title": "ORLA+",
         "kicker": "Colaboração em projeto de cliente",
         "role": "Contribuições frontend · colaboração com Pedro",
@@ -307,6 +315,9 @@
         "migrationNote": "Status atual (informado por mim): layouts, páginas e componentes com Next.js App Router estão estruturados. A integração das APIs ainda está pendente."
       },
       "growthbot-de": {
+        "catalogSummary": "Assistente Telegram para recomendações de produtos. Considera interesses e histórico da conversa, gera recomendações estruturadas com OpenAI API e prepara follow-ups pertinentes.",
+        "catalogContribution": "Integrei webhooks do Telegram, identificação de intenção por regras, seleção de produtos e lógica de prompts em um fluxo de conversa. O histórico e o estado dos follow-ups são persistidos para permitir a continuação do fluxo.",
+        "catalogEngineering": "Next.js e TypeScript com persistência SQLite. Zod valida dados dos webhooks e respostas do LLM; atualizações duplicadas são identificadas. Testes unitários e de integração verificam recomendações e persistência.",
         "title": "GrowthBot-DE",
         "kicker": "IA em um fluxo definido",
         "role": "Desenvolvimento de assistente Telegram · projeto próprio",
@@ -320,6 +331,9 @@
         "migrationNote": ""
       },
       "invest-agent": {
+        "catalogSummary": "Aplicação de análise de mercado com Dashboard React: processa dados de mercado, calcula RSI/EMA e apresenta verificações de risco e indicadores operacionais. Um worker cuida do processamento em segundo plano.",
+        "catalogContribution": "Implementei Dashboard, API Node.js e worker em um monorepo TypeScript. Módulos compartilhados agrupam análise, gestão de capital e risco; um pacote separado contém um cliente da Claude API com validação de mensagens.",
+        "catalogEngineering": "Web, API e worker são pacotes separados com tipos e módulos de domínio compartilhados. Essa estrutura separa apresentação e processamento em segundo plano; Docker Compose e CI apoiam o desenvolvimento. Tool Use está implementado como formato de dados.",
         "title": "InvestAgent",
         "kicker": "Arquitetura e dados de mercado",
         "role": "Desenvolvimento Fullstack · projeto próprio",
@@ -398,6 +412,9 @@
         "migrationNote": ""
       },
       "argosapp": {
+        "catalogSummary": "SaaS de gestão de estoque para produtos, lotes, entradas, saídas, transferências e datas de validade. O histórico de movimentações e os indicadores do Dashboard permitem acompanhar a operação diária.",
+        "catalogContribution": "Em equipe, desenvolvo funcionalidades e interfaces da aplicação SaaS, indicadores operacionais no Dashboard e integração do frontend com dados. Também contribuo no website público, com internacionalização em alemão, português e inglês e melhorias de UI/UX responsiva.",
+        "catalogEngineering": "Vue 3, TypeScript e Tailwind CSS no frontend; Supabase e PostgreSQL como serviços e dados. A colaboração utiliza Git, branches, Pull Requests e Code Review. Minhas contribuições abrangem a aplicação e o website.",
         "title": "Argosapp",
         "kicker": "SaaS / Gestão de estoque",
         "role": "Desenvolvimento em equipe · Aplicação SaaS e website público",

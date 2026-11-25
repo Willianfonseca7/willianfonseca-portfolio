@@ -4,7 +4,7 @@ import { useLanguage } from "../../hooks/useLanguage";
 import { useProjectCopy } from "../../hooks/useProjectCopy";
 import { useProjectImageModal } from "../../hooks/useProjectImageModal";
 import Dialog from "./Dialog";
-export default function ProjectMedia({ project }: { project: Project }) {
+export default function ProjectMedia({ project, compact = false }: { project: Project; compact?: boolean }) {
   const { content } = useLanguage();
   const labels = content.projects.ui;
   const copy = useProjectCopy(project.id);
@@ -51,10 +51,10 @@ export default function ProjectMedia({ project }: { project: Project }) {
           ↗
         </span>
       </button>
-      {project.id === "waiturn" && (
+      {!compact && project.id === "waiturn" && (
         <p className="project-media-caption">{labels.productVisual}</p>
       )}
-      {project.images.length > 1 && (
+      {!compact && project.images.length > 1 && (
         <div className="project-thumbnails">
           {project.images.slice(1).map((url, index) => (
             <button

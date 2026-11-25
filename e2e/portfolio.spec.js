@@ -51,6 +51,7 @@ test("Waiturn uses the supplied product visual without exposing private code", a
   );
   const featured = page.locator('[data-project="waiturn"]');
   await expect(featured).toBeVisible();
+  await expect(featured.getByText("Socket.IO", { exact: true })).toBeVisible();
   await expect(
     featured.getByText("Produktvisualisierung · vom Autor bereitgestellt"),
   ).toBeVisible();
@@ -63,6 +64,7 @@ test("Waiturn uses the supplied product visual without exposing private code", a
   ).toHaveCount(0);
   await featured.getByRole("link", { name: /Case ansehen/ }).click();
   await expect(page.locator("h1")).toHaveText("WAITURN");
+  await expect(page.getByText("Socket.IO", { exact: true })).toBeVisible();
   await expect(
     page.getByRole("heading", { name: "Architektur & Stack" }),
   ).toBeVisible();
@@ -196,7 +198,7 @@ for (const theme of ["dark", "light"])
       (value) => localStorage.setItem("theme", value),
       theme,
     );
-    for (const path of ["./", "projekte/waiturn", "projekte/argosapp", "kontakt", "skills"]) {
+    for (const path of ["./", "projekte", "projekte/waiturn", "projekte/argosapp", "kontakt", "skills"]) {
       await page.goto(path);
       await page.evaluate(() => document.fonts.ready);
       const results = await new AxeBuilder({ page })
@@ -228,3 +230,69 @@ test("reduced motion and Pages redirect preserve nested route, query and hash", 
     ),
   ).toBe("auto");
 });
+
+for (const theme of ["dark", "light"]) {
+  for (const width of [375, 768, 1280]) {
+    test(`catalog cards share dimensions and bottom actions at ${width}px in ${theme}`, async ({ page }) => {
+      await page.addInitScript((value) => localStorage.setItem("theme", value), theme);
+      await page.setViewportSize({ width, height: 1000 });
+      await page.goto("projekte");
+      await page.evaluate(() => document.fonts.ready);
+      const cards = page.locator(".project-list--catalog > article");
+      await expect(cards).toHaveCount(5);
+      const measurements = await cards.evaluateAll((nodes) => nodes.map((card) => {
+        const box = card.getBoundingClientRect();
+        const media = card.querySelector(".project-media").getBoundingClientRect();
+        const trigger = card.querySelector(".project-image-trigger").getBoundingClientRect();
+        const lastMediaChild = card.querySelector(".project-media").lastElementChild.getBoundingClientRect();
+        const actions = card.querySelector(".project-actions").getBoundingClientRect();
+        const heading = card.querySelector("h2").getBoundingClientRect();
+        return {
+          id: card.dataset.project,
+          height: box.height,
+          imageWidth: trigger.width,
+          imageHeight: trigger.height,
+          mediaHeight: media.height,
+          unusedMediaSpace: media.bottom - lastMediaChild.bottom,
+          actionBottom: box.bottom - actions.bottom,
+          primaryTop: card.querySelector(".project-actions a").getBoundingClientRect().top - box.top,
+          headingTop: heading.top - box.top,
+        };
+      }));
+      const spread = (key) => Math.max(...measurements.map((m) => m[key])) - Math.min(...measurements.map((m) => m[key]));
+      expect(spread("height"), JSON.stringify(measurements)).toBeLessThanOrEqual(1);
+      expect(spread("imageWidth"), JSON.stringify(measurements)).toBeLessThanOrEqual(1);
+      expect(spread("actionBottom"), JSON.stringify(measurements)).toBeLessThanOrEqual(1);
+      expect(spread("primaryTop"), JSON.stringify(measurements)).toBeLessThanOrEqual(1);
+      expect(spread("mediaHeight"), JSON.stringify(measurements)).toBeLessThanOrEqual(1);
+      expect(spread("headingTop"), JSON.stringify(measurements)).toBeLessThanOrEqual(1);
+      expect(spread("imageHeight"), JSON.stringify(measurements)).toBeLessThanOrEqual(1);
+      for (const measurement of measurements) expect(measurement.imageWidth / measurement.imageHeight).toBeCloseTo(1.6, 2);
+      for (const measurement of measurements) expect(Math.abs(measurement.unusedMediaSpace), JSON.stringify(measurement)).toBeLessThanOrEqual(1);
+      for (const card of await cards.all()) {
+        const image = card.locator(".project-image-trigger img");
+        await image.scrollIntoViewIfNeeded();
+        await expect(image).toHaveCSS("object-fit", "contain");
+        await expect.poll(() => image.evaluate((node) => node.complete && node.naturalWidth > 0)).toBe(true);
+      }
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+      await expect(cards.locator(".featured-facts, .project-media-caption, .project-thumbnails, .project-evidence, .private-note")).toHaveCount(0);
+      for (const card of await cards.all()) {
+        expect(await card.locator(".tag-chip").count()).toBeLessThanOrEqual(5);
+        await expect(card.locator(".project-summary")).toBeVisible();
+        await expect(card.getByText("Mein Beitrag", { exact: true })).toBeVisible();
+        await expect(card.getByText("Umsetzung & Architektur", { exact: true })).toBeVisible();
+        await expect(card.locator(".catalog-facts dd")).toHaveCount(2);
+        for (const description of await card.locator(".catalog-facts dd").all()) {
+          expect((await description.innerText()).length).toBeGreaterThan(80);
+        }
+      }
+      await expect(cards.filter({ has: page.getByRole("heading", { name: "ORLA+", exact: true }) }).getByText(/01\/2026–10\/2026/)).toBeVisible();
+      if (theme === "dark") {
+        for (const id of ["orla-plus", "waiturn"]) {
+          await page.locator(`[data-project="${id}"]`).screenshot({ path: `docs/visual/catalog-${id}-${width}.png` });
+        }
+      }
+    });
+  }
+}

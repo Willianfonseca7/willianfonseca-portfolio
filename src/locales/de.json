@@ -46,7 +46,7 @@
     "projectsPreviewCta": "Alle Projekte ansehen",
     "intro": [
       "Frontend- und Fullstack-Entwickler mit abgeschlossener IHK-Weiterbildung, Freelance-Kundenprojekt und eigenem SaaS-Produkt. Praktische Entwicklung mit Next.js App Router, TypeScript, Supabase/PostgreSQL, Authentifizierung und API-Integration. Erfahrung mit Row Level Security, Backend-Mandantentrennung und LLM-basierten Workflows. Besonderes Interesse an KI-Agenten, Tool Use und zuverlässiger Prozessautomatisierung.",
-      "ORLA+ | Frontend Developer, Freelance-Kundenprojekt | 01/2026 bis heute",
+      "ORLA+ | Frontend Developer, Freelance-Kundenprojekt | 01/2026–10/2026",
       "Kurzfristig verfügbar | Präsenz in Bochum möglich"
     ],
     "featuredTitle": "Berufserfahrung und ausgewählte Projekte",
@@ -84,7 +84,7 @@
       "title": "Werdegang",
       "paragraphs": [
         "Frontend- und Fullstack-Entwickler mit abgeschlossener IHK-Weiterbildung, Freelance-Kundenprojekt und eigenem SaaS-Produkt. Praktische Entwicklung mit Next.js App Router, TypeScript, Supabase/PostgreSQL, Authentifizierung und API-Integration. Erfahrung mit Row Level Security, Backend-Mandantentrennung und LLM-basierten Workflows. Besonderes Interesse an KI-Agenten, Tool Use und zuverlässiger Prozessautomatisierung.",
-        "ORLA+ | Frontend Developer, Freelance-Kundenprojekt | 01/2026 bis heute",
+        "ORLA+ | Frontend Developer, Freelance-Kundenprojekt | 01/2026–10/2026",
         "Kurzfristig verfügbar | Präsenz in Bochum möglich"
       ]
     },
@@ -260,6 +260,8 @@
     "featuredTitle": "Drei Projekte. Drei Perspektiven.",
     "subtitle": "Frontend, Fullstack, LLM-Workflows und Automatisierung.",
     "ui": {
+      "contributionLabel": "Mein Beitrag",
+      "engineeringLabel": "Umsetzung & Architektur",
       "demo": "Demo",
       "code": "Code",
       "comingSoon": "bald verfügbar",
@@ -309,6 +311,9 @@
     "archiveSubtitle": "Frühere Arbeiten und Lernprojekte bleiben mit Demo und Quellcode zugänglich.",
     "entries": {
       "waiturn": {
+        "catalogSummary": "Fullstack-SaaS für Termin- und Warteschlangenverwaltung in Barbershops. Öffentliche Buchungsabläufe und interne Verwaltungsoberflächen verbinden Kundentermine, spontane Warteschlangen und den täglichen Betrieb.",
+        "catalogContribution": "Ich entwickle das eigene Produkt vom Frontend bis zu Route Handlers und relationalem Datenmodell: Authentifizierung, Rollenberechtigungen, Buchungs- und Verwaltungsabläufe sowie Echtzeitaktualisierungen mit Socket.IO.",
+        "catalogEngineering": "Next.js, TypeScript, Prisma und PostgreSQL; Better Auth für Anmeldung und Sessions. Getrennte Anwendungs- und Datenzugriffsschichten, Zugriffsprüfungen über Session, Rolle und shopId sowie Vitest- und Playwright-Tests unterstützen die Weiterentwicklung.",
         "title": "WAITURN",
         "kicker": "Schwerpunktprojekt",
         "role": "Eigenes Fullstack-SaaS-Projekt | 2026 bis heute",
@@ -327,9 +332,12 @@
         ]
       },
       "orla-plus": {
+        "catalogSummary": "Kundenwebsite für eine Buchungsplattform für Strandservices in Rio de Janeiro. Mehrsprachige Inhalte und mobile Navigation machen das Angebot auf unterschiedlichen Geräten zugänglich.",
+        "catalogContribution": "Ich habe responsive Layouts, mobile Navigation und Mehrsprachigkeit weiterentwickelt und drei Pull Requests eingebracht. Für die Next.js-Migration habe ich Layouts, Seiten und Komponenten strukturiert, in Zusammenarbeit mit dem technischen Projektleiter.",
+        "catalogEngineering": "Die bestehende Website nutzt HTML, CSS und JavaScript. Die Migration zum Next.js App Router schafft eine wiederverwendbare Frontend-Struktur; die API-Integration steht noch aus. Die Migration ist nicht abgeschlossen.",
         "title": "ORLA+",
         "kicker": "Zusammenarbeit im Kundenprojekt",
-        "role": "Frontend Developer, Freelance-Kundenprojekt | 01/2026 bis heute",
+        "role": "Frontend Developer, Freelance-Kundenprojekt | 01/2026–10/2026",
         "summary": "Weiterentwicklung einer Kundenwebsite für eine Buchungsplattform: responsives Layout, mobile Navigation und Mehrsprachigkeit mit HTML, CSS und JavaScript; drei gemergte Pull Requests.",
         "problem": "Die Landingpage sollte auf kleinen Displays besser navigierbar und für internationale Besucher verständlich sein.",
         "solution": "Frontend-Architektur für die laufende Migration zu Next.js App Router umgesetzt, einschließlich Layouts, Seitenstruktur und Komponenten; Zusammenarbeit mit technischem Projektleiter.",
@@ -344,6 +352,9 @@
         ]
       },
       "growthbot-de": {
+        "catalogSummary": "Telegram-Assistent für Produktempfehlungen. Er berücksichtigt Interessen und Gesprächsverlauf, erzeugt strukturierte Empfehlungen mit der OpenAI API und bereitet passende Follow-ups vor.",
+        "catalogContribution": "Ich habe Telegram-Webhooks, regelbasierte Intent-Erkennung, Produktauswahl und Prompt-Logik zu einem Gesprächsablauf verbunden. Gesprächsverlauf und Follow-up-Zustand werden gespeichert, damit der Ablauf fortgesetzt werden kann.",
+        "catalogEngineering": "Next.js und TypeScript mit SQLite-Persistenz. Zod validiert Webhook-Daten und LLM-Antworten; doppelte Updates werden erkannt. Unit- und Integrationstests prüfen die Empfehlungs- und Persistenzlogik.",
         "title": "GROWTHBOT-DE",
         "kicker": "KI in einem definierten Workflow",
         "role": "LLM-Workflows und Automatisierung | 2026",
@@ -361,6 +372,9 @@
         ]
       },
       "invest-agent": {
+        "catalogSummary": "Marktanalyse-Anwendung mit React-Dashboard: verarbeitet Marktdaten, berechnet RSI/EMA und stellt Risikoprüfungen sowie operative Kennzahlen dar. Ein Worker übernimmt die Hintergrundverarbeitung.",
+        "catalogContribution": "Ich habe Dashboard, Node.js-API und Worker in einem TypeScript-Monorepo umgesetzt. Gemeinsame Module bündeln Marktanalyse, Kapitalverwaltung und Risikologik; ein separates Paket enthält einen Claude-API-Client mit Nachrichtenvalidierung.",
+        "catalogEngineering": "Web, API und Worker sind getrennte Pakete mit gemeinsamen Typen und Fachmodulen. Diese Struktur trennt Darstellung und Hintergrundverarbeitung; Docker Compose und CI ergänzen die Entwicklung. Tool Use ist als Datenformat implementiert.",
         "title": "INVESTAGENT",
         "kicker": "Schwerpunktprojekt",
         "role": "Automatisierung, Daten und KI-Integration | 2026",
@@ -448,6 +462,9 @@
         "bullets": []
       },
       "argosapp": {
+        "catalogSummary": "SaaS zur Lagerverwaltung: Unternehmen steuern Produkte, Chargen, Zu- und Abgänge, Lagertransfers und Verfallsdaten. Bewegungshistorie und Dashboard-Kennzahlen machen die täglichen Abläufe nachvollziehbar.",
+        "catalogContribution": "Im Team entwickle ich Funktionen und Oberflächen der SaaS-Anwendung, operative Dashboard-Kennzahlen und die Frontend-Datenanbindung. Außerdem arbeite ich am öffentlichen Website-Auftritt mit deutscher, portugiesischer und englischer Internationalisierung sowie responsivem UI/UX.",
+        "catalogEngineering": "Vue 3, TypeScript und Tailwind CSS bilden das Frontend; Supabase und PostgreSQL stellen Dienste und Daten bereit. Die Zusammenarbeit erfolgt über Git, Branches, Pull Requests und Code Reviews. Meine Beiträge umfassen Anwendung und Website.",
         "title": "Argosapp",
         "kicker": "SaaS / Lagerverwaltung",
         "role": "Entwicklung im Team · SaaS-Anwendung und öffentliche Website",
