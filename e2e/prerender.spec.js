@@ -30,6 +30,8 @@ for (const theme of ["dark", "light"]) {
     page.on("console", (message) => {
       if (message.type() === "error") errors.push(message.text());
     });
+    // Hydration and lazy-image checks need stable geometry; motion has its own test.
+    await page.emulateMedia({ reducedMotion: "reduce" });
     await page.addInitScript((value) => localStorage.setItem("theme", value), theme);
     for (const route of routes) {
       const response = await request.get(route);
