@@ -2,11 +2,28 @@ import { useLanguage } from "../../hooks/useLanguage";
 import Container from "../ui/Container";
 import Tag from "../ui/Tag";
 import Button from "../ui/Button";
+import portrait from "../../assets/willian-portrait-black.jpg";
 export default function FoundationsSection() {
   const { content } = useLanguage();
   return (
     <section className="section-space">
       <Container>
+        <div className="home-profile">
+          <figure className="portrait-composition">
+            <div className="portrait-frame">
+              <img src={portrait} alt="Willian Santos Fonseca" width="1024" height="1536" loading="lazy" decoding="async" />
+            </div>
+            <figcaption><span>Willian Fonseca</span><span>Düsseldorf, DE</span></figcaption>
+          </figure>
+          <div>
+            <p className="eyebrow">{content.home.aboutPreviewTitle} / Düsseldorf</p>
+            <h2>{content.meta.role}</h2>
+            <p className="hero-stack">{content.hero.subtitle}</p>
+            <p className="text-muted">{content.home.aboutPreviewSubtitle}</p>
+            <div className="availability"><span className="availability-dot" aria-hidden="true" /><span>{content.meta.tagline}<small>{content.hero.note}</small></span></div>
+            <Button href="/about" variant="ghost">{content.home.aboutPreviewTitle} →</Button>
+          </div>
+        </div>
         <div className="section-heading">
           <p className="eyebrow">04 / Stack</p>
           <h2>{content.skills.title}</h2>

@@ -7,8 +7,8 @@ import FoundationsSection from "../components/sections/FoundationsSection";
 import ContactSection from "../components/sections/ContactSection";
 export default function Home() {
   return (
-    <>
-      <Navbar />
+    <div className="home-page">
+      <Navbar home />
       <main id="main-content">
         <HeroSection />
         <ProjectsPreviewSection />
@@ -17,6 +17,6 @@ export default function Home() {
         <ContactSection compact />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

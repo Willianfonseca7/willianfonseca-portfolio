@@ -11,7 +11,7 @@ test("initial HTML contains the profile and all principal content without JavaSc
   const page = await context.newPage();
   const response = await page.goto("./");
   expect(await response.text()).toContain("<noscript>Die Inhalte sind ohne JavaScript lesbar.");
-  await expect(page.locator("h1")).toHaveText("Willian Santos Fonseca");
+  await expect(page.locator("h1")).toHaveText("Von der Ideezum digitalen Produkt.");
   await expect(page.getByText("Frontend- & Junior Fullstack-Entwickler | Next.js | Supabase | KI & Automatisierung", { exact: true })).toBeVisible();
   await expect(page.getByText(/Frontend- und Fullstack-Entwickler mit abgeschlossener IHK-Weiterbildung/)).toBeVisible();
   for (const name of ["ORLA+", "WAITURN", "GROWTHBOT-DE", "INVESTAGENT", "Frontend", "Backend & Daten", "Sicherheit", "KI & Qualität", "Sprachen"]) {

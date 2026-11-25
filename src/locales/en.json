@@ -16,19 +16,19 @@
     "themeLight": "Light"
   },
   "hero": {
-    "title": "Junior Frontend / Fullstack Developer",
+    "title": "From an idea",
     "subtitle": "React · Next.js · TypeScript · Node.js",
-    "description": "I build web applications with React, Next.js and TypeScript, from clear user interfaces to APIs and relational databases. My projects combine business logic, authentication, automated tests and AI integration.",
-    "eyebrow": "Build software. Explain decisions.",
+    "description": "I develop modern web applications with a focus on frontend, thoughtful architecture and real use cases.",
+    "eyebrow": "WILLIAN FONSECA / SOFTWARE DEVELOPMENT",
     "note": "Prefer on-site or hybrid · open to remote",
     "ctas": {
       "primary": {
         "label": "Explore projects",
-        "href": "/#projekte"
+        "href": "/projekte"
       },
       "secondary": {
-        "label": "Get in touch",
-        "href": "/#kontakt"
+        "label": "Contact",
+        "href": "/kontakt"
       },
       "tertiary": {
         "label": "GitHub",
@@ -36,7 +36,9 @@
         "target": "_blank"
       }
     },
-    "highlights": []
+    "highlights": [],
+    "titleAccent": "to a digital product.",
+    "officialMockup": "Official product mockup"
   },
   "home": {
     "aboutPreviewTitle": "About me",

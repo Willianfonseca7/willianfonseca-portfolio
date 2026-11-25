@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import useTheme from "../../hooks/useTheme";
 import { useLanguage } from "../../hooks/useLanguage";
-export default function Navbar() {
+export default function Navbar({ home = false }: { home?: boolean }) {
   const { theme, toggleTheme } = useTheme();
   const { content } = useLanguage();
   const labels = content.projects.ui;
@@ -36,7 +36,7 @@ export default function Navbar() {
   ));
   return (
     <header
-      className="nav-header"
+      className={`nav-header ${home ? "nav-header--home" : ""}`}
       onKeyDown={(event) => {
         if (event.key === "Escape" && isOpen) {
           setIsOpen(false);
@@ -52,7 +52,7 @@ export default function Navbar() {
           <span className="brand-mark" aria-hidden="true">
             W<span>/</span>F
           </span>
-          <span className="brand-name">Willian Fonseca</span>
+          <span className="brand-name">Willian Fonseca{home && <small>Software development</small>}</span>
         </Link>
         <nav className="nav-links" aria-label={labels.navLabel}>
           {links}

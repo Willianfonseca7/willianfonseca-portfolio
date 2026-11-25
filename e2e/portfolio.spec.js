@@ -47,13 +47,13 @@ test("Waiturn uses the supplied product visual without exposing private code", a
 }) => {
   await page.goto("./");
   await expect(page.locator("h1")).toContainText(
-    "Willian Santos Fonseca",
+    "Von der Idee",
   );
   const featured = page.locator('[data-project="waiturn"]');
   await expect(featured).toBeVisible();
-  await expect(featured.getByText("Socket.IO", { exact: true })).toBeVisible();
+  await expect(featured.locator(".catalog-facts").getByText(/Socket.IO/)).toBeVisible();
   await expect(
-    featured.getByText("Produktvisualisierung · vom Autor bereitgestellt"),
+    page.locator(".hero-showcase").getByText("Produktvisualisierung · vom Autor bereitgestellt"),
   ).toBeVisible();
   await expect(featured.locator("img")).toHaveAttribute(
     "src",
@@ -201,6 +201,9 @@ for (const theme of ["dark", "light"])
     for (const path of ["./", "projekte", "projekte/waiturn", "projekte/argosapp", "kontakt", "skills"]) {
       await page.goto(path);
       await page.evaluate(() => document.fonts.ready);
+      await page.evaluate(() => Promise.all(document.getAnimations()
+        .filter(animation => Number.isFinite(animation.effect?.getComputedTiming().endTime))
+        .map(animation => animation.finished.catch(() => undefined))));
       const results = await new AxeBuilder({ page })
         .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
         .analyze();
@@ -296,3 +299,79 @@ for (const theme of ["dark", "light"]) {
     });
   }
 }
+
+for (const width of [1920, 1440, 1280, 768, 390, 320]) {
+  for (const theme of ["dark", "light"]) {
+    test(`product showcase stays readable and contained at ${width}px in ${theme}`, async ({ page }) => {
+      const errors = [];
+      page.on("pageerror", error => errors.push(error.message));
+      page.on("console", message => { if (message.type() === "error") errors.push(message.text()); });
+      await page.setViewportSize({ width, height: 1000 });
+      await page.emulateMedia({ reducedMotion: "reduce" });
+      await page.addInitScript(value => localStorage.setItem("theme", value), theme);
+      await page.goto("./");
+      await page.evaluate(() => document.fonts.ready);
+      const hero = page.locator(".product-hero");
+      await expect(hero.getByRole("heading", { level: 1 })).toHaveText("Von der Ideezum digitalen Produkt.");
+      for (const [id, name] of [["waiturn", "WAITURN"], ["argosapp", "Argosapp"], ["orla-plus", "ORLA+"]]) {
+        const link = hero.getByRole("link", { name: `${name} – Zum Case`, exact: true });
+        await expect(link).toHaveAttribute("href", `/willianfonseca-portfolio/projekte/${id}`);
+        await expect(link.locator("img")).toHaveCSS("object-fit", "contain");
+        await expect.poll(() => link.locator("img").evaluate(image => image.complete && image.naturalWidth > 0)).toBe(true);
+        await link.locator(".showcase-label").scrollIntoViewIfNeeded();
+        expect(await link.locator(".showcase-label").evaluate(label => {
+          const rect = label.getBoundingClientRect();
+          const element = document.elementFromPoint(rect.x + rect.width / 2, rect.y + rect.height / 2);
+          return label.contains(element);
+        })).toBe(true);
+        const bounds = await link.boundingBox();
+        expect(bounds.x).toBeGreaterThanOrEqual(0);
+        expect(bounds.x + bounds.width).toBeLessThanOrEqual(width + 1);
+        const sectionBounds = await hero.boundingBox();
+        expect(bounds.y + bounds.height).toBeLessThanOrEqual(sectionBounds.y + sectionBounds.height + 1);
+      }
+      await expect(hero.getByText("Produktvisualisierung · vom Autor bereitgestellt", { exact: true })).toBeVisible();
+      await expect(hero.getByRole("link", { name: "Projekte entdecken", exact: true })).toHaveAttribute("href", "/willianfonseca-portfolio/projekte");
+      await expect(hero.getByRole("link", { name: "Kontakt", exact: true })).toHaveAttribute("href", "/willianfonseca-portfolio/kontakt");
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+      expect(errors).toEqual([]);
+      await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+      await page.screenshot({ path: `docs/visual/home-premium-${theme}-${width}.png` });
+      if (theme === "dark" && [1440, 390].includes(width)) await hero.screenshot({ path: `docs/visual/home-premium-hero-${width}.png` });
+    });
+  }
+}
+
+test("hero CTAs and keyboard-accessible windows lead to their cases", async ({ page }) => {
+  await page.goto("./");
+  await page.locator(".product-hero").getByRole("link", { name: "Projekte entdecken", exact: true }).click();
+  await expect(page).toHaveURL(/\/projekte$/);
+  await page.goto("./");
+  await page.locator(".product-hero").getByRole("link", { name: "Kontakt", exact: true }).click();
+  await expect(page).toHaveURL(/\/kontakt$/);
+  for (const name of ["WAITURN", "Argosapp", "ORLA+"]) {
+    await page.goto("./");
+    const link = page.locator(".hero-showcase").getByRole("link", { name: `${name} – Zum Case`, exact: true });
+    await link.focus();
+    await expect(link).toBeFocused();
+    await expect(link).toHaveCSS("outline-style", "solid");
+    await page.keyboard.press("Enter");
+    await expect(page.locator("h1")).toHaveText(name);
+  }
+});
+
+test("showcase parallax resets and respects reduced motion", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.goto("./");
+  const stage = page.locator(".hero-showcase");
+  const bounds = await stage.boundingBox();
+  await page.mouse.move(bounds.x + bounds.width * 0.8, bounds.y + bounds.height * 0.2);
+  await expect.poll(() => stage.evaluate(node => Number(node.style.getPropertyValue("--pointer-x")))).toBeGreaterThan(0);
+  await page.mouse.move(5, 5);
+  await expect.poll(() => stage.evaluate(node => node.style.getPropertyValue("--pointer-x"))).toBe("0");
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.mouse.move(bounds.x + bounds.width * 0.8, bounds.y + bounds.height * 0.2);
+  await expect(stage.locator(".showcase-scene")).toHaveCSS("transform", "none");
+  for (const window of await stage.locator(".showcase-window").all()) await expect(window).toHaveCSS("animation-name", "none");
+  expect(await stage.evaluate(node => node.style.getPropertyValue("--pointer-x"))).toBe("0");
+});
