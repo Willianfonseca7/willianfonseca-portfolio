@@ -47,6 +47,22 @@ export default function HeroShowcase() {
     if (!element) return;
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const pointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const desktop = window.matchMedia("(min-width: 1024px)");
+    const fitToViewport = () => {
+      if (!desktop.matches) {
+        element.style.removeProperty("--showcase-scale");
+        return;
+      }
+      // Use the initial document position so scrolling does not change the fit.
+      const top = element.getBoundingClientRect().top + window.scrollY;
+      const availableHeight = Math.max(0, window.innerHeight - top - 32);
+      const scale = Math.min(1, availableHeight / element.clientHeight);
+      element.style.setProperty("--showcase-scale", String(scale));
+    };
+    const resizeObserver = new ResizeObserver(fitToViewport);
+    resizeObserver.observe(element);
+    window.addEventListener("resize", fitToViewport);
+    fitToViewport();
     let frame = 0;
     const reset = () => {
       cancelAnimationFrame(frame);
@@ -72,6 +88,8 @@ export default function HeroShowcase() {
       element.removeEventListener("pointermove", move);
       element.removeEventListener("pointerleave", reset);
       motion.removeEventListener("change", reset);
+      resizeObserver.disconnect();
+      window.removeEventListener("resize", fitToViewport);
     };
   }, []);
   return (

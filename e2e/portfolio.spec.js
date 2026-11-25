@@ -375,3 +375,71 @@ test("showcase parallax resets and respects reduced motion", async ({ page }) =>
   for (const window of await stage.locator(".showcase-window").all()) await expect(window).toHaveCSS("animation-name", "none");
   expect(await stage.evaluate(node => node.style.getPropertyValue("--pointer-x"))).toBe("0");
 });
+
+for (const [width, height] of [[1280, 720], [1280, 800], [1440, 700], [1440, 800], [1440, 900], [1512, 982], [1728, 900], [1920, 800]]) {
+  test(`showcase fits ${width}x${height} at rest and keeps other projects visible on hover`, async ({ page }) => {
+    await page.setViewportSize({ width, height });
+    await page.emulateMedia({ reducedMotion: "no-preference" });
+    await page.goto("./");
+    await page.evaluate(() => document.fonts.ready);
+    await page.locator(".showcase-image img").evaluateAll(images => Promise.all(images.map(image => image.decode())));
+    await page.evaluate(() => Promise.all(document.getAnimations()
+      .filter(animation => Number.isFinite(animation.effect?.getComputedTiming().endTime))
+      .map(animation => animation.finished.catch(() => undefined))));
+    await page.mouse.move(8, 8);
+    const projects = page.locator(".showcase-project");
+    const measure = () => projects.evaluateAll(links => links.map(link => {
+      const headerBottom = document.querySelector(".nav-header").getBoundingClientRect().bottom;
+      const label = link.querySelector(".showcase-label");
+      const rect = label.getBoundingClientRect();
+      const windowRect = link.querySelector(".showcase-window").getBoundingClientRect();
+      const labelHit = document.elementFromPoint(rect.x + rect.width / 2, rect.y + rect.height / 2);
+      const imageRect = link.querySelector(".showcase-image").getBoundingClientRect();
+      let visibleSamples = 0;
+      for (let row = 1; row <= 8; row++) for (let col = 1; col <= 8; col++) {
+        const hit = document.elementFromPoint(imageRect.x + imageRect.width * col / 9, imageRect.y + imageRect.height * row / 9);
+        if (hit && link.contains(hit)) visibleSamples++;
+      }
+      return { labelVisible: label.contains(labelHit), labelTop: rect.top, headerBottom,
+        bottom: Math.max(rect.bottom, windowRect.bottom), left: Math.min(rect.left, windowRect.left),
+        right: Math.max(rect.right, windowRect.right), visibleSamples };
+    }));
+    const assertFraming = measurements => {
+      expect(measurements).toHaveLength(3);
+      for (const item of measurements) {
+        expect(item.labelVisible).toBe(true);
+        expect(item.labelTop).toBeGreaterThan(item.headerBottom + 4);
+        expect(item.bottom).toBeLessThan(height - 4);
+        expect(item.left).toBeGreaterThan(0);
+        expect(item.right).toBeLessThan(width);
+        expect(item.visibleSamples).toBeGreaterThan(12);
+      }
+    };
+    await expect.poll(async () => (await measure()).every(item => item.labelVisible && item.bottom < height - 4)).toBe(true);
+    const initial = await measure();
+    assertFraming(initial);
+    await page.screenshot({ path: `docs/visual/hero-fit-${width}x${height}-rest.png` });
+    for (const [index, id] of ["waiturn", "argosapp", "orla-plus"].entries()) {
+      const project = page.locator(`.showcase-project--${id}`);
+      // Move the physical pointer; locator.hover() may auto-scroll a scaled scene.
+      const labelBox = await project.locator(".showcase-label").boundingBox();
+      await page.mouse.move(labelBox.x + labelBox.width / 2, labelBox.y + labelBox.height / 2);
+      await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
+      await expect(project).toHaveCSS("translate", "0px -3px");
+      await expect.poll(async () => (await measure()).every(item => item.labelVisible && item.bottom < height - 4)).toBe(true);
+      const hovered = await measure();
+      assertFraming(hovered);
+      for (let other = 0; other < 3; other++) {
+        if (other !== index) expect(hovered[other].visibleSamples).toBeGreaterThanOrEqual(initial[other].visibleSamples - 8);
+      }
+      await page.screenshot({ path: `docs/visual/hero-fit-${width}x${height}-hover-${id}.png` });
+    }
+    // Resizing the same page must recompute the fit, including the tablet reset.
+    await page.setViewportSize({ width, height: height - 80 });
+    await page.mouse.move(8, 8);
+    await expect.poll(async () => (await measure()).every(item => item.bottom < height - 80 - 4)).toBe(true);
+    await page.setViewportSize({ width: 768, height: 1024 });
+    await expect(page.locator(".hero-showcase")).not.toHaveAttribute("style", /--showcase-scale/);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  });
+}
