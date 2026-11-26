@@ -2,7 +2,6 @@ import { FiMail, FiGithub, FiLinkedin } from "react-icons/fi";
 import { useLanguage } from "../../hooks/useLanguage";
 import Container from "../ui/Container";
 import ContactForm from "./ContactForm";
-import Button from "../ui/Button";
 const icons = { mail: FiMail, github: FiGithub, linkedin: FiLinkedin };
 export default function ContactSection({
   compact = false,
@@ -14,7 +13,7 @@ export default function ContactSection({
   return (
     <section id="kontakt" className="section-space contact-section">
       <Container>
-        <div className="contact-grid">
+        <div className={`contact-grid ${compact ? "contact-grid--compact" : ""}`}>
           <div>
             <p className="eyebrow">06 / {content.contact.title}</p>
             <Heading className={compact ? "" : "page-title"}>
@@ -51,17 +50,7 @@ export default function ContactSection({
               })}
             </div>
           </div>
-          {compact ? (
-            <div className="contact-callout">
-              <p className="eyebrow">React / Next.js / TypeScript</p>
-              <p>{content.hero.note}</p>
-              <Button href="/kontakt" variant="secondary">
-                {content.contact.form.title} →
-              </Button>
-            </div>
-          ) : (
-            <ContactForm />
-          )}
+          {!compact && <ContactForm />}
         </div>
       </Container>
     </section>

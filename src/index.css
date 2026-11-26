@@ -656,6 +656,10 @@
     gap: 70px;
     align-items: start;
   }
+  .contact-grid--compact {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 680px;
+  }
   .contact-grid h1,
   .contact-grid h2 {
     font-size: 2.8rem;
@@ -694,18 +698,6 @@
   .contact-link > span:last-child {
     margin-left: auto;
     color: var(--accent);
-  }
-  .contact-callout {
-    padding: 35px;
-    background: var(--surface-2);
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    align-self: center;
-  }
-  .contact-callout > p:nth-child(2) {
-    font-size: 1.45rem;
-    line-height: 1.4;
-    margin: 24px 0;
   }
   .site-footer {
     padding: 28px 0;
@@ -1031,9 +1023,6 @@
   .contact-grid h2 {
     font-size: 2.2rem;
   }
-  .contact-callout {
-    padding: 25px;
-  }
   .site-footer > div > div {
     gap: 10px;
     flex-direction: column;
@@ -1340,7 +1329,6 @@ html[data-theme="light"] .showcase-light { opacity: 0.5; }
 .home-profile .text-muted { font-size: 0.9rem; }
 .home-profile .btn { margin-top: 16px; }
 .home-page .skills-grid > div { border-left: 2px solid var(--border); padding-left: 20px; }
-.home-page .contact-callout { border-top: 2px solid var(--accent); }
 @media (prefers-reduced-motion: no-preference) {
   .product-hero .hero-copy > * { animation: hero-reveal 650ms both; }
   .product-hero .hero-copy > :nth-child(2) { animation-delay: 80ms; }
